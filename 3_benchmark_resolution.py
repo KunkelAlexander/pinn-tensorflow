@@ -10,9 +10,9 @@ Methods
 - 4th- and 6th-order central finite differences (periodic), explicit RK4 in time at half the
   stability limit
 - Pseudospectral FFT solver with exact time integration
-- Continuous-time PINN (as in linear_schroedinger_1d.ipynb): psi_theta(x, t), residual enforced on
+- Continuous-time PINN (as in 1_linear_schroedinger_1d.ipynb): psi_theta(x, t), residual enforced on
   an N x N grid of collocation points
-- Discrete-time PINN (as in linear_schroedinger_1d_discrete_time.ipynb): one Gauss-Legendre IRK step
+- Discrete-time PINN (as in 2_linear_schroedinger_1d_discrete_time.ipynb): one Gauss-Legendre IRK step
   with q = 256 stages, psi_theta(x) enforced on N points at t0
 
 "Resolution" N means grid points for FD/FFT and collocation points per dimension for the PINNs.
@@ -22,9 +22,9 @@ Error metric: mean L1 error of real and imaginary part at t1, 0.5 * mean(|dRe| +
 
 Usage
 -----
-    python benchmark_resolution.py              # full run (~1.5 h on a 4-core CPU), resumes from cache
-    python benchmark_resolution.py --quick      # smoke test, a few minutes
-    python benchmark_resolution.py --plot-only  # replot from cached results
+    python 3_benchmark_resolution.py              # full run (~1.5 h on a 4-core CPU), resumes from cache
+    python 3_benchmark_resolution.py --quick      # smoke test, a few minutes
+    python 3_benchmark_resolution.py --plot-only  # replot from cached results
 
 Results are cached in results/benchmark_plane_wave_<waves>waves.json after every run, so an interrupted benchmark resumes
 where it left off. Figures are written to figures/benchmark_*.png.
@@ -76,10 +76,17 @@ def glow(x, y, ax=None, **kwargs):
     return line
 
 
-def save(name, fig=None):
+def save(name, fig=None, tight=True):
     """Save the figure as figures/<name>.png."""
     os.makedirs('figures', exist_ok=True)
-    (fig or plt.gcf()).savefig(f'figures/{name}.png', dpi=200, bbox_inches='tight')
+    (fig or plt.gcf()).savefig(f'figures/{name}.png', dpi=200, bbox_inches='tight' if tight else None)
+
+
+# larger fonts, and the same fixed size for all benchmark figures (saved without tight cropping so
+# that they have identical pixel sizes)
+mpl.rcParams.update({'font.size': 14, 'axes.titlesize': 16, 'axes.labelsize': 15,
+                     'legend.fontsize': 12, 'legend.title_fontsize': 13, 'figure.titlesize': 17})
+FIGSIZE = (10, 13)
 
 
 # one colour per method, used in all figures
@@ -464,11 +471,11 @@ def plural(waves):
 # ----------------------------------------------------------------------------------------------
 
 def plot_resolution(args, cases):
-    """One panel per number of wavelengths, like Fig. 10 of Kunkel et al. (2025)."""
-    fig, axes = plt.subplots(1, len(cases), figsize=(6 * len(cases) + 3, 5.5), sharey=True, squeeze=False)
-    fig.subplots_adjust(wspace=0.05)
+    """One panel per number of wavelengths, stacked vertically, like Fig. 10 of Kunkel et al. (2025)."""
+    fig, axes = plt.subplots(len(cases), 1, figsize=FIGSIZE, sharex=True, squeeze=False, layout='constrained')
+    axes = axes[:, 0]
 
-    for ax, (waves, cache) in zip(axes[0], cases):
+    for ax, (waves, cache) in zip(axes, cases):
         ax.set_title(f'Plane wave, {plural(waves)}')
         ax.set_xscale('log', base=2)
         ax.set_yscale('log')
@@ -479,7 +486,7 @@ def plot_resolution(args, cases):
                 label = STYLE[method]['label']
                 if method.startswith('pinn'):
                     label += f' ({rows[0]["depth"]}x{rows[0]["width"]}, {rows[0]["n_params"]:,} params)'
-                glow([r['N'] for r in rows], [max(r['l1'], 1e-16) for r in rows], ax=ax, lw=1.5, markersize=6,
+                glow([r['N'] for r in rows], [max(r['l1'], 1e-16) for r in rows], ax=ax, lw=1.5, markersize=7,
                      color=STYLE[method]['color'], marker=STYLE[method]['marker'], label=label)
 
         # guide lines N^-4 and N^-6, anchored at the finest FD resolution that is not yet at round-off
@@ -494,61 +501,62 @@ def plot_resolution(args, cases):
         if 2 * waves >= 16:
             ax.axvline(2 * waves, color='white', lw=0.8, alpha=0.5)
             ax.text(2 * waves * 1.07, 0.97, '2 points / wavelength', rotation=90, va='top', color='white',
-                    alpha=0.7, fontsize=8, transform=ax.get_xaxis_transform())
+                    alpha=0.7, fontsize=12, transform=ax.get_xaxis_transform())
 
         ax.set_ylim(1e-16, 1e1)
         ax.set_xticks(2.0**np.arange(4, 12))
-        ax.set_xlabel('Points $N$')
+        ax.set_ylabel('$L_1$ error at $t_1$')
 
-    axes[0, 0].set_ylabel('$L_1$ error at $t_1$')
-    # one legend for all panels, without duplicates
+    axes[-1].set_xlabel('Points $N$ (grid points / collocation points per dimension)')
+    # one legend for all panels below the plots, without duplicates
     handles = {}
-    for ax in axes[0]:
+    for ax in axes:
         for h, l in zip(*ax.get_legend_handles_labels()):
             handles.setdefault(l, h)
-    axes[0, -1].legend(handles.values(), handles.keys(), loc='center left', bbox_to_anchor=(1.03, 0.5),
-                       title='Numerical schemes', frameon=True, fontsize=9)
-    fig.text(0.5, -0.04, '$N$: grid points (FD, FFT) or collocation points per dimension (PINNs); '
-             'the PINN networks are the same for all $N$', ha='center', fontsize=8, alpha=0.7)
-    save('benchmark_1_error_vs_resolution', fig)
+    fig.legend(handles.values(), handles.keys(), loc='outside lower center', ncol=2, frameon=True)
+    save('benchmark_1_error_vs_resolution', fig, tight=False)
     plt.close(fig)
 
 
 def plot_cost(args, waves, cache):
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
-    fig.subplots_adjust(wspace=0.05)
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=FIGSIZE, layout='constrained')
     fig.suptitle(f'Plane wave, {plural(waves)}')
     train_match = dict(depth=args.depth, adam_steps=args.adam_steps, lbfgs_steps=args.lbfgs_steps)
 
-    # left: error vs. degrees of freedom - trainable parameters for PINNs, 2N real unknowns for grid methods
-    ax1.set_title(f'Error vs. degrees of freedom (PINNs at $N = {args.width_sweep_n}$)')
+    # top: error vs. degrees of freedom - trainable parameters for PINNs, 2N real unknowns for grid methods
+    ax1.set_title(f'Error vs. degrees of freedom (PINN width sweep at $N = {args.width_sweep_n}$)')
     for method in ['fd4', 'fd6', 'fft']:
         rows = select(cache, method)
-        glow([r['dof'] for r in rows], [max(r['l1'], 1e-16) for r in rows], ax=ax1, lw=1.5,
-             color=STYLE[method]['color'], marker=STYLE[method]['marker'], label=STYLE[method]['label'] + ' ($2N$)')
+        glow([r['dof'] for r in rows], [max(r['l1'], 1e-16) for r in rows], ax=ax1, lw=1.5, markersize=7,
+             color=STYLE[method]['color'], marker=STYLE[method]['marker'], label=STYLE[method]['label'])
     for method in ['pinn_cont', 'pinn_disc']:
         rows = sorted(select(cache, method, N=args.width_sweep_n, **train_match), key=lambda r: r['n_params'])
         if rows:
-            glow([r['n_params'] for r in rows], [r['l1'] for r in rows], ax=ax1, lw=1.5,
-                 color=STYLE[method]['color'], marker=STYLE[method]['marker'],
-                 label=STYLE[method]['label'] + ' (width ' + ', '.join(str(r['width']) for r in rows) + ')')
+            glow([r['n_params'] for r in rows], [r['l1'] for r in rows], ax=ax1, lw=1.5, markersize=7,
+                 color=STYLE[method]['color'], marker=STYLE[method]['marker'], label=STYLE[method]['label'])
+            # label every point with its width
+            for r in rows:
+                ax1.annotate(f'w={r["width"]}', (r['n_params'], r['l1']), textcoords='offset points',
+                             xytext=(0, -18), ha='center', fontsize=11, color=STYLE[method]['color'])
     ax1.set_xscale('log')
     ax1.set_yscale('log')
     ax1.set_xlabel('Degrees of freedom (trainable parameters / $2N$ real unknowns)')
     ax1.set_ylabel('$L_1$ error at $t_1$')
-    ax1.legend(loc='center right', bbox_to_anchor=(1.0, 0.62), fontsize=8)
 
-    # right: error vs. wall-clock time of the resolution sweep
+    # bottom: error vs. wall-clock time of the resolution sweep
     ax2.set_title('Error vs. wall-clock time (resolution sweep)')
     for method, rows in resolution_series(args, cache).items():
         if rows:
             glow([max(r['wall'], 1e-6) for r in rows], [max(r['l1'], 1e-16) for r in rows], ax=ax2, lw=1.5,
-                 color=STYLE[method]['color'], marker=STYLE[method]['marker'], label=STYLE[method]['label'])
+                 markersize=7, color=STYLE[method]['color'], marker=STYLE[method]['marker'])
     ax2.set_xscale('log')
+    ax2.set_yscale('log')
     ax2.set_xlabel('Wall-clock time [s] (training time for PINNs)')
-    ax2.legend(loc='lower left', bbox_to_anchor=(0.0, 0.1), fontsize=8)
+    ax2.set_ylabel('$L_1$ error at $t_1$')
 
-    save('benchmark_2_error_vs_cost', fig)
+    # one legend for both panels below the plots
+    fig.legend(*ax1.get_legend_handles_labels(), loc='outside lower center', ncol=2, frameon=True)
+    save('benchmark_2_error_vs_cost', fig, tight=False)
     plt.close(fig)
 
 

@@ -50,7 +50,7 @@ The discrete time approach trains about 11 times faster because the IRK scheme r
 
 ## Resolution benchmark
 
-`benchmark_resolution.py` compares how the error of both PINNs depends on resolution with that of classical solvers.
+`3_benchmark_resolution.py` compares how the error of both PINNs depends on resolution with that of classical solvers.
 
 ![L1 error vs. resolution](figures/benchmark_1_error_vs_resolution.png)
 
@@ -98,7 +98,7 @@ python 3_benchmark_resolution.py --quick      # smoke test, about 1 min
 python 3_benchmark_resolution.py --plot-only  # replot from cached results
 ```
 
-Results are cached in `results/benchmark_plane_wave_<waves>waves.json` after every run, so an interrupted benchmark resumes where it left off. See `python benchmark_resolution.py --help` for all options.
+Results are cached in `results/benchmark_plane_wave_<waves>waves.json` after every run, so an interrupted benchmark resumes where it left off. See `python 3_benchmark_resolution.py --help` for all options.
 
 ## Setup
 
