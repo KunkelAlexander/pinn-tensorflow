@@ -31,7 +31,7 @@ It is minimised over a number of collocation points that are randomly sampled fr
 |---|---|
 | `1_linear_schroedinger_1d.ipynb` | Original TensorFlow implementation (continuous time) |
 | `2_linear_schroedinger_1d_discrete_time.ipynb` | Original TensorFlow implementation (discrete time) |
-| `3_benchmark_resolution.py` | Resolution benchmark of both PINNs against finite differences and FFT (PyTorch, standalone) |
+| `3_benchmark_resolution.py` | Resolution and step-size benchmarks of both PINNs against classical solvers (PyTorch, standalone) |
 
 ## Performance comparison
 
@@ -90,15 +90,50 @@ In practice, neither usually limits accuracy: optimisation does ([Krishnapriyan 
 
 Natural next steps are Fourier feature embeddings against spectral bias ([Tancik et al. 2020](https://arxiv.org/abs/2006.10739); [Wang, Wang & Perdikaris 2021](https://arxiv.org/abs/2012.10047)) and adaptive loss weighting against the plateau.
 
-### Running it
+## Step-size benchmark
+
+The discrete time approach promises large time steps, since the implicit Gauss-Legendre scheme has no stability limit. The step-size benchmark tests whether this carries over to the PINN.
+
+![L1 error and cost vs. step size](figures/benchmark_3_error_vs_step_size.png)
+
+### Setup
+
+- **Test problem:** plane wave with 2 wavelengths in the periodic potential $V(x) = 20\cos(2\pi x)$, advanced by a single step of size $\omega\Delta t = 1, \dots, 128$ with $\omega = k^2/2$. Without a potential, the Fourier propagator would be exact for any step size; the potential is what makes the classical solvers depend on the step size, as in Schrödinger-Poisson. The exact solution is computed from the eigen-decomposition of the Hamiltonian in a truncated Fourier basis.
+- **PINNs** (same training and networks as above, $N = 64$ collocation points per dimension):
+  - discrete time as in the notebook ($q = 256$, $\psi^{n+1}$ as a network output)
+  - discrete time with $q$ adapted to the step (smallest Gauss-Legendre scheme with a temporal error below $10^{-8}$) and $\psi^{n+1} = \psi_0 + \Delta t \sum_k b_k \mathcal{N}[\psi_k]$ computed from the stages
+  - continuous time on $[0, \Delta t]$ with 16 collocation points per period in $t$
+- **Classical single steps:** split-step Fourier (Strang), Crank-Nicolson, and the Gauss-Legendre scheme with the same $q$ solved exactly by linear algebra, i.e. what a perfectly trained discrete time PINN would achieve.
+
+### Results
+
+| $\omega\Delta t$ | 1 | 4 | 16 | 32 | 128 |
+|---|---|---|---|---|---|
+| Required stages $q$ | 8 | 24 | 96 | 192 | > 256 |
+| Gauss IRK, exact solve | $2 \times 10^{-10}$ | $1 \times 10^{-9}$ | $2 \times 10^{-9}$ | $2 \times 10^{-9}$ | $2 \times 10^{-3}$ ($q$ capped at 256) |
+| PINN discrete time (notebook) | $5 \times 10^{-3}$ | $3 \times 10^{-2}$ | $8 \times 10^{-2}$ | 0.45 | 0.41 |
+| PINN discrete time ($q$ adapted) | $6 \times 10^{-3}$ | $4 \times 10^{-2}$ | 0.14 | 0.45 | 0.40 |
+| PINN continuous time | $5 \times 10^{-4}$ | $4 \times 10^{-3}$ | $6 \times 10^{-2}$ | 0.19 | 0.63 |
+| Split-step Fourier (Strang) | $1 \times 10^{-2}$ | 0.35 | 1.1 | 0.78 | 0.81 |
+
+- **The time scheme allows large steps, the PINN does not deliver them.** Solved exactly, the Gauss-Legendre scheme stays at about $10^{-9}$ up to $\omega\Delta t = 32$. The discrete time PINNs solving the same equations are 7–8 orders of magnitude less accurate, and their error grows with the step size until they fail completely at $\omega\Delta t \approx 32$.
+- **No free lunch in time.** The number of stages needed grows linearly with the step, $q \approx 3\,\omega\Delta t$, because every Fourier mode excited by the potential has to be resolved in phase. A large step does not remove temporal degrees of freedom; it moves them into the stages.
+- **Training gets harder with the step size.** The final loss grows from about $10^{-5}$ at $\omega\Delta t = 1$ to about $5 \times 10^{-4}$ at $\omega\Delta t \geq 32$. Errors in the curvature of the stages enter the IRK update multiplied by $\omega\Delta t$.
+- **Adapting $q$ and computing $\psi^{n+1}$ from the stages does not help.** Both discrete time variants perform the same, so the number of outputs and the loss weighting of $\psi^{n+1}$ are not what limits accuracy. The continuous time PINN is about 10 times more accurate at $\omega\Delta t = 1$, but its advantage shrinks with the step size and is gone by $\omega\Delta t = 16$.
+- **Single-step comparisons with second-order schemes are misleading.** The discrete time PINN beats one Strang or Crank-Nicolson step for $\omega\Delta t \geq 2$, but those schemes are meant for small steps: they need milliseconds per step, whereas training one PINN step takes 1–10 minutes.
+
+For Schrödinger-Poisson this means that large time steps are better obtained with classical implicit or exponential integrators (or the phase-free Madelung formulation) than with a discrete time PINN.
+
+## Running the benchmarks
 
 ```bash
-python 3_benchmark_resolution.py              # full run, about 1.5 h on a 4-core CPU
-python 3_benchmark_resolution.py --quick      # smoke test, about 1 min
-python 3_benchmark_resolution.py --plot-only  # replot from cached results
+python 3_benchmark_resolution.py                      # both benchmarks, about 2.5 h on a 4-core CPU
+python 3_benchmark_resolution.py --benchmarks step    # only the step-size benchmark, about 1 h
+python 3_benchmark_resolution.py --quick              # smoke test, a few minutes
+python 3_benchmark_resolution.py --plot-only          # replot from cached results
 ```
 
-Results are cached in `results/benchmark_plane_wave_<waves>waves.json` after every run, so an interrupted benchmark resumes where it left off. See `python 3_benchmark_resolution.py --help` for all options.
+Results are cached in `results/benchmark_plane_wave_<waves>waves.json` and `results/benchmark_step_size.json` after every run, so an interrupted benchmark resumes where it left off. See `python 3_benchmark_resolution.py --help` for all options.
 
 ## Setup
 
