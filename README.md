@@ -29,9 +29,9 @@ It is minimised over a number of collocation points that are randomly sampled fr
 
 | File | Description |
 |---|---|
-| `linear_schroedinger_1d.ipynb` | Original TensorFlow implementation (continuous time) |
-| `linear_schroedinger_1d_discrete_time.ipynb` | Original TensorFlow implementation (discrete time) |
-| `benchmark_resolution.py` | Resolution benchmark of both PINNs against finite differences and FFT (PyTorch, standalone) |
+| `1_linear_schroedinger_1d.ipynb` | Original TensorFlow implementation (continuous time) |
+| `2_linear_schroedinger_1d_discrete_time.ipynb` | Original TensorFlow implementation (discrete time) |
+| `3_benchmark_resolution.py` | Resolution benchmark of both PINNs against finite differences and FFT (PyTorch, standalone) |
 
 ## Performance comparison
 
@@ -93,9 +93,9 @@ Natural next steps are Fourier feature embeddings against spectral bias ([Tancik
 ### Running it
 
 ```bash
-python benchmark_resolution.py              # full run, about 1.5 h on a 4-core CPU
-python benchmark_resolution.py --quick      # smoke test, about 1 min
-python benchmark_resolution.py --plot-only  # replot from cached results
+python 3_benchmark_resolution.py              # full run, about 1.5 h on a 4-core CPU
+python 3_benchmark_resolution.py --quick      # smoke test, about 1 min
+python 3_benchmark_resolution.py --plot-only  # replot from cached results
 ```
 
 Results are cached in `results/benchmark_plane_wave_<waves>waves.json` after every run, so an interrupted benchmark resumes where it left off. See `python benchmark_resolution.py --help` for all options.
@@ -110,17 +110,3 @@ conda activate pinn_env
 ```
 
 This installs a CPU-only PyTorch build. For GPU support, open `environment.yml`, remove the `cpuonly` line, and add `pytorch-cuda=12.1` (adjust the version to match your CUDA installation), then re-run the command above.
-
-### Register the Jupyter kernel
-
-```bash
-python -m ipykernel install --user --name pinn_env --display-name "Python (pinn_env)"
-```
-
-### Run the PyTorch notebook
-
-Open `schrodinger_pinn_pytorch.py` in VS Code — the Python extension treats `# %%` cell markers as a Jupyter notebook. Select the `pinn_env` kernel and run cells interactively, or launch JupyterLab:
-
-```bash
-jupyter lab schrodinger_pinn_pytorch.py
-```
