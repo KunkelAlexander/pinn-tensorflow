@@ -2,7 +2,7 @@
 
 ![PINN prediction of the real part of the wave function](figures/continuous_16_pred_surface_real.png)
 
-This code heavily draws on the implementation of the PINN approach published by Jan Blechschmidt under https://github.com/janblechschmidt/PDEsByNNs/ (MIT license).
+This code heavily draws on the implementation of the PINN approach published by Jan Blechschmidt under https://github.com/janblechschmidt/PDEsByNNs/ (MIT license) and was further developed using Claude. 
 
 
 ## Explanation
@@ -29,7 +29,6 @@ It is minimised over a number of collocation points that are randomly sampled fr
 
 | File | Description |
 |---|---|
-| `schrodinger_pinn_pytorch.py` | **PyTorch implementation** — recommended starting point |
 | `linear_schroedinger_1d.ipynb` | Original TensorFlow implementation (continuous time) |
 | `linear_schroedinger_1d_discrete_time.ipynb` | Original TensorFlow implementation (discrete time) |
 | `benchmark_resolution.py` | Resolution benchmark of both PINNs against finite differences and FFT (PyTorch, standalone) |
@@ -51,7 +50,7 @@ The discrete time approach trains about 11 times faster because the IRK scheme r
 
 ## Resolution benchmark
 
-`benchmark_resolution.py` compares how the error of both PINNs depends on resolution with that of classical solvers, in the style of Fig. 10 of Kunkel et al. (ApJS 279:39, 2025).
+`benchmark_resolution.py` compares how the error of both PINNs depends on resolution with that of classical solvers.
 
 ![L1 error vs. resolution](figures/benchmark_1_error_vs_resolution.png)
 
@@ -74,7 +73,7 @@ The discrete time approach trains about 11 times faster because the IRK scheme r
 | Continuous time PINN | Fails, error 0.7–2 at every $N$ | Flat at about $1.2 \times 10^{-4}$ from $N = 2^4$ |
 | Discrete time PINN | Fails, error about 0.63 at every $N$ | Flat at about $5 \times 10^{-3}$ from $N = 2^5$ |
 
-- **16 wavelengths:** neither PINN learns the solution at any resolution, not even where 4th-order FD already reaches $10^{-6}$. This is spectral bias: plain tanh networks learn high frequencies very slowly (Rahaman et al. 2019; Wang, Yu & Perdikaris, JCP 2022).
+- **16 wavelengths:** neither PINN learns the solution at any resolution, not even where 4th-order FD already reaches $10^{-6}$. This is spectral bias: plain tanh networks learn high frequencies very slowly ([Rahaman et al. 2019](https://arxiv.org/abs/1806.08734); [Wang, Yu & Perdikaris, JCP 2022](https://arxiv.org/abs/2007.14527)).
 - **2 wavelengths:** the PINN errors do not decrease with $N$. The final loss is the same for every $N$ (about $6 \times 10^{-6}$ for discrete time, about $5 \times 10^{-7}$ for continuous time), so the optimiser limits the accuracy, not the number of collocation points.
 - **Network size barely matters:** across widths from 382 to 82k parameters at $N = 64$, the continuous time PINN stays at $1.3$–$1.8 \times 10^{-4}$, and the discrete time PINN gets worse from width 50 to width 100. At equal degrees of freedom, FD is 5–10 orders of magnitude more accurate and about 1000 times faster.
 - **Continuous vs. discrete time:** the continuous time PINN is about 40 times more accurate with about 25 times fewer parameters. Most parameters of the discrete time PINN sit in its 514-output final layer.
@@ -84,12 +83,12 @@ The discrete time approach trains about 11 times faster because the IRK scheme r
 
 There is no established mapping like "number of network parameters = number of grid points". A PINN has two separate resolutions:
 
-- **Collocation points** play the role of quadrature nodes. The generalisation error is bounded by the training error plus a quadrature term that decays as $N_\mathrm{colloc}^{-\alpha}$, with $\alpha = 1/2$ for random sampling and higher for grid or quasi-Monte Carlo points (Mishra & Molinaro, IMA J. Numer. Anal. 2023).
-- **Network width and depth** set how rich the approximation is, similar to the polynomial order or number of basis functions, not the grid (De Ryck, Lanthaler & Mishra, Neural Networks 2021).
+- **Collocation points** play the role of quadrature nodes. The generalisation error is bounded by the training error plus a quadrature term that decays as $N_\mathrm{colloc}^{-\alpha}$, with $\alpha = 1/2$ for random sampling and higher for grid or quasi-Monte Carlo points ([Mishra & Molinaro, IMA J. Numer. Anal. 2023](https://arxiv.org/abs/2006.16144)).
+- **Network width and depth** set how rich the approximation is, similar to the polynomial order or number of basis functions, not the grid ([De Ryck, Lanthaler & Mishra, Neural Networks 2021](https://arxiv.org/abs/2104.08938)).
 
-In practice, neither usually limits accuracy: optimisation does (Krishnapriyan et al., NeurIPS 2021). This is why the benchmark also plots the error against degrees of freedom and wall-clock time, following the recommendation to compare at equal accuracy or equal runtime by McGreivy & Hakim (Nat. Mach. Intell. 2024) and Grossmann et al. (IMA J. Appl. Math. 2024).
+In practice, neither usually limits accuracy: optimisation does ([Krishnapriyan et al., NeurIPS 2021](https://arxiv.org/abs/2109.01050)). This is why the benchmark also plots the error against degrees of freedom and wall-clock time, following the recommendation to compare at equal accuracy or equal runtime by [McGreivy & Hakim (Nat. Mach. Intell. 2024)](https://arxiv.org/abs/2407.07218) and [Grossmann et al. (IMA J. Appl. Math. 2024)](https://arxiv.org/abs/2302.04107).
 
-Natural next steps are Fourier feature embeddings against spectral bias (Tancik et al. 2020; Wang, Wang & Perdikaris 2021) and adaptive loss weighting against the plateau.
+Natural next steps are Fourier feature embeddings against spectral bias ([Tancik et al. 2020](https://arxiv.org/abs/2006.10739); [Wang, Wang & Perdikaris 2021](https://arxiv.org/abs/2012.10047)) and adaptive loss weighting against the plateau.
 
 ### Running it
 
