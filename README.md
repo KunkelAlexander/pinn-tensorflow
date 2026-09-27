@@ -1,5 +1,41 @@
 # Solve the linear Schrödinger equation in 1D using a Physics Informed Neural Network
+
+![PINN prediction of the real part of the wave function](figures/16_pred_surface_real.png)
+
 This code heavily draws on the implementation of the PINN approach published by Jan Blechschmidt under https://github.com/janblechschmidt/PDEsByNNs/ (MIT license).
+
+## Files
+
+| File | Description |
+|---|---|
+| `schrodinger_pinn_pytorch.py` | **PyTorch implementation** — recommended starting point |
+| `linear_schroedinger_1d.ipynb` | Original TensorFlow implementation (continuous time) |
+| `linear_schroedinger_1d_discrete_time.ipynb` | Original TensorFlow implementation (discrete time) |
+
+## Setup
+
+### Create the conda environment
+
+```bash
+conda env create -f environment.yml
+conda activate pinn_env
+```
+
+This installs a CPU-only PyTorch build. For GPU support, open `environment.yml`, remove the `cpuonly` line, and add `pytorch-cuda=12.1` (adjust the version to match your CUDA installation), then re-run the command above.
+
+### Register the Jupyter kernel
+
+```bash
+python -m ipykernel install --user --name pinn_env --display-name "Python (pinn_env)"
+```
+
+### Run the PyTorch notebook
+
+Open `schrodinger_pinn_pytorch.py` in VS Code — the Python extension treats `# %%` cell markers as a Jupyter notebook. Select the `pinn_env` kernel and run cells interactively, or launch JupyterLab:
+
+```bash
+jupyter lab schrodinger_pinn_pytorch.py
+```
 
 ## Explanation
 In the following, we will solve the dimensionless 1D Schrödinger equation with inhomogeneous Dirichlet boundary conditions using a Physics Informed Neural Network (PINN).
