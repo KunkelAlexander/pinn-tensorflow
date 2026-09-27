@@ -1,0 +1,99 @@
+--- 2 wavelengths: k = 12.566, omega = 78.957, t1 = 0.05305
+fd4/N=16                 L1 = 1.086e-02
+fd6/N=16                 L1 = 1.041e-03
+fft/N=16                 L1 = 3.608e-16
+fd4/N=32                 L1 = 6.981e-04
+fd6/N=32                 L1 = 1.716e-05
+fft/N=32                 L1 = 2.975e-16
+fd4/N=64                 L1 = 4.394e-05
+fd6/N=64                 L1 = 2.717e-07
+fft/N=64                 L1 = 3.050e-16
+fd4/N=128                L1 = 2.751e-06
+fd6/N=128                L1 = 4.259e-09
+fft/N=128                L1 = 3.027e-16
+fd4/N=256                L1 = 1.720e-07
+fd6/N=256                L1 = 6.651e-11
+fft/N=256                L1 = 2.927e-16
+fd4/N=512                L1 = 1.075e-08
+fd6/N=512                L1 = 6.603e-13
+fft/N=512                L1 = 3.335e-16
+fd4/N=1024               L1 = 6.694e-10
+fd6/N=1024               L1 = 1.505e-12
+fft/N=1024               L1 = 3.374e-16
+fd4/N=2048               L1 = 3.182e-11
+fd6/N=2048               L1 = 6.086e-12
+fft/N=2048               L1 = 3.110e-16
+[disc N=16 w=50] Adam       0: loss = 1.004e+00
+[disc N=16 w=50] Adam    1000: loss = 5.589e-04
+[disc N=16 w=50] final loss = 5.886e-06
+pinn_disc/N=16/width=50/depth=4/adam=2000/lbfgs=1500         L1 = 2.704e-02  params = 33964  time = 49 s
+[disc N=32 w=50] Adam       0: loss = 1.004e+00
+[disc N=32 w=50] Adam    1000: loss = 9.970e-04
+[disc N=32 w=50] final loss = 6.744e-06
+pinn_disc/N=32/width=50/depth=4/adam=2000/lbfgs=1500         L1 = 5.382e-03  params = 33964  time = 56 s
+[disc N=64 w=50] Adam       0: loss = 1.004e+00
+[disc N=64 w=50] Adam    1000: loss = 1.492e-03
+[disc N=64 w=50] final loss = 6.634e-06
+pinn_disc/N=64/width=50/depth=4/adam=2000/lbfgs=1500         L1 = 5.089e-03  params = 33964  time = 84 s
+[disc N=128 w=50] Adam       0: loss = 1.004e+00
+[disc N=128 w=50] Adam    1000: loss = 1.492e-03
+[disc N=128 w=50] final loss = 6.448e-06
+pinn_disc/N=128/width=50/depth=4/adam=2000/lbfgs=1500        L1 = 5.746e-03  params = 33964  time = 70 s
+[disc N=256 w=50] Adam       0: loss = 1.004e+00
+[disc N=256 w=50] Adam    1000: loss = 1.444e-03
+[disc N=256 w=50] final loss = 6.200e-06
+pinn_disc/N=256/width=50/depth=4/adam=2000/lbfgs=1500        L1 = 5.368e-03  params = 33964  time = 99 s
+[disc N=512 w=50] Adam       0: loss = 1.004e+00
+[disc N=512 w=50] Adam    1000: loss = 1.334e-03
+[disc N=512 w=50] final loss = 6.450e-06
+pinn_disc/N=512/width=50/depth=4/adam=2000/lbfgs=1500        L1 = 5.204e-03  params = 33964  time = 160 s
+[disc N=1024 w=50] Adam       0: loss = 1.004e+00
+[disc N=1024 w=50] Adam    1000: loss = 1.424e-03
+[disc N=1024 w=50] final loss = 6.913e-06
+pinn_disc/N=1024/width=50/depth=4/adam=2000/lbfgs=1500       L1 = 5.345e-03  params = 33964  time = 283 s
+[disc N=2048 w=50] Adam       0: loss = 1.004e+00
+[disc N=2048 w=50] Adam    1000: loss = 1.416e-03
+[disc N=2048 w=50] final loss = 6.714e-06
+pinn_disc/N=2048/width=50/depth=4/adam=2000/lbfgs=1500       L1 = 5.240e-03  params = 33964  time = 517 s
+[cont N=16 w=20] Adam       0: loss = 1.496e+00
+[cont N=16 w=20] Adam    1000: loss = 6.476e-03
+[cont N=16 w=20] final loss = 4.840e-07
+pinn_cont/N=16/width=20/depth=4/adam=2000/lbfgs=1500         L1 = 2.111e-04  params = 1362  time = 71 s
+[cont N=32 w=20] Adam       0: loss = 1.496e+00
+[cont N=32 w=20] Adam    1000: loss = 6.895e-03
+[cont N=32 w=20] final loss = 4.040e-07
+pinn_cont/N=32/width=20/depth=4/adam=2000/lbfgs=1500         L1 = 1.179e-04  params = 1362  time = 65 s
+[cont N=64 w=20] Adam       0: loss = 1.496e+00
+[cont N=64 w=20] Adam    1000: loss = 7.107e-03
+[cont N=64 w=20] final loss = 6.645e-07
+pinn_cont/N=64/width=20/depth=4/adam=2000/lbfgs=1500         L1 = 1.377e-04  params = 1362  time = 133 s
+[cont N=128 w=20] Adam       0: loss = 1.496e+00
+[cont N=128 w=20] Adam    1000: loss = 7.455e-03
+[cont N=128 w=20] final loss = 8.647e-07
+pinn_cont/N=128/width=20/depth=4/adam=2000/lbfgs=1500        L1 = 1.161e-04  params = 1362  time = 504 s
+[disc N=64 w=12] Adam       0: loss = 1.008e+00
+[disc N=64 w=12] Adam    1000: loss = 1.398e-03
+[disc N=64 w=12] final loss = 2.157e-05
+pinn_disc/N=64/width=12/depth=4/adam=2000/lbfgs=1500         L1 = 1.192e-02  params = 7174  time = 44 s
+[disc N=64 w=25] Adam       0: loss = 1.002e+00
+[disc N=64 w=25] Adam    1000: loss = 1.804e-03
+[disc N=64 w=25] final loss = 3.045e-05
+pinn_disc/N=64/width=25/depth=4/adam=2000/lbfgs=1500         L1 = 8.369e-03  params = 15364  time = 62 s
+pinn_disc/N=64/width=50/depth=4/adam=2000/lbfgs=1500         L1 = 5.089e-03  params = 33964  time = 84 s
+[disc N=64 w=100] Adam       0: loss = 1.011e+00
+[disc N=64 w=100] Adam    1000: loss = 2.917e-03
+[disc N=64 w=100] final loss = 2.820e-05
+pinn_disc/N=64/width=100/depth=4/adam=2000/lbfgs=1500        L1 = 1.396e-02  params = 82414  time = 96 s
+[cont N=64 w=10] Adam       0: loss = 1.528e+00
+[cont N=64 w=10] Adam    1000: loss = 6.505e-03
+[cont N=64 w=10] final loss = 1.923e-06
+pinn_cont/N=64/width=10/depth=4/adam=2000/lbfgs=1500         L1 = 1.374e-04  params = 382  time = 87 s
+pinn_cont/N=64/width=20/depth=4/adam=2000/lbfgs=1500         L1 = 1.377e-04  params = 1362  time = 133 s
+[cont N=64 w=40] Adam       0: loss = 1.445e+00
+[cont N=64 w=40] Adam    1000: loss = 1.161e-03
+[cont N=64 w=40] final loss = 2.875e-07
+pinn_cont/N=64/width=40/depth=4/adam=2000/lbfgs=1500         L1 = 1.265e-04  params = 5122  time = 283 s
+[cont N=64 w=80] Adam       0: loss = 1.000e+00
+[cont N=64 w=80] Adam    1000: loss = 9.588e-04
+[cont N=64 w=80] final loss = 2.553e-07
+pinn_cont/N=64/width=80/depth=4/adam=2000/lbfgs=1500         L1 = 1.752e-04  params = 19842  time = 607 s
