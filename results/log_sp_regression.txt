@@ -1,0 +1,23 @@
+--- modes=3/kmax=4/seed=0/kappa=1000/wdt=4
+modes m = [1, 2, 4], |a_m|^2 = [0.486, 0.336, 0.178]
+omega = 315.8, dt = 0.01267, V rms = 14.7, dt V rms = 0.19
+reference: max difference to half the steps 9.4e-11, largest coefficient of the upper half of the spectrum 1.6e-15
+    IP IRK q = 2: rms difference to reference 9.86e-04
+    IP IRK q = 3: rms difference to reference 6.63e-05
+    IP IRK q = 4: rms difference to reference 1.34e-05
+    IP IRK q = 6: rms difference to reference 4.67e-07
+    IP IRK q = 8: rms difference to reference 2.74e-08
+    IP IRK q = 12: rms difference to reference 1.90e-10
+q = 16 (stages), 12 (interaction picture)
+[regression baseline N=256 q=16] Adam       0: loss = 2.127e+00
+[regression baseline N=256 q=16] Adam    1000: loss = 2.108e-04
+[regression baseline N=256 q=16] final loss = 3.782e-06
+regression:baseline/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=16/N=256/width=50/depth=4/adam=2000/lbfgs=1500/lm=100       L1 = 5.732e-04  loss = 3.8e-06  time = 43 s
+[regression ff N=256 q=16] Adam       0: loss = 5.102e+02
+[regression ff N=256 q=16] Adam    1000: loss = 9.353e-02
+[regression ff N=256 q=16] final loss = 8.025e-06
+regression:ff/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=16/N=256/width=50/depth=4/adam=2000/lbfgs=1500/lm=100             L1 = 6.213e-04  loss = 8.0e-06  time = 50 s
+[regression per N=256 q=16] Adam       0: loss = 2.554e+02
+[regression per N=256 q=16] Adam    1000: loss = 9.358e-03
+[regression per N=256 q=16] final loss = 1.045e-05
+regression:per/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=16/N=256/width=50/depth=4/adam=2000/lbfgs=1500/lm=100            L1 = 5.552e-04  loss = 1.0e-05  time = 76 s

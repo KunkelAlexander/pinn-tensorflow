@@ -1,0 +1,64 @@
+--- modes=3/kmax=4/seed=0/kappa=1000/wdt=4
+modes m = [1, 2, 4], |a_m|^2 = [0.486, 0.336, 0.178]
+omega = 315.8, dt = 0.01267, V rms = 14.7, dt V rms = 0.19
+reference: max difference to half the steps 9.4e-11, largest coefficient of the upper half of the spectrum 1.6e-15
+q = 16 (stages), 12 (interaction picture)
+[per N=64 q=16] Adam       0: loss = 1.435e+01
+[per N=64 q=16] Adam    1000: loss = 8.053e-04
+[per N=64 q=16] final loss = 7.936e-07
+lm:per/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=16/N=64/width=50/depth=4/adam=2000/lbfgs=1500/lm=30                      L1 = 8.289e-01  loss = 7.9e-07  time = 48 s
+[per+lm N=64 q=16] Adam       0: loss = 1.435e+01
+[per+lm N=64 q=16] Adam    1000: loss = 8.053e-04
+[per+lm N=64 q=16] final loss = 6.519e-04
+[per+lm N=64 q=16] LM         0: loss = 5.313e-04  mu = 1.4e-04
+[per+lm N=64 q=16] LM        10: loss = 8.313e-23  mu = 2.3e-09
+[per+lm N=64 q=16] LM stalled at step 14
+[per+lm N=64 q=16] final loss = 1.393e-30
+lm:per+lm/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=16/N=64/width=50/depth=4/adam=2000/lbfgs=1500/lm=30                   L1 = 8.216e-01  loss = 1.4e-30  time = 127 s
+[k+per N=64 q=16] Adam       0: loss = 1.378e+01
+[k+per N=64 q=16] Adam    1000: loss = 7.758e-04
+[k+per N=64 q=16] final loss = 2.307e-07
+kform:k+per/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=16/N=64/width=50/depth=4/adam=2000/lbfgs=1500/lm=30                 L1 = 5.032e-01  loss = 2.3e-07  time = 49 s
+[k+per+lm N=64 q=16] Adam       0: loss = 1.378e+01
+[k+per+lm N=64 q=16] Adam    1000: loss = 7.758e-04
+[k+per+lm N=64 q=16] final loss = 6.174e-04
+[k+per+lm N=64 q=16] LM         0: loss = 3.372e-04  mu = 6.7e-05
+[k+per+lm N=64 q=16] LM        10: loss = 5.561e-23  mu = 1.1e-09
+[k+per+lm N=64 q=16] LM        20: loss = 3.124e-31  mu = 2.1e-02
+[k+per+lm N=64 q=16] LM stalled at step 28
+[k+per+lm N=64 q=16] final loss = 1.516e-31
+kform:k+per+lm/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=16/N=64/width=50/depth=4/adam=2000/lbfgs=1500/lm=30              L1 = 5.102e-01  loss = 1.5e-31  time = 173 s
+[ip+per N=64 q=12] Adam       0: loss = 6.463e-01
+[ip+per N=64 q=12] Adam    1000: loss = 5.183e-06
+[ip+per N=64 q=12] final loss = 2.642e-08
+ip:ip+per/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=12/N=64/width=50/depth=4/adam=2000/lbfgs=1500/lm=30                   L1 = 8.843e-06  loss = 2.6e-08  time = 31 s
+[ip+per+lm N=64 q=12] Adam       0: loss = 6.463e-01
+[ip+per+lm N=64 q=12] Adam    1000: loss = 5.183e-06
+[ip+per+lm N=64 q=12] final loss = 4.139e-06
+[ip+per+lm N=64 q=12] LM         0: loss = 1.408e-06  mu = 7.6e-06
+[ip+per+lm N=64 q=12] LM        10: loss = 9.238e-12  mu = 1.3e-10
+[ip+per+lm N=64 q=12] LM        20: loss = 8.631e-32  mu = 2.2e-15
+[ip+per+lm N=64 q=12] final loss = 5.030e-32
+ip:ip+per+lm/modes=3/kmax=4/seed=0/kappa=1000/wdt=4/q=12/N=64/width=50/depth=4/adam=2000/lbfgs=1500/lm=30                L1 = 1.107e-10  loss = 5.0e-32  time = 60 s
+--- modes=3/kmax=4/seed=0/kappa=1000/wdt=8
+modes m = [1, 2, 4], |a_m|^2 = [0.486, 0.336, 0.178]
+omega = 315.8, dt = 0.02533, V rms = 14.7, dt V rms = 0.37
+reference: max difference to half the steps 2.3e-09, largest coefficient of the upper half of the spectrum 1.7e-15
+    IRK q = 4: rms difference to reference 2.54e-01
+    IRK q = 6: rms difference to reference 3.67e-02
+    IRK q = 8: rms difference to reference 8.18e-03
+    IRK q = 12: rms difference to reference 5.95e-04
+    IRK q = 16: rms difference to reference 2.85e-05
+    IRK q = 24: rms difference to reference 4.18e-07
+    IRK q = 32: rms difference to reference 3.11e-09
+    IP IRK q = 2: rms difference to reference 2.00e-02
+    IP IRK q = 3: rms difference to reference 4.36e-03
+    IP IRK q = 4: rms difference to reference 1.13e-03
+    IP IRK q = 6: rms difference to reference 1.54e-04
+    IP IRK q = 8: rms difference to reference 2.12e-05
+    IP IRK q = 12: rms difference to reference 6.20e-07
+    IP IRK q = 16: rms difference to reference 3.11e-08
+q = 32 (stages), 16 (interaction picture)
+[per N=64 q=32] Adam       0: loss = 9.271e+00
+[per N=64 q=32] Adam    1000: loss = 1.347e-03
+[per N=64 q=32] final loss = 5.636e-06

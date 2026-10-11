@@ -1,0 +1,27 @@
+--- modes=3/kmax=4/seed=0/kappa=1000/wdt=16
+modes m = [1, 2, 4], |a_m|^2 = [0.486, 0.336, 0.178]
+omega = 315.8, dt = 0.05066, V rms = 14.7, dt V rms = 0.74
+reference: max difference to half the steps 2.6e-10, largest coefficient of the upper half of the spectrum 3.8e-15
+    IP IRK q = 2: rms difference to reference 1.59e-01
+    IP IRK q = 3: rms difference to reference 5.60e-02
+    IP IRK q = 4: rms difference to reference 3.33e-02
+    IP IRK q = 6: rms difference to reference 9.60e-03
+    IP IRK q = 8: rms difference to reference 2.81e-03
+    IP IRK q = 12: rms difference to reference 3.62e-04
+    IP IRK q = 16: rms difference to reference 6.03e-05
+    IP IRK q = 24: rms difference to reference 2.93e-06
+    IP IRK q = 32: rms difference to reference 1.90e-07
+    IP IRK q = 48: rms difference to reference 1.52e-09
+q = 64 (stages), 48 (interaction picture)
+[ip+per N=64 q=48] Adam       0: loss = 5.610e-01
+[ip+per N=64 q=48] Adam    1000: loss = 1.970e-05
+[ip+per N=64 q=48] final loss = 7.039e-08
+ip:ip+per/modes=3/kmax=4/seed=0/kappa=1000/wdt=16/q=48/N=64/width=50/depth=4/adam=2000/lbfgs=1500/lm=30                  L1 = 3.819e-05  loss = 7.0e-08  time = 36 s
+[ip+per+lm N=64 q=48] Adam       0: loss = 5.610e-01
+[ip+per+lm N=64 q=48] Adam    1000: loss = 1.970e-05
+[ip+per+lm N=64 q=48] final loss = 1.605e-05
+[ip+per+lm N=64 q=48] LM         0: loss = 1.322e-05  mu = 1.6e-06
+[ip+per+lm N=64 q=48] LM        10: loss = 2.846e-08  mu = 2.7e-11
+[ip+per+lm N=64 q=48] LM        20: loss = 1.911e-13  mu = 3.0e-11
+[ip+per+lm N=64 q=48] final loss = 1.567e-13
+ip:ip+per+lm/modes=3/kmax=4/seed=0/kappa=1000/wdt=16/q=48/N=64/width=50/depth=4/adam=2000/lbfgs=1500/lm=30               L1 = 5.976e-08  loss = 1.6e-13  time = 1843 s

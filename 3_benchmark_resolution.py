@@ -246,6 +246,30 @@ def solve_fft(problem, n):
 # Neural network with analytic input derivatives
 # ----------------------------------------------------------------------------------------------
 
+FOURIER_PER_SCALE = 16  # random frequencies per scale of the Fourier feature embedding
+
+
+class Dense(torch.nn.Linear):
+    """Linear layer with optional random weight factorisation W = diag(exp(s)) V (Wang et al. 2022)."""
+
+    def __init__(self, n_in, n_out):
+        super().__init__(n_in, n_out)
+        self.register_parameter('log_scale', None)
+
+    def factorize(self):
+        """Split the current weight into a random scale per output neuron and the remaining matrix V."""
+        s = 1.0 + 0.1 * torch.randn(self.out_features)
+        with torch.no_grad():
+            self.weight /= torch.exp(s)[:, None]
+        self.log_scale = torch.nn.Parameter(s)
+
+    def effective_weight(self):
+        return self.weight if self.log_scale is None else torch.exp(self.log_scale)[:, None] * self.weight
+
+    def forward(self, h):
+        return torch.nn.functional.linear(h, self.effective_weight(), self.bias)
+
+
 class MLP(torch.nn.Module):
     """Fully connected tanh network like init_model() in the notebooks.
 
@@ -253,18 +277,28 @@ class MLP(torch.nn.Module):
     derivative w.r.t. t) through the layers alongside the values. This yields the derivatives of
     all outputs at once, which matters for the 2(q+1) outputs of the discrete-time PINN, and is
     much cheaper than nested autograd.
+
+    Optional improvements, both off by default:
+    - fourier_scales: embed the input in random Fourier features [sin(2 pi f s), cos(2 pi f s)] (Tancik et
+      al. 2020), s in [0, 1] the position in the domain. For every scale, FOURIER_PER_SCALE frequencies f are
+      drawn from a Gaussian with that standard deviation in cycles per domain length (multi-scale).
+    - rwf: random weight factorisation of all layers
     """
 
-    def __init__(self, n_in, n_out, width, depth, lower, upper):
+    def __init__(self, n_in, n_out, width, depth, lower, upper, fourier_scales=None, rwf=False):
         super().__init__()
         self.register_buffer('lower', torch.tensor(lower))
         self.register_buffer('upper', torch.tensor(upper))
-        sizes = [n_in] + [width] * depth
-        self.hidden = torch.nn.ModuleList(torch.nn.Linear(a, b) for a, b in zip(sizes[:-1], sizes[1:]))
-        self.out = torch.nn.Linear(width, n_out)
+        self.register_buffer('freqs', torch.cat([s * torch.randn(FOURIER_PER_SCALE, n_in) for s in fourier_scales])
+                             if fourier_scales else None)
+        sizes = [n_in if self.freqs is None else 2 * len(self.freqs)] + [width] * depth
+        self.hidden = torch.nn.ModuleList(Dense(a, b) for a, b in zip(sizes[:-1], sizes[1:]))
+        self.out = Dense(width, n_out)
         for layer in list(self.hidden) + [self.out]:
             torch.nn.init.xavier_normal_(layer.weight)  # glorot_normal as in the notebooks
             torch.nn.init.zeros_(layer.bias)
+            if rwf:
+                layer.factorize()
 
     def n_params(self):
         return sum(p.numel() for p in self.parameters())
@@ -275,6 +309,9 @@ class MLP(torch.nn.Module):
 
     def forward(self, X):
         h = self.scale(X)
+        if self.freqs is not None:
+            z = torch.pi * h @ self.freqs.T     # h = 2 s - 1, i.e. 2 pi f s up to a phase
+            h = torch.cat([torch.sin(z), torch.cos(z)], dim=1)
         for layer in self.hidden:
             h = torch.tanh(layer(h))
         return self.out(h)
@@ -290,9 +327,18 @@ class MLP(torch.nn.Module):
         if with_t:
             ht = torch.zeros(n, n_in); ht[:, 1] = ds[1]
 
+        if self.freqs is not None:
+            B = self.freqs.T
+            z, zx = torch.pi * h @ B, torch.pi * hx @ B   # hxx = 0, so the embedding is linear in x
+            sin, cos = torch.sin(z), torch.cos(z)
+            h, hx, hxx = torch.cat([sin, cos], 1), torch.cat([cos * zx, -sin * zx], 1), torch.cat([-sin * zx**2, -cos * zx**2], 1)
+            if with_t:
+                zt = torch.pi * ht @ B
+                ht = torch.cat([cos * zt, -sin * zt], 1)
+
         for layer in self.hidden:
-            W = layer.weight
-            z, zx, zxx = layer(h), hx @ W.T, hxx @ W.T
+            W = layer.effective_weight()
+            z, zx, zxx = h @ W.T + layer.bias, hx @ W.T, hxx @ W.T
             a = torch.tanh(z)
             d1 = 1.0 - a**2           # tanh'
             h   = a
@@ -301,7 +347,7 @@ class MLP(torch.nn.Module):
             if with_t:
                 ht = d1 * (ht @ W.T)
 
-        W = self.out.weight
+        W = self.out.effective_weight()
         derivs = [self.out(h), hx @ W.T, hxx @ W.T]
         if with_t:
             derivs.append(ht @ W.T)
@@ -312,36 +358,69 @@ class MLP(torch.nn.Module):
 # Training: Adam followed by L-BFGS
 # ----------------------------------------------------------------------------------------------
 
-def train(model, loss_fn, adam_steps, lbfgs_steps, log_prefix=''):
+def balance_gradients(w, terms, params, beta=0.9):
+    """Gradient-norm balancing (Wang, Teng & Perdikaris 2021): scale every term such that its mean gradient
+    magnitude matches the maximum gradient magnitude of the first term (which keeps the weight 1), smoothed
+    with a moving average. A term that is almost satisfied has a small gradient and is boosted further."""
+    grads = [torch.cat([g.flatten() for g in torch.autograd.grad(t, params, retain_graph=True)]).abs() for t in terms]
+    target = grads[0].max() / torch.stack([g.mean() for g in grads])
+    target[0] = 1.0
+    return beta * w + (1 - beta) * target.detach()
+
+
+def balance_losses(w, terms, previous, beta=0.9, tau=0.1):
+    """Relative loss balancing, simplified from Bischof & Kraus (2021): the terms that decreased least since the
+    previous update get the largest weight, w_i = m softmax(L_i / (tau L_i_previous)), smoothed with a moving
+    average. The weights stay in [0, m]."""
+    if previous is None:
+        return w
+    return beta * w + (1 - beta) * len(terms) * torch.softmax(terms.detach() / previous / tau, 0)
+
+
+def train(model, terms_fn, adam_steps, lbfgs_steps, adaptive=None, log_prefix=''):
+    """Minimise sum_i w_i terms_i, with terms_fn() returning the loss terms as a vector, by Adam followed by L-BFGS.
+
+    The weights w are 1, or with adaptive='gradient' / 'loss' follow balance_gradients() / balance_losses()
+    every 10 Adam steps and are then frozen for L-BFGS. Returns the unweighted sum of the terms.
+    """
+    params = list(model.parameters())
+    with torch.no_grad():
+        w = torch.ones(len(terms_fn()))
+    previous = None
+
     # piecewise constant learning rate as in the notebooks, milestones at 20 % and 60 % of the steps
-    optim = torch.optim.Adam(model.parameters(), lr=1e-2)
+    optim = torch.optim.Adam(params, lr=1e-2)
     milestones = [int(0.2 * adam_steps), int(0.6 * adam_steps)]
     sched = torch.optim.lr_scheduler.MultiStepLR(optim, milestones, gamma=0.1)
 
     for i in range(adam_steps):
         optim.zero_grad()
-        loss = loss_fn()
-        loss.backward()
+        terms = terms_fn()
+        if adaptive and i % 10 == 0:
+            w = balance_gradients(w, terms, params) if adaptive == 'gradient' else balance_losses(w, terms, previous)
+            previous = terms.detach()
+        (w * terms).sum().backward()
         optim.step()
         sched.step()
         if i % 1000 == 0:
-            print(f'{log_prefix} Adam  {i:6d}: loss = {loss.item():.3e}', flush=True)
+            print(f'{log_prefix} Adam  {i:6d}: loss = {terms.sum().item():.3e}'
+                  + (f'  weights = {np.array2string(w.numpy(), precision=2)}' if adaptive else ''), flush=True)
 
     if lbfgs_steps > 0:
-        lbfgs = torch.optim.LBFGS(model.parameters(), lr=1.0, max_iter=lbfgs_steps, history_size=50,
+        lbfgs = torch.optim.LBFGS(params, lr=1.0, max_iter=lbfgs_steps, history_size=50,
                                   tolerance_grad=1e-12, tolerance_change=1e-16,
                                   line_search_fn='strong_wolfe')
 
         def closure():
             lbfgs.zero_grad()
-            loss = loss_fn()
+            loss = (w * terms_fn()).sum()
             loss.backward()
             return loss
 
         lbfgs.step(closure)
 
     with torch.no_grad():
-        final = loss_fn().item()
+        final = terms_fn().sum().item()
     print(f'{log_prefix} final loss = {final:.3e}', flush=True)
     return final
 
@@ -375,18 +454,17 @@ def run_pinn_continuous(problem, n, width, depth, adam_steps, lbfgs_steps, seed=
 
     model = MLP(2, 2, width, depth, [problem.xl, problem.t0], [problem.xr, problem.t1])
 
-    def loss_fn():
+    def terms_fn():
         psi, psi_x, psi_xx, psi_t = model.forward_with_derivatives(xt_col, with_t=True)
         # residual of i psi_t + 1/2 psi_xx - V psi = 0, divided by omega to make it O(1) (non-dimensionalisation)
         res_re = psi_t[:, 0] + 0.5 * psi_xx[:, 1] - V_col * psi[:, 1]
         res_im = psi_t[:, 1] - 0.5 * psi_xx[:, 0] + V_col * psi[:, 0]
-        loss  = torch.mean(res_re**2 + res_im**2) / problem.omega**2
-        loss += torch.mean((model(xt_ini) - psi_ini)**2)
-        loss += torch.mean((model(xt_bnd) - psi_bnd)**2)
-        return loss
+        return torch.stack([torch.mean(res_re**2 + res_im**2) / problem.omega**2,
+                            torch.mean((model(xt_ini) - psi_ini)**2),
+                            torch.mean((model(xt_bnd) - psi_bnd)**2)])
 
     start = time.perf_counter()
-    loss = train(model, loss_fn, adam_steps, lbfgs_steps, log_prefix=f'[cont N={n} Nt={n_t} w={width}]')
+    loss = train(model, terms_fn, adam_steps, lbfgs_steps, log_prefix=f'[cont N={n} Nt={n_t} w={width}]')
     wall = time.perf_counter() - start
 
     x_eval, psi_eval = eval_grid(problem)
@@ -396,31 +474,22 @@ def run_pinn_continuous(problem, n, width, depth, adam_steps, lbfgs_steps, seed=
     return l1_error(out[:, 0] + 1j * out[:, 1], psi_eval), loss, wall, model.n_params()
 
 
-def load_irk(q):
-    tmp = np.loadtxt(f'utilities/IRK_weights/Butcher_IRK{q}.txt', ndmin=2)
-    assert tmp.shape[0] == q**2 + 2 * q
-    weights = np.reshape(tmp[0:q**2 + q], (q + 1, q))  # rows 0, ..., q-1 contain A, row q contains b
-    times = tmp[q**2 + q:]                              # c
-    return torch.tensor(weights), times
-
-
 def run_pinn_discrete(problem, n, width, depth, adam_steps, lbfgs_steps, q=256, seed=0, tableau=None,
-                      final_from_stages=False):
+                      final_from_stages=False, fourier=None, rwf=False, adaptive=None):
     """Discrete-time PINN with one q-stage Gauss-Legendre IRK step.
 
-    tableau: (A, b, c) of the IRK scheme, by default loaded from utilities/IRK_weights.
+    tableau: (A, b, c) of the IRK scheme, by default the q-stage Gauss-Legendre scheme.
     final_from_stages: if False (as in the notebook), psi^{n+1} is an additional network output that is
     trained with the b row of the IRK scheme. If True, the network only outputs the q stages and
     psi^{n+1} = psi0 + dt sum_k b_k N[psi_k] is computed from them.
+    fourier, rwf, adaptive: improvements of the training, see MLP (fourier is a tuple of scales) and train()
+    ('gradient' or 'loss'); the loss terms are the IRK reconstruction of psi^n and the boundary data.
     """
     torch.manual_seed(seed)
     col = lambda a: torch.tensor(a).reshape(-1, 1)
-    if tableau is None:
-        irk_weights, irk_times = load_irk(q)
-    else:
-        A, b, c = tableau
-        q = len(b)
-        irk_weights, irk_times = torch.tensor(np.vstack([A, b])), c
+    A, b, c = tableau or gauss_legendre_tableau(q)
+    q = len(b)
+    irk_weights, irk_times = torch.tensor(np.vstack([A, b])), c
     dt = problem.t1 - problem.t0
 
     # functions of x the network outputs: the q stages and, unless computed from them, psi^{n+1}
@@ -440,7 +509,7 @@ def run_pinn_discrete(problem, n, width, depth, adam_steps, lbfgs_steps, q=256, 
     psi_r = problem.exact_torch(torch.full_like(t_out, problem.xr), t_out)
     psi_bnd = torch.cat([torch.stack([psi_l[:, 0], psi_r[:, 0]]), torch.stack([psi_l[:, 1], psi_r[:, 1]])], dim=1)
 
-    model = MLP(1, 2 * n_t, width, depth, [problem.xl], [problem.xr])
+    model = MLP(1, 2 * n_t, width, depth, [problem.xl], [problem.xr], fourier_scales=fourier, rwf=rwf)
 
     def irk_rhs(x, psi, psi_xx):
         # N[psi] = i/2 psi_xx - i V psi, only the q stages enter - not the final time t1
@@ -450,18 +519,18 @@ def run_pinn_discrete(problem, n, width, depth, adam_steps, lbfgs_steps, q=256, 
         N_im =  0.5 * psi_xx[:, :q] - V * re
         return N_re, N_im
 
-    def loss_fn():
+    def terms_fn():
         psi, _, psi_xx = model.forward_with_derivatives(x_ini)
         N_re, N_im = irk_rhs(x_ini, psi, psi_xx)
         # undo the IRK step to reconstruct psi^n from every output
         re0 = psi[:, :n_t] - dt * N_re @ weights.T
         im0 = psi[:, n_t:] - dt * N_im @ weights.T
-        loss  = torch.mean((torch.cat([re0, im0], dim=1) - psi_ini_stages)**2)
-        loss += torch.mean((model(x_bnd) - psi_bnd)**2)
-        return loss
+        return torch.stack([torch.mean((torch.cat([re0, im0], dim=1) - psi_ini_stages)**2),
+                            torch.mean((model(x_bnd) - psi_bnd)**2)])
 
     start = time.perf_counter()
-    loss = train(model, loss_fn, adam_steps, lbfgs_steps, log_prefix=f'[disc N={n} q={q} w={width}]')
+    loss = train(model, terms_fn, adam_steps, lbfgs_steps, adaptive=adaptive,
+                 log_prefix=f'[disc N={n} q={q} w={width}]')
     wall = time.perf_counter() - start
 
     x_eval, psi_eval = eval_grid(problem)
@@ -498,8 +567,9 @@ class Cache:
     def put(self, key, value):
         self.data[key] = value
         os.makedirs(os.path.dirname(self.path), exist_ok=True)
-        with open(self.path, 'w') as f:
+        with open(self.path + '.tmp', 'w') as f:   # atomic: an interrupted run cannot leave a truncated cache
             json.dump(self.data, f, indent=1)
+        os.replace(self.path + '.tmp', self.path)
 
 
 def run_benchmark(args, problem, cache, width_sweep):
@@ -539,7 +609,7 @@ def run_benchmark(args, problem, cache, width_sweep):
 
 def select(cache, method, **match):
     rows = [r for r in cache.data.values() if r['method'] == method and all(r.get(k) == v for k, v in match.items())]
-    return sorted(rows, key=lambda r: (r['N'], r.get('width', 0)))
+    return sorted(rows, key=lambda r: (r.get('N', 0), r.get('wdt', 0), r.get('width', 0)))
 
 
 def resolution_series(args, cache):
@@ -561,8 +631,10 @@ def plural(waves):
 # Figures
 # ----------------------------------------------------------------------------------------------
 
-def plot_resolution(args, cases):
-    """One panel per number of wavelengths, stacked vertically, like Fig. 10 of Kunkel et al. (2025)."""
+def plot_resolution(args, cases, series_fn=resolution_series, name='benchmark_1_error_vs_resolution', ncol=2):
+    """One panel per number of wavelengths, stacked vertically, like Fig. 10 of Kunkel et al. (2025).
+
+    series_fn(args, cache) returns the rows to plot for every method (a key of STYLE)."""
     fig, axes = plt.subplots(len(cases), 1, figsize=FIGSIZE, sharex=True, squeeze=False, layout='constrained')
     axes = axes[:, 0]
 
@@ -571,7 +643,7 @@ def plot_resolution(args, cases):
         ax.set_xscale('log', base=2)
         ax.set_yscale('log')
 
-        series = resolution_series(args, cache)
+        series = series_fn(args, cache)
         for method, rows in series.items():
             if rows:
                 label = STYLE[method]['label']
@@ -582,7 +654,7 @@ def plot_resolution(args, cases):
 
         # guide lines N^-4 and N^-6, anchored at the finest FD resolution that is not yet at round-off
         for method, p, ls in [('fd4', 4, '--'), ('fd6', 6, ':')]:
-            rows = [r for r in series[method] if r['l1'] > 1e-11]
+            rows = [r for r in series.get(method, []) if r['l1'] > 1e-11]
             if rows:
                 n0, e0 = rows[-1]['N'], rows[-1]['l1']
                 ns = np.array([max(n0 / 16, 16), min(n0 * 4, 2048)], dtype=float)
@@ -605,8 +677,8 @@ def plot_resolution(args, cases):
     for ax in axes:
         for h, l in zip(*ax.get_legend_handles_labels()):
             handles.setdefault(l, h)
-    fig.legend(handles.values(), handles.keys(), loc='outside lower center', ncol=2, frameon=True)
-    save('benchmark_1_error_vs_resolution', fig, tight=False)
+    fig.legend(handles.values(), handles.keys(), loc='outside lower center', ncol=ncol, frameon=True)
+    save(name, fig, tight=False)
     plt.close(fig)
 
 
