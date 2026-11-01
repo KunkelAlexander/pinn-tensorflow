@@ -1,0 +1,129 @@
+{
+  "experiment": "amr",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "elapsed_seconds": 0.6555409999855328,
+  "results": [
+    {
+      "boundary": "exact_boundary",
+      "fine_interior_n": 32,
+      "relative_potential_error": 0.0009101490724635755,
+      "max_discrete_residual": 4.3520742565306136e-14,
+      "boundary_error": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "boundary": "exact_boundary",
+      "fine_interior_n": 64,
+      "relative_potential_error": 0.00022351487970994737,
+      "max_discrete_residual": 2.0855539517583566e-13,
+      "boundary_error": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "boundary": "exact_boundary",
+      "fine_interior_n": 128,
+      "relative_potential_error": 5.578973532635322e-05,
+      "max_discrete_residual": 7.23421322845752e-13,
+      "boundary_error": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "boundary": "exact_boundary",
+      "fine_interior_n": 256,
+      "relative_potential_error": 1.3962789028464401e-05,
+      "max_discrete_residual": 2.8594626666489376e-12,
+      "boundary_error": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "boundary": "coarse_spectral",
+      "fine_interior_n": 32,
+      "relative_potential_error": 0.002370272446532284,
+      "max_discrete_residual": 5.284661597215745e-14,
+      "boundary_error": [
+        -0.0012764172004525731,
+        0.0021514318253411657
+      ]
+    },
+    {
+      "boundary": "coarse_spectral",
+      "fine_interior_n": 64,
+      "relative_potential_error": 0.0019133930668031236,
+      "max_discrete_residual": 1.3244960683778118e-13,
+      "boundary_error": [
+        -0.0012764172004525731,
+        0.0021514318253411657
+      ]
+    },
+    {
+      "boundary": "coarse_spectral",
+      "fine_interior_n": 128,
+      "relative_potential_error": 0.0018267053961269436,
+      "max_discrete_residual": 5.792033519469442e-13,
+      "boundary_error": [
+        -0.0012764172004525731,
+        0.0021514318253411657
+      ]
+    },
+    {
+      "boundary": "coarse_spectral",
+      "fine_interior_n": 256,
+      "relative_potential_error": 0.0018075200839326034,
+      "max_discrete_residual": 2.701394663517931e-12,
+      "boundary_error": [
+        -0.0012764172004525731,
+        0.0021514318253411657
+      ]
+    },
+    {
+      "boundary": "coarse_fd2",
+      "fine_interior_n": 32,
+      "relative_potential_error": 0.0037601887871149156,
+      "max_discrete_residual": 2.930988785010413e-14,
+      "boundary_error": [
+        0.003560788808192328,
+        -0.0047435401157137624
+      ]
+    },
+    {
+      "boundary": "coarse_fd2",
+      "fine_interior_n": 64,
+      "relative_potential_error": 0.004004349786044367,
+      "max_discrete_residual": 1.9673151996357774e-13,
+      "boundary_error": [
+        0.003560788808192328,
+        -0.0047435401157137624
+      ]
+    },
+    {
+      "boundary": "coarse_fd2",
+      "fine_interior_n": 128,
+      "relative_potential_error": 0.004080966713750163,
+      "max_discrete_residual": 6.898925875020723e-13,
+      "boundary_error": [
+        0.003560788808192328,
+        -0.0047435401157137624
+      ]
+    },
+    {
+      "boundary": "coarse_fd2",
+      "fine_interior_n": 256,
+      "relative_potential_error": 0.004102502629794086,
+      "max_discrete_residual": 2.8300695120719865e-12,
+      "boundary_error": [
+        0.003560788808192328,
+        -0.0047435401157137624
+      ]
+    }
+  ]
+}

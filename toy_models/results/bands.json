@@ -1,0 +1,211 @@
+{
+  "experiment": "bands",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "elapsed_seconds": 13.466215899999952,
+  "results": {
+    "carrier": 24,
+    "coupling": 20.0,
+    "final_time": 0.5,
+    "reference_n": 512,
+    "reference_disagreement": 3.1050092883288315e-09,
+    "rows": [
+      {
+        "half_bandwidth": 2,
+        "carriers": [
+          -24,
+          24
+        ],
+        "complex_dofs": 10,
+        "max_mode": 26,
+        "density_bandwidth": 52,
+        "density_error": 0.4939627447859535,
+        "wave_error": 0.7195818601857863,
+        "initial_missing_mass": 0.008481890786506519,
+        "mass_error": 7.19624360101534e-12,
+        "relative_energy_drift": 5.754197054846454e-12,
+        "rhs_evaluations": 1370,
+        "accepted_steps": 113,
+        "seconds": 0.05025569998542778
+      },
+      {
+        "half_bandwidth": 4,
+        "carriers": [
+          -24,
+          24
+        ],
+        "complex_dofs": 18,
+        "max_mode": 28,
+        "density_bandwidth": 56,
+        "density_error": 0.3924710932509929,
+        "wave_error": 0.5517252078248295,
+        "initial_missing_mass": 1.7546709087712387e-05,
+        "mass_error": 3.2023272922288015e-12,
+        "relative_energy_drift": 2.281186694687326e-12,
+        "rhs_evaluations": 2270,
+        "accepted_steps": 188,
+        "seconds": 0.08522010000888258
+      },
+      {
+        "half_bandwidth": 6,
+        "carriers": [
+          -24,
+          24
+        ],
+        "complex_dofs": 26,
+        "max_mode": 30,
+        "density_bandwidth": 60,
+        "density_error": 0.24796668811667386,
+        "wave_error": 0.3102124713728125,
+        "initial_missing_mass": 9.067370854154433e-09,
+        "mass_error": 1.8037793481084918e-12,
+        "relative_energy_drift": 1.2440690345812034e-12,
+        "rhs_evaluations": 3038,
+        "accepted_steps": 252,
+        "seconds": 0.13846069999272004
+      },
+      {
+        "half_bandwidth": 8,
+        "carriers": [
+          -24,
+          24
+        ],
+        "complex_dofs": 34,
+        "max_mode": 32,
+        "density_bandwidth": 64,
+        "density_error": 0.083105109554134,
+        "wave_error": 0.09525142903827985,
+        "initial_missing_mass": 1.656563775043196e-12,
+        "mass_error": 9.426903702092204e-13,
+        "relative_energy_drift": 6.502803076171709e-13,
+        "rhs_evaluations": 3686,
+        "accepted_steps": 306,
+        "seconds": 0.20632289999048226
+      },
+      {
+        "half_bandwidth": 10,
+        "carriers": [
+          -24,
+          24
+        ],
+        "complex_dofs": 42,
+        "max_mode": 34,
+        "density_bandwidth": 68,
+        "density_error": 0.01343735250558465,
+        "wave_error": 0.017635260711536843,
+        "initial_missing_mass": 4.440892098500626e-16,
+        "mass_error": 5.349054532644004e-13,
+        "relative_energy_drift": 3.611273523117112e-13,
+        "rhs_evaluations": 4070,
+        "accepted_steps": 338,
+        "seconds": 0.2680167999933474
+      },
+      {
+        "half_bandwidth": 12,
+        "carriers": [
+          -24,
+          24
+        ],
+        "complex_dofs": 50,
+        "max_mode": 36,
+        "density_bandwidth": 72,
+        "density_error": 0.0018175398547768896,
+        "wave_error": 0.0027226066209476542,
+        "initial_missing_mass": 2.220446049250313e-16,
+        "mass_error": 3.822497873784414e-13,
+        "relative_energy_drift": 2.5400266842782345e-13,
+        "rhs_evaluations": 4274,
+        "accepted_steps": 355,
+        "seconds": 0.3207563000032678
+      },
+      {
+        "half_bandwidth": 16,
+        "carriers": [
+          -24,
+          24
+        ],
+        "complex_dofs": 66,
+        "max_mode": 40,
+        "density_bandwidth": 80,
+        "density_error": 6.20863907328036e-05,
+        "wave_error": 7.840728554306968e-05,
+        "initial_missing_mass": 1.1102230246251565e-16,
+        "mass_error": 3.5293989952833726e-13,
+        "relative_energy_drift": 2.3642752497812234e-13,
+        "rhs_evaluations": 4298,
+        "accepted_steps": 357,
+        "seconds": 0.45923609999590553
+      },
+      {
+        "half_bandwidth": 20,
+        "carriers": [
+          -24,
+          24
+        ],
+        "complex_dofs": 82,
+        "max_mode": 44,
+        "density_bandwidth": 88,
+        "density_error": 5.160253148954996e-06,
+        "wave_error": 7.517714788699727e-06,
+        "initial_missing_mass": 1.1102230246251565e-16,
+        "mass_error": 3.8691272408186705e-13,
+        "relative_energy_drift": 2.5986104957772386e-13,
+        "rhs_evaluations": 4250,
+        "accepted_steps": 353,
+        "seconds": 0.6021612999902572
+      }
+    ],
+    "spawned_bands": [
+      {
+        "half_bandwidth": 4,
+        "carriers": [
+          -72,
+          -24,
+          24,
+          72
+        ],
+        "complex_dofs": 36,
+        "density_error": 0.39247125215134976,
+        "wave_error": 0.551725213413326,
+        "rhs_evaluations": 17066,
+        "mass_error": 2.220446049250313e-16,
+        "relative_energy_drift": 2.9291583716062146e-15,
+        "seconds": 1.0087551999895368
+      },
+      {
+        "half_bandwidth": 8,
+        "carriers": [
+          -72,
+          -24,
+          24,
+          72
+        ],
+        "complex_dofs": 68,
+        "density_error": 0.08310576277217271,
+        "wave_error": 0.0952514386022649,
+        "rhs_evaluations": 16406,
+        "mass_error": 1.5543122344752192e-15,
+        "relative_energy_drift": 5.4399253532967965e-15,
+        "seconds": 2.146203600015724
+      },
+      {
+        "half_bandwidth": 12,
+        "carriers": [
+          -72,
+          -24,
+          24,
+          72
+        ],
+        "complex_dofs": 100,
+        "density_error": 0.0018179090566069643,
+        "wave_error": 0.002722603904679113,
+        "rhs_evaluations": 15962,
+        "mass_error": 0.0,
+        "relative_energy_drift": 5.230697455268193e-15,
+        "seconds": 3.8017732999869622
+      }
+    ],
+    "limitations": "Prescribed separated bands; not an adaptive algorithm; dense O(M^2) convolution; few-stream test only"
+  }
+}

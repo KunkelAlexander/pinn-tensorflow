@@ -1,0 +1,89 @@
+{
+  "rows": [
+    {
+      "kind": "stored_matmul",
+      "dt_factor": 1.0,
+      "max_spectral_radius": 1.0000015553756223,
+      "bloch_phase": 3.141592653589793,
+      "amplitude_efold_steps": 642932.01163234,
+      "steps_for_1e7_amplification": 10362839.660553105,
+      "steps_for_1e14_amplification": 20725679.32110621,
+      "max_single_step_singular_value": 1.0125819767897215,
+      "unstable_mode_dominant_ppw": 4.571428571428571,
+      "predicted_10000_step_amplitude": 1.0156753331756008,
+      "runtime_10000_step_amplitude": 1.0156753331719184,
+      "runtime_prediction_difference": 3.682387728076719e-12
+    },
+    {
+      "kind": "stored_matmul",
+      "dt_factor": 0.5,
+      "max_spectral_radius": 1.000001021409244,
+      "bloch_phase": -3.141592653589793,
+      "amplitude_efold_steps": 979040.004295333,
+      "steps_for_1e7_amplification": 15780260.435346821,
+      "steps_for_1e14_amplification": 31560520.870693643,
+      "max_single_step_singular_value": 1.013047287965981,
+      "unstable_mode_dominant_ppw": 4.571428571428571,
+      "predicted_10000_step_amplitude": 1.010266429069531,
+      "runtime_10000_step_amplitude": 1.010266429067566,
+      "runtime_prediction_difference": 1.964872708981602e-12
+    },
+    {
+      "kind": "stored_matmul",
+      "dt_factor": 0.25,
+      "max_spectral_radius": 1.0000079487070352,
+      "bloch_phase": 1.8039614065535137,
+      "amplitude_efold_steps": 125807.12434291079,
+      "steps_for_1e7_amplification": 2027771.263731043,
+      "steps_for_1e14_amplification": 4055542.527462086,
+      "max_single_step_singular_value": 1.0087936660603827,
+      "unstable_mode_dominant_ppw": 3.3949440530460007,
+      "predicted_10000_step_amplitude": 1.082731218057901,
+      "runtime_10000_step_amplitude": 1.0827312180503859,
+      "runtime_prediction_difference": 7.515099653687685e-12
+    },
+    {
+      "kind": "fft_fused",
+      "dt_factor": 1.0,
+      "max_spectral_radius": 1.0000009404331147,
+      "bloch_phase": 3.141592653589793,
+      "amplitude_efold_steps": 1063340.3424111768,
+      "steps_for_1e7_amplification": 17139021.348506123,
+      "steps_for_1e14_amplification": 34278042.697012246,
+      "max_single_step_singular_value": 1.0073423111530946,
+      "unstable_mode_dominant_ppw": 4.571428571428571,
+      "predicted_10000_step_amplitude": 1.0094486863540972,
+      "runtime_10000_step_amplitude": 1.0094479302721047,
+      "runtime_prediction_difference": 7.560819925700457e-07
+    },
+    {
+      "kind": "fft_fused",
+      "dt_factor": 0.5,
+      "max_spectral_radius": 1.000004607647755,
+      "bloch_phase": -1.5830681730979816,
+      "amplitude_efold_steps": 217030.97914976758,
+      "steps_for_1e7_amplification": 3498126.081157095,
+      "steps_for_1e14_amplification": 6996252.16231419,
+      "max_single_step_singular_value": 1.0046868584388016,
+      "unstable_mode_dominant_ppw": 3.7629765732659624,
+      "predicted_10000_step_amplitude": 1.0471543805463173,
+      "runtime_10000_step_amplitude": 1.0471363311973403,
+      "runtime_prediction_difference": 1.8049348976978408e-05
+    },
+    {
+      "kind": "fft_fused",
+      "dt_factor": 0.25,
+      "max_spectral_radius": 1.000001687857969,
+      "bloch_phase": -1.5707963267948966,
+      "amplitude_efold_steps": 592467.4127368345,
+      "steps_for_1e7_amplification": 9549446.428568099,
+      "steps_for_1e14_amplification": 19098892.857136197,
+      "max_single_step_singular_value": 1.0042422917833327,
+      "unstable_mode_dominant_ppw": 3.764705882352941,
+      "predicted_10000_step_amplitude": 1.0170218132350983,
+      "runtime_10000_step_amplitude": 1.017007579303218,
+      "runtime_prediction_difference": 1.4233931880269779e-05
+    }
+  ],
+  "scope": "Dense Bloch spectrum of the same-level linear map. Positive growth is conditional linear-mode evidence, not measured activation in a cosmological run; roundoff, filtering, subcycling, gravity, and physical perturbations affect seeding. Smaller dt retains a per-step filter and need not monotonically improve this diagnostic."
+}

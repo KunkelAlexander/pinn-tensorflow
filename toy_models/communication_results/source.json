@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "degree": 1,
+      "dofs": 20,
+      "wave_projection_error": 0.9980220212774089,
+      "density_source_potential_error": 0.017150906450534412,
+      "coarse_wave_source_potential_error": 0.9962442018621881,
+      "represented_mass_fraction": 0.003952045045355158
+    },
+    {
+      "degree": 2,
+      "dofs": 40,
+      "wave_projection_error": 0.9935371526823256,
+      "density_source_potential_error": 0.0014502366857837062,
+      "coarse_wave_source_potential_error": 0.9871953535436805,
+      "represented_mass_fraction": 0.012883926239897318
+    },
+    {
+      "degree": 3,
+      "dofs": 60,
+      "wave_projection_error": 0.8000562499315906,
+      "density_source_potential_error": 9.281548878276678e-05,
+      "coarse_wave_source_potential_error": 0.6455649639724266,
+      "represented_mass_fraction": 0.3599099969454004
+    },
+    {
+      "degree": 4,
+      "dofs": 80,
+      "wave_projection_error": 0.38885783702039556,
+      "density_source_potential_error": 2.4918579800578785e-05,
+      "coarse_wave_source_potential_error": 0.15322392107403934,
+      "represented_mass_fraction": 0.8487895825878194
+    },
+    {
+      "degree": 6,
+      "dofs": 120,
+      "wave_projection_error": 0.07435269001357835,
+      "density_source_potential_error": 3.563219847505279e-07,
+      "coarse_wave_source_potential_error": 0.0057818081250245665,
+      "represented_mass_fraction": 0.9944716774877461
+    },
+    {
+      "degree": 8,
+      "dofs": 160,
+      "wave_projection_error": 0.008284925141225197,
+      "density_source_potential_error": 3.967729079266347e-09,
+      "coarse_wave_source_potential_error": 7.591435006261363e-05,
+      "represented_mass_fraction": 0.9999313600154033
+    }
+  ],
+  "scope": "Static source diagnostic. The globally coarse wave projections deliberately discard details; the full wave is retained when forming the correct load. No claim that such a coarse wave resolves the input."
+}

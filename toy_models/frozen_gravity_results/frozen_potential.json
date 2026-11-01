@@ -1,0 +1,1025 @@
+{
+  "rows": [
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000000000000067,
+      "amplitude_growth_rate_per_physical_time": 4.240739575284675e-12,
+      "efold_time": 235807925067.61548,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 0.9999999999997875
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 0.9999999999978748
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 0.9999999999787448
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.000000000000006,
+      "amplitude_growth_rate_per_physical_time": 3.8166656177562086e-12,
+      "efold_time": 262008805630.68375,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 1.0000000000001275
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 1.0000000000012772
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 1.0000000000126947
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.000000000000006,
+      "amplitude_growth_rate_per_physical_time": 3.8166656177562086e-12,
+      "efold_time": 262008805630.68375,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 1.000000000000115
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 1.0000000000011515
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 1.000000000011489
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000007860690177,
+      "amplitude_growth_rate_per_physical_time": 0.0005004268823999312,
+      "efold_time": 1998.293926985361,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 1.0007050093570036
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 1.0070774479310864
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 1.07308394862085
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.0000787139130372,
+      "amplitude_growth_rate_per_physical_time": 0.05010886129347076,
+      "efold_time": 19.95655008289524,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 0.9998825521202798
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 0.9993826439100689
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 0.994317611941229
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0001581271781108,
+      "amplitude_growth_rate_per_physical_time": 0.1006589298874904,
+      "efold_time": 9.934538357577724,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 0.987679734433516
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 0.8891507426770257
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 1.2368101870756627
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000005015053097,
+      "amplitude_growth_rate_per_physical_time": 0.0003192681160606825,
+      "efold_time": 3132.1636884339946,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 1.0004688410545288
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 1.0047005874537602
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 1.0480196529191264
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.0000520015003347,
+      "amplitude_growth_rate_per_physical_time": 0.03310432257607969,
+      "efold_time": 30.207535517508934,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 0.999996989287168
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 1.0005316264104507
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 1.0058784126314506
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 1.0,
+      "dt": 0.0015707963267948967,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0001189807983155,
+      "amplitude_growth_rate_per_physical_time": 0.07574102296539435,
+      "efold_time": 13.20288478882698,
+      "samples": [
+        {
+          "time": 1.0005972601683493,
+          "steps": 637,
+          "mass_ratio": 0.992922926000609
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 6366,
+          "mass_ratio": 0.9393340975252709
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 63662,
+          "mass_ratio": 0.5451073639945422
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.000000000000004,
+      "amplitude_growth_rate_per_physical_time": 5.0888874903416165e-12,
+      "efold_time": 196506604223.01263,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 0.9999999999996534
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 0.9999999999965228
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 0.9999999999652223
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.000000000000006,
+      "amplitude_growth_rate_per_physical_time": 7.633331235512417e-12,
+      "efold_time": 131004402815.34187,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 1.0000000000004436
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 1.0000000000044418
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 1.0000000000442513
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0000000000000047,
+      "amplitude_growth_rate_per_physical_time": 5.93703540539855e-12,
+      "efold_time": 168434232191.15375,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 1.0000000000002913
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 1.0000000000028888
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 1.000000000028928
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000003435440168,
+      "amplitude_growth_rate_per_physical_time": 0.0004374137523985259,
+      "efold_time": 2286.1649742756695,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 1.0006114966293012
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 1.0061273957238377
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 1.0629877298325263
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.000033435590323,
+      "amplitude_growth_rate_per_physical_time": 0.04257080411491083,
+      "efold_time": 23.49027745167117,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 0.9996793977576321
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 0.9973588862781353
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 0.9742787185252411
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0001131751795884,
+      "amplitude_growth_rate_per_physical_time": 0.14409096052810536,
+      "efold_time": 6.940060614037944,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 0.9863462296745179
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 0.8763933525262209
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 4312.0758654112815
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.000004008362311,
+      "amplitude_growth_rate_per_physical_time": 0.005103595175416327,
+      "efold_time": 195.9403059272672,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 1.000968799655588
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 1.0097379486023195
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 1.1017694256424209
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.0000415128879705,
+      "amplitude_growth_rate_per_physical_time": 0.052854753511056146,
+      "efold_time": 18.91977416545553,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 1.0003783818704404
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 1.0043529381685996
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 1.0449622925794844
+        }
+      ]
+    },
+    {
+      "n": 80,
+      "wave_ppw": 5.0,
+      "dt_factor": 0.5,
+      "dt": 0.0007853981633974483,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0001033358559428,
+      "amplitude_growth_rate_per_physical_time": 0.13156450062735323,
+      "efold_time": 7.600834535392085,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 1273,
+          "mass_ratio": 0.9916719849146343
+        },
+        {
+          "time": 9.999689416376311,
+          "steps": 12732,
+          "mass_ratio": 0.92709325766816
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 127324,
+          "mass_ratio": 161.10512910180023
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000000000000062,
+      "amplitude_growth_rate_per_physical_time": 1.5832094414396125e-11,
+      "efold_time": 63162837071.68269,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 0.9999999999997078
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 0.9999999999970814
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 0.9999999999708133
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.0000000000000084,
+      "amplitude_growth_rate_per_physical_time": 2.1486413848108998e-11,
+      "efold_time": 46541037842.29257,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 1.0000000000006741
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 1.000000000006727
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 1.0000000000675286
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0000000000000073,
+      "amplitude_growth_rate_per_physical_time": 1.8659254131252563e-11,
+      "efold_time": 53592710242.63989,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 1.0000000000002318
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 1.0000000000023794
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 1.000000000023625
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000015553756239,
+      "amplitude_growth_rate_per_physical_time": 0.003960728422200982,
+      "efold_time": 252.47881031042738,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 1.0000017997076174
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 1.0000180047989302
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 1.0001800657683069
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.0000176699258774,
+      "amplitude_growth_rate_per_physical_time": 0.04499569922505586,
+      "efold_time": 22.224346264701445,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 0.9999869284806998
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 0.9999108190847869
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 0.9991938479202143
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0001499103601128,
+      "amplitude_growth_rate_per_physical_time": 0.38171498652148306,
+      "efold_time": 2.619755669309357,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 0.9997490476980839
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 0.9982347551689719
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 8.733857235986976e+19
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000009404331158,
+      "amplitude_growth_rate_per_physical_time": 0.002394792138425114,
+      "efold_time": 417.57277550511316,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 1.0000004669936913
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 1.0000046711501571
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 1.0000467124023185
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.0000162580013165,
+      "amplitude_growth_rate_per_physical_time": 0.04140032384682566,
+      "efold_time": 24.15440042691053,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 0.999987118371781
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 0.9999134924530095
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 0.9992210630046929
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 1.0,
+      "dt": 0.00039269908169872416,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0001180796364328,
+      "amplitude_growth_rate_per_physical_time": 0.30066957394083443,
+      "efold_time": 3.325910190689196,
+      "samples": [
+        {
+          "time": 0.9998118620049518,
+          "steps": 2546,
+          "mass_ratio": 0.9997732036319904
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 25465,
+          "mass_ratio": 0.9984784398861646
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 254648,
+          "mass_ratio": 7128977022617.753
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000000000000107,
+      "amplitude_growth_rate_per_physical_time": 5.4281466563643724e-11,
+      "efold_time": 18422494145.907497,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 0.9999999999993412
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 0.9999999999934126
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 0.99999999993412
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.000000000000007,
+      "amplitude_growth_rate_per_physical_time": 3.618764437576255e-11,
+      "efold_time": 27633741218.86119,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 1.0000000000013203
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 1.000000000013204
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 1.0000000001325722
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "periodic_fft",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.0000000000000093,
+      "amplitude_growth_rate_per_physical_time": 4.7496283243188286e-11,
+      "efold_time": 21054279023.894268,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 1.0000000000021587
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 1.0000000000215912
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 1.0000000002160743
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000010214092443,
+      "amplitude_growth_rate_per_physical_time": 0.005201991908097241,
+      "efold_time": 192.2340552747563,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 1.0000035642959535
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 1.0000356519890272
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 1.0003566239635702
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.000012143476684,
+      "amplitude_growth_rate_per_physical_time": 0.061845843387483744,
+      "efold_time": 16.169235396058617,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 0.9999924762708671
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 0.9999443509582128
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 0.9995244192409496
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "stored_matmul",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.000047163305383,
+      "amplitude_growth_rate_per_physical_time": 0.2401950777433493,
+      "efold_time": 4.163282650898073,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 0.9998387331931495
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 0.9987710039141647
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 12.856000436556844
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.0,
+      "spectral_radius": 1.0000040083623114,
+      "amplitude_growth_rate_per_physical_time": 0.020414380703927027,
+      "efold_time": 48.98507647638972,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 1.0000006456056838
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 1.0000064567762503
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 1.0000645698313007
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.05,
+      "spectral_radius": 1.0000208241296709,
+      "amplitude_growth_rate_per_physical_time": 0.10605531727552,
+      "efold_time": 9.42904161421827,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 0.9999862756767007
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 0.9999031039998784
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 0.9991194064443445
+        }
+      ]
+    },
+    {
+      "n": 160,
+      "wave_ppw": 10.0,
+      "dt_factor": 0.5,
+      "dt": 0.00019634954084936208,
+      "kind": "fft_fused",
+      "potential_over_carrier_energy": 0.2,
+      "spectral_radius": 1.000087957056665,
+      "amplitude_growth_rate_per_physical_time": 0.4479419116001719,
+      "efold_time": 2.232432317904178,
+      "samples": [
+        {
+          "time": 1.000008211545801,
+          "steps": 5093,
+          "mass_ratio": 0.9997547104449217
+        },
+        {
+          "time": 10.00008211545801,
+          "steps": 50930,
+          "mass_ratio": 0.9982712734092802
+        },
+        {
+          "time": 100.00003575641671,
+          "steps": 509296,
+          "mass_ratio": 5.748999851488567e+25
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "n": 80,
+      "steps": 1000,
+      "runtime_vs_fused": 3.910601871067177e-07
+    },
+    {
+      "n": 160,
+      "steps": 1000,
+      "runtime_vs_fused": 5.019051210054894e-08
+    }
+  ],
+  "scope": "Periodic 1D linear Schrodinger equation, prescribed V=A*cos(2*k*x+0.37), k=16. Same-level patch maps, no AMR or self-gravity. Smooth initial standing wave with complex modulation. Dense matrix powers evaluate long times without loop-roundoff accumulation; actual factored FFT validates 1000 steps. Frozen potential amplitude ratios are chosen controls, not calibrated halo fields. Periodic FFT baseline is unitary on this same grid, not a spatially converged continuum oracle."
+}

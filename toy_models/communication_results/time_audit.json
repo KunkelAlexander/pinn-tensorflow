@@ -1,0 +1,13 @@
+{
+  "degree": 10,
+  "shift": 0.0,
+  "rtol": 2e-11,
+  "wave_error": 4.390913300263961e-08,
+  "density_error": 1.803267755566779e-08,
+  "initial_projection_error": 4.4953112282829246e-08,
+  "rhs_calls": 17246,
+  "steps": 1432,
+  "seconds": 70.25265429998399,
+  "mass_drift": 1.1102230246251597e-16,
+  "energy_drift": 1.1934930668133426e-14
+}

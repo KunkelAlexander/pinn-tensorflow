@@ -1,0 +1,49 @@
+{
+  "experiment": "nufft",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "elapsed_seconds": 0.8759074999834411,
+  "results": [
+    {
+      "distribution": "uniform",
+      "condition": 1.0000000000000018,
+      "max_gap_nyquist_wavelengths": 0.20000000000000454,
+      "adjoint_error": 3.3838273645557262e-15,
+      "weighted_adjoint_error": 2.0386559228082666e-15,
+      "least_squares_error": 2.1775771494025798e-15,
+      "noisy_fine_grid_error": 6.262857146153055e-13,
+      "rank": 41
+    },
+    {
+      "distribution": "mild",
+      "condition": 23.69558746863488,
+      "max_gap_nyquist_wavelengths": 0.5984286105769676,
+      "adjoint_error": 0.7509204396897121,
+      "weighted_adjoint_error": 0.28592696474910817,
+      "least_squares_error": 3.0055009598826024e-15,
+      "noisy_fine_grid_error": 1.3398209867714263e-12,
+      "rank": 41
+    },
+    {
+      "distribution": "strong",
+      "condition": 1.6997202564630336e+16,
+      "max_gap_nyquist_wavelengths": 3.4268206067061615,
+      "adjoint_error": 2.1859454372625287,
+      "weighted_adjoint_error": 2.7239559217883613,
+      "least_squares_error": 0.43909182553941506,
+      "noisy_fine_grid_error": 0.7048367499324324,
+      "rank": 31
+    },
+    {
+      "distribution": "extreme",
+      "condition": 1.1736028232243259e+17,
+      "max_gap_nyquist_wavelengths": 8.020176644545202,
+      "adjoint_error": 4.382691703883853,
+      "weighted_adjoint_error": 4.373416683221712,
+      "least_squares_error": 0.7472803651537756,
+      "noisy_fine_grid_error": 0.7575450810951015,
+      "rank": 19
+    }
+  ]
+}

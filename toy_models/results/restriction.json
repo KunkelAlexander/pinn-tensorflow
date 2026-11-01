@@ -1,0 +1,50 @@
+{
+  "experiment": "restriction",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "elapsed_seconds": 0.00024059999850578606,
+  "results": {
+    "fine_values": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0
+      ]
+    ],
+    "expected_coarse_density": 1.0,
+    "returned_coarse_density": 0.0,
+    "returned_complex": [
+      0.0,
+      0.0
+    ],
+    "scope": "Reduced reproduction, standard complex restriction only; not a GAMER integration test"
+  }
+}

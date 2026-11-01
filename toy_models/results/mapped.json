@@ -1,0 +1,157 @@
+{
+  "experiment": "mapped",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "elapsed_seconds": 1.400415999989491,
+  "results": {
+    "reference_n": 1025,
+    "reference_energy": -19.910456445648943,
+    "rows": [
+      {
+        "n": 33,
+        "alpha": 0.0,
+        "min_dx": 0.6060606060606029,
+        "max_dx": 0.6060606060606082,
+        "ground_energy_error": 0.07641224524145589,
+        "density_error": 0.27572355682672645,
+        "mass_error": 2.220446049250313e-16,
+        "hermitian_defect": 2.859886125391013e-16,
+        "poisson_error": 3.361647793187515e-14,
+        "max_kinetic_eigenvalue": 12.633093633394378
+      },
+      {
+        "n": 49,
+        "alpha": 0.0,
+        "min_dx": 0.40816326530612024,
+        "max_dx": 0.40816326530612734,
+        "ground_energy_error": 0.0076094722751590725,
+        "density_error": 0.0765462347881391,
+        "mass_error": 1.5543122344752192e-15,
+        "hermitian_defect": 2.7327199769872006e-16,
+        "poisson_error": 8.361177413401875e-14,
+        "max_kinetic_eigenvalue": 28.424460675137354
+      },
+      {
+        "n": 65,
+        "alpha": 0.0,
+        "min_dx": 0.3076923076923048,
+        "max_dx": 0.30769230769231015,
+        "ground_energy_error": 0.0003993945137839864,
+        "density_error": 0.012530051739310568,
+        "mass_error": 4.440892098500626e-16,
+        "hermitian_defect": 3.9308954618559787e-16,
+        "poisson_error": 2.8941108326191256e-13,
+        "max_kinetic_eigenvalue": 50.53237453357756
+      },
+      {
+        "n": 97,
+        "alpha": 0.0,
+        "min_dx": 0.206185567010305,
+        "max_dx": 0.206185567010313,
+        "ground_energy_error": 2.2449083223824577e-07,
+        "density_error": 0.00014930887569707455,
+        "mass_error": 7.771561172376096e-16,
+        "hermitian_defect": 2.1918209598237072e-16,
+        "poisson_error": 2.6912209993335846e-13,
+        "max_kinetic_eigenvalue": 113.69784270054949
+      },
+      {
+        "n": 129,
+        "alpha": 0.0,
+        "min_dx": 0.1550387596899201,
+        "max_dx": 0.1550387596899263,
+        "ground_energy_error": 2.975824651160896e-11,
+        "density_error": 1.0886514907376076e-06,
+        "mass_error": 4.440892098500626e-16,
+        "hermitian_defect": 4.674558101023377e-16,
+        "poisson_error": 7.700915534416261e-13,
+        "max_kinetic_eigenvalue": 202.12949813431004
+      },
+      {
+        "n": 193,
+        "alpha": 0.0,
+        "min_dx": 0.10362694300517816,
+        "max_dx": 0.10362694300518527,
+        "ground_energy_error": 5.531471583459518e-14,
+        "density_error": 2.016431190860031e-11,
+        "mass_error": 5.551115123125783e-16,
+        "hermitian_defect": 5.504889948061162e-16,
+        "poisson_error": 2.159022627861159e-12,
+        "max_kinetic_eigenvalue": 454.7913708021975
+      },
+      {
+        "n": 33,
+        "alpha": 0.8,
+        "min_dx": 0.12194415285683234,
+        "max_dx": 1.087984942480631,
+        "ground_energy_error": 2.5475315979247513e-07,
+        "density_error": 8.560162026717315e-05,
+        "mass_error": 1.1102230246251565e-15,
+        "hermitian_defect": 2.5097984560556796e-16,
+        "poisson_error": 7.421526296402116e-14,
+        "max_kinetic_eigenvalue": 148.05073648225806
+      },
+      {
+        "n": 49,
+        "alpha": 0.8,
+        "min_dx": 0.08185631442882411,
+        "max_dx": 0.7337997835565311,
+        "ground_energy_error": 1.690043003314091e-11,
+        "density_error": 2.3138083039618613e-07,
+        "mass_error": 8.881784197001252e-16,
+        "hermitian_defect": 2.238241689658824e-16,
+        "poisson_error": 1.9985824014550708e-13,
+        "max_kinetic_eigenvalue": 392.1513804411219
+      },
+      {
+        "n": 65,
+        "alpha": 0.8,
+        "min_dx": 0.06163428628561287,
+        "max_dx": 0.5534629891439113,
+        "ground_energy_error": 5.4779412132970066e-14,
+        "density_error": 5.290050076053909e-10,
+        "mass_error": 4.440892098500626e-16,
+        "hermitian_defect": 2.939631690050744e-16,
+        "poisson_error": 2.1310285897349326e-13,
+        "max_kinetic_eigenvalue": 767.0298991675458
+      },
+      {
+        "n": 97,
+        "alpha": 0.8,
+        "min_dx": 0.04126594910196335,
+        "max_dx": 0.371018695966022,
+        "ground_energy_error": 3.336726406796548e-14,
+        "density_error": 1.6255394347801997e-13,
+        "mass_error": 2.220446049250313e-16,
+        "hermitian_defect": 1.698702196330923e-16,
+        "poisson_error": 8.338088593813107e-13,
+        "max_kinetic_eigenvalue": 1927.3074293654727
+      },
+      {
+        "n": 129,
+        "alpha": 0.8,
+        "min_dx": 0.03102001182500383,
+        "max_dx": 0.2790207322563294,
+        "ground_energy_error": 4.121838502513383e-14,
+        "density_error": 1.7989427791699134e-13,
+        "mass_error": 6.661338147750939e-16,
+        "hermitian_defect": 3.360815929989179e-16,
+        "poisson_error": 6.511396596284879e-13,
+        "max_kinetic_eigenvalue": 3652.006777718801
+      },
+      {
+        "n": 193,
+        "alpha": 0.8,
+        "min_dx": 0.020729049525743615,
+        "max_dx": 0.18651385429249068,
+        "ground_energy_error": 1.2436889334423496e-13,
+        "density_error": 2.378887937982043e-13,
+        "mass_error": 6.661338147750939e-16,
+        "hermitian_defect": 3.994336874253585e-16,
+        "poisson_error": 7.331600836096113e-13,
+        "max_kinetic_eigenvalue": 8839.850836876361
+      }
+    ]
+  }
+}

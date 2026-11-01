@@ -1,0 +1,135 @@
+{
+  "rows": [
+    {
+      "kind": "stored_matmul",
+      "n": 160,
+      "steps": 2546,
+      "time": 0.9998118620049518,
+      "mass_ratio": 0.9997490476979511,
+      "matrix_power_mass": 0.9997490476980841,
+      "wave_difference": 7.131283286731779e-14,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.567837645309137,
+        "runtime_norm": 1.567837645309566
+      }
+    },
+    {
+      "kind": "stored_matmul",
+      "n": 160,
+      "steps": 25465,
+      "time": 10.00008211545801,
+      "mass_ratio": 0.9982347551676284,
+      "matrix_power_mass": 0.9982347551689696,
+      "wave_difference": 7.157563811504664e-13,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.567837645309137,
+        "runtime_norm": 1.567837645309566
+      }
+    },
+    {
+      "kind": "stored_matmul",
+      "n": 160,
+      "steps": 63662,
+      "time": 25.000008939104177,
+      "mass_ratio": 0.9958331858718822,
+      "matrix_power_mass": 0.9958331858751321,
+      "wave_difference": 1.683384695930077e-11,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.567837645309137,
+        "runtime_norm": 1.567837645309566
+      }
+    },
+    {
+      "kind": "stored_matmul",
+      "n": 160,
+      "steps": 127324,
+      "time": 50.000017878208354,
+      "mass_ratio": 2310.5895393124015,
+      "matrix_power_mass": 2310.5895301268843,
+      "wave_difference": 2.332484534475732e-07,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.567837645309137,
+        "runtime_norm": 1.567837645309566
+      }
+    },
+    {
+      "kind": "stored_matmul",
+      "n": 160,
+      "steps": 254648,
+      "time": 100.00003575641671,
+      "mass_ratio": 8.733857268210532e+19,
+      "matrix_power_mass": 8.73385723370546e+19,
+      "wave_difference": 45.20634741737399,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.567837645309137,
+        "runtime_norm": 1.567837645309566
+      }
+    },
+    {
+      "kind": "fft_runtime",
+      "n": 160,
+      "steps": 2546,
+      "time": 0.9998118620049518,
+      "mass_ratio": 0.9997731475485001,
+      "matrix_power_mass": 0.9997732036319904,
+      "wave_difference": 3.533867958368742e-07,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.4250658123307773,
+        "runtime_norm": 1.4250670331931776
+      }
+    },
+    {
+      "kind": "fft_runtime",
+      "n": 160,
+      "steps": 25465,
+      "time": 10.00008211545801,
+      "mass_ratio": 0.9984782677101215,
+      "matrix_power_mass": 0.9984784398861646,
+      "wave_difference": 4.582075992520803e-07,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.4250658123307773,
+        "runtime_norm": 1.4250670331931776
+      }
+    },
+    {
+      "kind": "fft_runtime",
+      "n": 160,
+      "steps": 63662,
+      "time": 25.000008939104177,
+      "mass_ratio": 0.9964314447883936,
+      "matrix_power_mass": 0.9964316795043195,
+      "wave_difference": 2.712801269025022e-05,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.4250658123307773,
+        "runtime_norm": 1.4250670331931776
+      }
+    },
+    {
+      "kind": "fft_runtime",
+      "n": 160,
+      "steps": 127324,
+      "time": 50.000017878208354,
+      "mass_ratio": 1.5989370447099136,
+      "matrix_power_mass": 1.6172996767814136,
+      "wave_difference": 0.0498540643735201,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.4250658123307773,
+        "runtime_norm": 1.4250670331931776
+      }
+    },
+    {
+      "kind": "fft_runtime",
+      "n": 160,
+      "steps": 254648,
+      "time": 100.00003575641671,
+      "mass_ratio": 6919741983306.364,
+      "matrix_power_mass": 7128977026091.143,
+      "wave_difference": 168692.79263960753,
+      "eigenmode_3000_steps": {
+        "predicted_norm": 1.4250658123307773,
+        "runtime_norm": 1.4250670331931776
+      }
+    }
+  ],
+  "scope": "Independent repeated runtime updates at n=160, default dt, A/omega=0.2. Late-time amplitudes are seed/roundoff sensitive; agreement of exact amplitude is not required to establish growth."
+}

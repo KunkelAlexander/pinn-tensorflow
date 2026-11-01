@@ -1,0 +1,413 @@
+{
+  "rows": [
+    {
+      "degree": 2,
+      "physical_k": 1.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 1.3194927513276215e-07,
+      "flux_transmission": 0.9999998680507248,
+      "coarse_relative_wavenumber_error": 0.0006581835158004923,
+      "fine_relative_wavenumber_error": 4.283466599785957e-05
+    },
+    {
+      "degree": 2,
+      "physical_k": 1.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 1.475636975236086e-07,
+      "flux_transmission": 0.9999998524363025,
+      "coarse_relative_wavenumber_error": 0.0006581835158004923,
+      "fine_relative_wavenumber_error": 2.703793631542162e-06
+    },
+    {
+      "degree": 2,
+      "physical_k": 1.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 1.4854870371572526e-07,
+      "flux_transmission": 0.9999998514512964,
+      "coarse_relative_wavenumber_error": 0.0006581835158004923,
+      "fine_relative_wavenumber_error": 1.6940332914217038e-07
+    },
+    {
+      "degree": 2,
+      "physical_k": 2.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 7.579767423495292e-05,
+      "flux_transmission": 0.999924202325765,
+      "coarse_relative_wavenumber_error": 0.008843413568807912,
+      "fine_relative_wavenumber_error": 0.0006581835158004923
+    },
+    {
+      "degree": 2,
+      "physical_k": 2.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 8.225411650685649e-05,
+      "flux_transmission": 0.9999177458834931,
+      "coarse_relative_wavenumber_error": 0.008843413568807912,
+      "fine_relative_wavenumber_error": 4.283466599785957e-05
+    },
+    {
+      "degree": 2,
+      "physical_k": 2.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 8.263347735362814e-05,
+      "flux_transmission": 0.9999173665226464,
+      "coarse_relative_wavenumber_error": 0.008843413568807912,
+      "fine_relative_wavenumber_error": 2.703793631542162e-06
+    },
+    {
+      "degree": 2,
+      "physical_k": 2.8,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 0.006630824688771507,
+      "flux_transmission": 0.9933691753112285,
+      "coarse_relative_wavenumber_error": 0.025603784380138883,
+      "fine_relative_wavenumber_error": 0.0023963447692088025
+    },
+    {
+      "degree": 2,
+      "physical_k": 2.8,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 0.006886548341499738,
+      "flux_transmission": 0.9931134516585002,
+      "coarse_relative_wavenumber_error": 0.025603784380138883,
+      "fine_relative_wavenumber_error": 0.00016246130031327688
+    },
+    {
+      "degree": 2,
+      "physical_k": 2.8,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 0.0069001322985240724,
+      "flux_transmission": 0.9930998677014761,
+      "coarse_relative_wavenumber_error": 0.025603784380138883,
+      "fine_relative_wavenumber_error": 1.0354151659508481e-05
+    },
+    {
+      "degree": 3,
+      "physical_k": 1.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 7.74495929392092e-12,
+      "flux_transmission": 0.9999999999922552,
+      "coarse_relative_wavenumber_error": 4.789102934554812e-06,
+      "fine_relative_wavenumber_error": 7.683032277050472e-08
+    },
+    {
+      "degree": 3,
+      "physical_k": 1.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 7.965662989347584e-12,
+      "flux_transmission": 0.9999999999920343,
+      "coarse_relative_wavenumber_error": 4.789102934554812e-06,
+      "fine_relative_wavenumber_error": 1.2083656297789958e-09
+    },
+    {
+      "degree": 3,
+      "physical_k": 1.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 7.969054552786259e-12,
+      "flux_transmission": 0.9999999999920309,
+      "coarse_relative_wavenumber_error": 4.789102934554812e-06,
+      "fine_relative_wavenumber_error": 1.883981859407413e-11
+    },
+    {
+      "degree": 3,
+      "physical_k": 2.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 8.39526391096865e-08,
+      "flux_transmission": 0.9999999160473612,
+      "coarse_relative_wavenumber_error": 0.00027502171600657377,
+      "fine_relative_wavenumber_error": 4.789102934554812e-06
+    },
+    {
+      "degree": 3,
+      "physical_k": 2.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 8.557309565043674e-08,
+      "flux_transmission": 0.9999999144269044,
+      "coarse_relative_wavenumber_error": 0.00027502171600657377,
+      "fine_relative_wavenumber_error": 7.683032277050472e-08
+    },
+    {
+      "degree": 3,
+      "physical_k": 2.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 8.559613320805231e-08,
+      "flux_transmission": 0.9999999144038667,
+      "coarse_relative_wavenumber_error": 0.00027502171600657377,
+      "fine_relative_wavenumber_error": 1.2083656297789958e-09
+    },
+    {
+      "degree": 3,
+      "physical_k": 2.8,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 4.723649279354895e-05,
+      "flux_transmission": 0.9999527635072064,
+      "coarse_relative_wavenumber_error": 0.001780354713933563,
+      "fine_relative_wavenumber_error": 3.484915328599847e-05
+    },
+    {
+      "degree": 3,
+      "physical_k": 2.8,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 4.756770512629706e-05,
+      "flux_transmission": 0.9999524322948736,
+      "coarse_relative_wavenumber_error": 0.001780354713933563,
+      "fine_relative_wavenumber_error": 5.736480586104875e-07
+    },
+    {
+      "degree": 3,
+      "physical_k": 2.8,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 4.7571923395266563e-05,
+      "flux_transmission": 0.9999524280766046,
+      "coarse_relative_wavenumber_error": 0.001780354713933563,
+      "fine_relative_wavenumber_error": 9.079443419324207e-09
+    },
+    {
+      "degree": 4,
+      "physical_k": 1.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 1.2745881368368798e-16,
+      "flux_transmission": 0.9999999999999998,
+      "coarse_relative_wavenumber_error": 1.9164065334642544e-08,
+      "fine_relative_wavenumber_error": 7.637546151073593e-11
+    },
+    {
+      "degree": 4,
+      "physical_k": 1.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 1.2835544676289632e-16,
+      "flux_transmission": 0.9999999999999999,
+      "coarse_relative_wavenumber_error": 1.9164065334642544e-08,
+      "fine_relative_wavenumber_error": 3.2585045772748344e-13
+    },
+    {
+      "degree": 4,
+      "physical_k": 1.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 1.2835795234613222e-16,
+      "flux_transmission": 0.9999999999999999,
+      "coarse_relative_wavenumber_error": 1.9164065334642544e-08,
+      "fine_relative_wavenumber_error": 5.284661597215745e-14
+    },
+    {
+      "degree": 4,
+      "physical_k": 2.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 2.3638239876472295e-11,
+      "flux_transmission": 0.999999999976362,
+      "coarse_relative_wavenumber_error": 4.52385317306625e-06,
+      "fine_relative_wavenumber_error": 1.9164065334642544e-08
+    },
+    {
+      "degree": 4,
+      "physical_k": 2.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 2.3748147151501575e-11,
+      "flux_transmission": 0.999999999976252,
+      "coarse_relative_wavenumber_error": 4.52385317306625e-06,
+      "fine_relative_wavenumber_error": 7.637546151073593e-11
+    },
+    {
+      "degree": 4,
+      "physical_k": 2.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 2.3748533504848217e-11,
+      "flux_transmission": 0.9999999999762514,
+      "coarse_relative_wavenumber_error": 4.52385317306625e-06,
+      "fine_relative_wavenumber_error": 3.2585045772748344e-13
+    },
+    {
+      "degree": 4,
+      "physical_k": 2.8,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 5.782742054637877e-08,
+      "flux_transmission": 0.9999999421725794,
+      "coarse_relative_wavenumber_error": 6.004401866033238e-05,
+      "fine_relative_wavenumber_error": 2.756144483750944e-07
+    },
+    {
+      "degree": 4,
+      "physical_k": 2.8,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 5.79203870568747e-08,
+      "flux_transmission": 0.999999942079613,
+      "coarse_relative_wavenumber_error": 6.004401866033238e-05,
+      "fine_relative_wavenumber_error": 1.1199693394914334e-09
+    },
+    {
+      "degree": 4,
+      "physical_k": 2.8,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 5.792067811939371e-08,
+      "flux_transmission": 0.9999999420793219,
+      "coarse_relative_wavenumber_error": 6.004401866033238e-05,
+      "fine_relative_wavenumber_error": 4.39648317751562e-12
+    },
+    {
+      "degree": 6,
+      "physical_k": 1.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 4.1966444896502384e-27,
+      "flux_transmission": 1.0,
+      "coarse_relative_wavenumber_error": 8.515410598874951e-14,
+      "fine_relative_wavenumber_error": 2.886579864025407e-14
+    },
+    {
+      "degree": 6,
+      "physical_k": 1.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 6.988925515756956e-27,
+      "flux_transmission": 0.9999999999999999,
+      "coarse_relative_wavenumber_error": 8.515410598874951e-14,
+      "fine_relative_wavenumber_error": 6.7390537594747e-14
+    },
+    {
+      "degree": 6,
+      "physical_k": 1.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 1.797193083184735e-26,
+      "flux_transmission": 1.0,
+      "coarse_relative_wavenumber_error": 8.515410598874951e-14,
+      "fine_relative_wavenumber_error": 1.6797674362578618e-13
+    },
+    {
+      "degree": 6,
+      "physical_k": 2.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 1.2942302344443306e-19,
+      "flux_transmission": 0.9999999999999999,
+      "coarse_relative_wavenumber_error": 3.3057989679008415e-10,
+      "fine_relative_wavenumber_error": 8.515410598874951e-14
+    },
+    {
+      "degree": 6,
+      "physical_k": 2.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 1.294696384732165e-19,
+      "flux_transmission": 1.0000000000000002,
+      "coarse_relative_wavenumber_error": 3.3057989679008415e-10,
+      "fine_relative_wavenumber_error": 2.886579864025407e-14
+    },
+    {
+      "degree": 6,
+      "physical_k": 2.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 1.2948318117303405e-19,
+      "flux_transmission": 1.0,
+      "coarse_relative_wavenumber_error": 3.3057989679008415e-10,
+      "fine_relative_wavenumber_error": 6.7390537594747e-14
+    },
+    {
+      "degree": 6,
+      "physical_k": 2.8,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 5.1035191192377276e-15,
+      "flux_transmission": 0.9999999999999949,
+      "coarse_relative_wavenumber_error": 1.7449395151025726e-08,
+      "fine_relative_wavenumber_error": 4.750644322371045e-12
+    },
+    {
+      "degree": 6,
+      "physical_k": 2.8,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 5.1039989862993804e-15,
+      "flux_transmission": 0.999999999999995,
+      "coarse_relative_wavenumber_error": 1.7449395151025726e-08,
+      "fine_relative_wavenumber_error": 2.1094237467877974e-15
+    },
+    {
+      "degree": 6,
+      "physical_k": 2.8,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 5.103999530186444e-15,
+      "flux_transmission": 0.999999999999995,
+      "coarse_relative_wavenumber_error": 1.7449395151025726e-08,
+      "fine_relative_wavenumber_error": 7.105427357601002e-15
+    },
+    {
+      "degree": 8,
+      "physical_k": 1.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 1.2230425518835877e-27,
+      "flux_transmission": 0.9999999999999998,
+      "coarse_relative_wavenumber_error": 1.9984014443252818e-15,
+      "fine_relative_wavenumber_error": 7.105427357601002e-14
+    },
+    {
+      "degree": 8,
+      "physical_k": 1.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 8.32844831067591e-27,
+      "flux_transmission": 1.0,
+      "coarse_relative_wavenumber_error": 1.9984014443252818e-15,
+      "fine_relative_wavenumber_error": 1.8207657603852567e-13
+    },
+    {
+      "degree": 8,
+      "physical_k": 1.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 6.9233637789627295e-28,
+      "flux_transmission": 0.9999999999999999,
+      "coarse_relative_wavenumber_error": 1.9984014443252818e-15,
+      "fine_relative_wavenumber_error": 5.395683899678261e-14
+    },
+    {
+      "degree": 8,
+      "physical_k": 2.0,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 1.2325951644078067e-28,
+      "flux_transmission": 1.0,
+      "coarse_relative_wavenumber_error": 4.6629367034256575e-15,
+      "fine_relative_wavenumber_error": 1.9984014443252818e-15
+    },
+    {
+      "degree": 8,
+      "physical_k": 2.0,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 5.697671147474688e-28,
+      "flux_transmission": 0.9999999999999998,
+      "coarse_relative_wavenumber_error": 4.6629367034256575e-15,
+      "fine_relative_wavenumber_error": 7.105427357601002e-14
+    },
+    {
+      "degree": 8,
+      "physical_k": 2.0,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 6.425321376830418e-27,
+      "flux_transmission": 1.0,
+      "coarse_relative_wavenumber_error": 4.6629367034256575e-15,
+      "fine_relative_wavenumber_error": 1.8207657603852567e-13
+    },
+    {
+      "degree": 8,
+      "physical_k": 2.8,
+      "refinement_ratio": 2.0,
+      "reflection_probability": 3.3280861877831366e-23,
+      "flux_transmission": 1.0,
+      "coarse_relative_wavenumber_error": 1.3948842081390467e-12,
+      "fine_relative_wavenumber_error": 6.439293542825908e-15
+    },
+    {
+      "degree": 8,
+      "physical_k": 2.8,
+      "refinement_ratio": 4.0,
+      "reflection_probability": 3.337058987541909e-23,
+      "flux_transmission": 1.0,
+      "coarse_relative_wavenumber_error": 1.3948842081390467e-12,
+      "fine_relative_wavenumber_error": 9.658940314238862e-15
+    },
+    {
+      "degree": 8,
+      "physical_k": 2.8,
+      "refinement_ratio": 8.0,
+      "reflection_probability": 3.357521701717304e-23,
+      "flux_transmission": 0.9999999999999999,
+      "coarse_relative_wavenumber_error": 1.3948842081390467e-12,
+      "fine_relative_wavenumber_error": 4.5075054799781356e-14
+    }
+  ],
+  "flux_balance_error": 2.220446049250313e-16,
+  "linear_element_dispersion_check": 0.0,
+  "continuum_flux_check": 2.0872192862952943e-14,
+  "scope": "Stationary semi-infinite 1D interface, constant kinetic coefficient, exact consistent FE mass; first propagation band only. Reflection probability here is a genuine scattering coefficient, unlike the packet negative-mode diagnostic."
+}

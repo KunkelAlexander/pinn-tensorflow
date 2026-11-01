@@ -1,0 +1,23 @@
+{
+  "experiment": "Scale communication: translation, source, coupled SP and scattering controls",
+  "files": {
+    "scale_communication.py": "a31c60eeb2bdc47446bf7a83b7b1e5c1b172f4a46780710e35022e9f76abf2ae",
+    "shared_basis_review.py": "19efb0e0645fd7bafa8fb03bfa2091f6770ab185e1484f2a5e77a4f50346f686",
+    "frozen_hamiltonian.py": "e4da5ff16c0e6dc8eda00566685fafa6f1341ba81e504b46dd0f00ac5d1bf222",
+    "experiments.py": "52eb8e45027e24eb64e872cdf59b5dc086dcbbbe16dc705debe30feca0399e01"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1605.00437",
+      "scope": "Existing finite-element SP convergence analysis; different boundary conditions/time discretization."
+    },
+    {
+      "url": "https://arxiv.org/abs/2103.00400",
+      "scope": "Existing spectral-element accuracy analysis; not a prediction of the measured errors here."
+    },
+    {
+      "url": "https://arxiv.org/abs/2007.01471",
+      "scope": "Prior adaptive multiresolution DG nonlinear Schrodinger work; not a cosmological SP performance demonstration."
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "lambda_dt_over_dx2": 0.25464790894703254,
+  "stored_zero_time_no_filter_matrix_error": 9.61745099478891e-07,
+  "analytic_dft_zero_time_no_filter_matrix_error": 2.5060728198430577e-44,
+  "one_step": [
+    {
+      "ppw": 4.0,
+      "kind": "stored_matmul",
+      "relative_error": 0.0003391414071915855,
+      "mean_phase_error": -5.838679790633905e-06,
+      "mean_amplitude_error": -5.3175559520113325e-06,
+      "patch_modulation": 0.00033904944723471005
+    },
+    {
+      "ppw": 4.0,
+      "kind": "fft_fused",
+      "relative_error": 0.0002126616444253192,
+      "mean_phase_error": -5.202177109258015e-06,
+      "mean_amplitude_error": -5.849410751879169e-06,
+      "patch_modulation": 0.00021251752143098453
+    },
+    {
+      "ppw": 4.0,
+      "kind": "fft_runtime",
+      "relative_error": 0.00021265165774206658,
+      "fused_runtime_difference": 4.21888352300949e-08
+    },
+    {
+      "ppw": 6.0,
+      "kind": "stored_matmul",
+      "relative_error": 8.3793249834899e-07,
+      "mean_phase_error": -2.2360932774198972e-08,
+      "mean_amplitude_error": 3.642446810836475e-08,
+      "patch_modulation": 8.368417524318347e-07
+    },
+    {
+      "ppw": 6.0,
+      "kind": "fft_fused",
+      "relative_error": 4.7481704180051556e-07,
+      "mean_phase_error": 4.629719243304098e-09,
+      "mean_amplitude_error": 2.0096337927100194e-08,
+      "patch_modulation": 4.7436897674932883e-07
+    },
+    {
+      "ppw": 6.0,
+      "kind": "fft_runtime",
+      "relative_error": 4.747839851086933e-07,
+      "fused_runtime_difference": 2.2115222193863712e-10
+    },
+    {
+      "ppw": 8.0,
+      "kind": "stored_matmul",
+      "relative_error": 4.173581678338713e-08,
+      "mean_phase_error": -2.534879260204354e-10,
+      "mean_amplitude_error": 1.7599428581149823e-09,
+      "patch_modulation": 4.1697922568841614e-08
+    },
+    {
+      "ppw": 8.0,
+      "kind": "fft_fused",
+      "relative_error": 2.2712942651310852e-08,
+      "mean_phase_error": 2.892919211786377e-10,
+      "mean_amplitude_error": 1.011699612973871e-09,
+      "patch_modulation": 2.268855519497831e-08
+    },
+    {
+      "ppw": 8.0,
+      "kind": "fft_runtime",
+      "relative_error": 2.271348697608232e-08,
+      "fused_runtime_difference": 3.851090743310771e-12
+    },
+    {
+      "ppw": 10.0,
+      "kind": "stored_matmul",
+      "relative_error": 1.0750111541717998e-08,
+      "mean_phase_error": -2.546213714319668e-10,
+      "mean_amplitude_error": 8.340217405589101e-11,
+      "patch_modulation": 1.0746772100936632e-08
+    },
+    {
+      "ppw": 10.0,
+      "kind": "fft_fused",
+      "relative_error": 9.57454686469962e-10,
+      "mean_phase_error": -2.0704722501033212e-11,
+      "mean_amplitude_error": 7.998313122925538e-11,
+      "patch_modulation": 9.538833743554278e-10
+    },
+    {
+      "ppw": 10.0,
+      "kind": "fft_runtime",
+      "relative_error": 9.575565152182434e-10,
+      "fused_runtime_difference": 7.93345840308558e-13
+    },
+    {
+      "ppw": 12.0,
+      "kind": "stored_matmul",
+      "relative_error": 8.240374464451728e-09,
+      "mean_phase_error": 5.961671675874195e-11,
+      "mean_amplitude_error": 2.1777091241403923e-10,
+      "patch_modulation": 8.237280693366762e-09
+    },
+    {
+      "ppw": 12.0,
+      "kind": "fft_fused",
+      "relative_error": 1.2110914485849796e-10,
+      "mean_phase_error": -3.3073320333384497e-12,
+      "mean_amplitude_error": 7.908340649009915e-12,
+      "patch_modulation": 1.2080541417335518e-10
+    },
+    {
+      "ppw": 12.0,
+      "kind": "fft_runtime",
+      "relative_error": 1.2111681166648958e-10,
+      "fused_runtime_difference": 3.814302685211263e-14
+    },
+    {
+      "ppw": 16.0,
+      "kind": "stored_matmul",
+      "relative_error": 1.1396451885674509e-08,
+      "mean_phase_error": 3.335277196262383e-11,
+      "mean_amplitude_error": 2.6058621926949854e-10,
+      "patch_modulation": 1.1393423474778731e-08
+    },
+    {
+      "ppw": 16.0,
+      "kind": "fft_fused",
+      "relative_error": 1.1488718294963048e-12,
+      "mean_phase_error": 3.242170371074201e-14,
+      "mean_amplitude_error": 1.1945999744966684e-13,
+      "patch_modulation": 1.1421758677463394e-12
+    },
+    {
+      "ppw": 16.0,
+      "kind": "fft_runtime",
+      "relative_error": 1.1486251355913073e-12,
+      "fused_runtime_difference": 9.566001233014994e-16
+    },
+    {
+      "ppw": 24.0,
+      "kind": "stored_matmul",
+      "relative_error": 9.182403073372993e-09,
+      "mean_phase_error": -2.5637582188733426e-10,
+      "mean_amplitude_error": -3.188094233053107e-11,
+      "patch_modulation": 9.178767954682087e-09
+    },
+    {
+      "ppw": 24.0,
+      "kind": "fft_fused",
+      "relative_error": 5.99776932158427e-15,
+      "mean_phase_error": -1.519624782708937e-16,
+      "mean_amplitude_error": 4.440892098500626e-16,
+      "patch_modulation": 5.929708088607612e-15
+    },
+    {
+      "ppw": 24.0,
+      "kind": "fft_runtime",
+      "relative_error": 5.958969725053395e-15,
+      "fused_runtime_difference": 3.0633652249584093e-16
+    },
+    {
+      "ppw": 32.0,
+      "kind": "stored_matmul",
+      "relative_error": 9.128942048324917e-09,
+      "mean_phase_error": -1.5667740249745707e-10,
+      "mean_amplitude_error": 1.006741356945895e-10,
+      "patch_modulation": 9.127042218144271e-09
+    },
+    {
+      "ppw": 32.0,
+      "kind": "fft_fused",
+      "relative_error": 2.6027510096208974e-16,
+      "mean_phase_error": -4.8428593190698634e-17,
+      "mean_amplitude_error": -1.1102230246251565e-16,
+      "patch_modulation": 2.4611074928045293e-16
+    },
+    {
+      "ppw": 32.0,
+      "kind": "fft_runtime",
+      "relative_error": 3.218990955079341e-16,
+      "fused_runtime_difference": 3.4480124705379047e-16
+    }
+  ],
+  "bloch": [
+    {
+      "ppw": 4.0,
+      "kind": "stored_matmul",
+      "steps": 10000,
+      "wave_error": 0.07470305539963656,
+      "mass_ratio": 0.8938032513906131,
+      "spectral_radius": 1.000000339601456
+    },
+    {
+      "ppw": 4.0,
+      "kind": "fft_fused",
+      "steps": 10000,
+      "wave_error": 0.07614544448367161,
+      "mass_ratio": 0.8852229984579061,
+      "spectral_radius": 1.0000001790574427
+    },
+    {
+      "ppw": 6.0,
+      "kind": "stored_matmul",
+      "steps": 10000,
+      "wave_error": 0.0004560509647890975,
+      "mass_ratio": 1.0007694682015429,
+      "spectral_radius": 1.0000008479372824
+    },
+    {
+      "ppw": 6.0,
+      "kind": "fft_fused",
+      "steps": 10000,
+      "wave_error": 0.00019761210675636306,
+      "mass_ratio": 1.0003914907476301,
+      "spectral_radius": 1.0000005794155207
+    },
+    {
+      "ppw": 8.0,
+      "kind": "stored_matmul",
+      "steps": 10000,
+      "wave_error": 2.687261732935187e-05,
+      "mass_ratio": 1.0000356213502217,
+      "spectral_radius": 1.0000003396014558
+    },
+    {
+      "ppw": 8.0,
+      "kind": "fft_fused",
+      "steps": 10000,
+      "wave_error": 1.7225754431371943e-05,
+      "mass_ratio": 1.0000197472339947,
+      "spectral_radius": 1.0000001790574429
+    },
+    {
+      "ppw": 10.0,
+      "kind": "stored_matmul",
+      "steps": 10000,
+      "wave_error": 5.576559496509806e-06,
+      "mass_ratio": 1.0000078671346095,
+      "spectral_radius": 1.0000007860190605
+    },
+    {
+      "ppw": 10.0,
+      "kind": "fft_fused",
+      "steps": 10000,
+      "wave_error": 9.271334894929541e-07,
+      "mass_ratio": 1.0000018342959538,
+      "spectral_radius": 1.0000005014735305
+    },
+    {
+      "ppw": 12.0,
+      "kind": "stored_matmul",
+      "steps": 10000,
+      "wave_error": 4.327986357065854e-06,
+      "mass_ratio": 1.000007290648506,
+      "spectral_radius": 1.000000847792454
+    },
+    {
+      "ppw": 12.0,
+      "kind": "fft_fused",
+      "steps": 10000,
+      "wave_error": 9.745301049918766e-08,
+      "mass_ratio": 1.0000001898444328,
+      "spectral_radius": 1.0000005794401527
+    },
+    {
+      "ppw": 16.0,
+      "kind": "stored_matmul",
+      "steps": 10000,
+      "wave_error": 3.466622749744396e-06,
+      "mass_ratio": 1.0000051179635017,
+      "spectral_radius": 1.0000003396014572
+    },
+    {
+      "ppw": 16.0,
+      "kind": "fft_fused",
+      "steps": 10000,
+      "wave_error": 1.7789485210707966e-09,
+      "mass_ratio": 1.0000000023508266,
+      "spectral_radius": 1.0000001790574418
+    },
+    {
+      "ppw": 24.0,
+      "kind": "stored_matmul",
+      "steps": 10000,
+      "wave_error": 3.851404329580444e-06,
+      "mass_ratio": 1.000004142345117,
+      "spectral_radius": 1.000000847937284
+    },
+    {
+      "ppw": 24.0,
+      "kind": "fft_fused",
+      "steps": 10000,
+      "wave_error": 5.913080071924256e-12,
+      "mass_ratio": 1.0000000000117582,
+      "spectral_radius": 1.0000005794155218
+    },
+    {
+      "ppw": 32.0,
+      "kind": "stored_matmul",
+      "steps": 10000,
+      "wave_error": 5.069531508349216e-06,
+      "mass_ratio": 1.0000071125818906,
+      "spectral_radius": 1.0000015553756223
+    },
+    {
+      "ppw": 32.0,
+      "kind": "fft_fused",
+      "steps": 10000,
+      "wave_error": 6.255129884248449e-13,
+      "mass_ratio": 0.9999999999994793,
+      "spectral_radius": 1.0000009404331147
+    }
+  ],
+  "scope": "Patch-size 8, ghost 8, 14 Gram boundary samples, 32 extension points; MATMUL stored tables contracted at 55 decimal digits then cast to float64; FFT fused control uses actual FFT tables with analytic DFT. No AMR, gravity, mass rescaling, or density floor."
+}

@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "degree": 4,
+      "mesh": "graded",
+      "dofs": 100,
+      "initial_projection_error": 0.0008510721683548618,
+      "wave_error": 0.15053779348682506,
+      "propagation_error": 0.15054019477971364,
+      "generated_reverse_error_mass": 0.003526551739781143
+    },
+    {
+      "degree": 4,
+      "mesh": "uniform_coarse",
+      "dofs": 80,
+      "initial_projection_error": 0.025831014630778838,
+      "wave_error": 0.19856866362419537,
+      "propagation_error": 0.19937824181590746,
+      "generated_reverse_error_mass": 0.005036735816871621
+    },
+    {
+      "degree": 4,
+      "mesh": "uniform_fine",
+      "dofs": 160,
+      "initial_projection_error": 0.0008325117773888636,
+      "wave_error": 0.002666653652813842,
+      "propagation_error": 0.0027806935563127085,
+      "generated_reverse_error_mass": 1.9180712115911407e-06
+    },
+    {
+      "degree": 6,
+      "mesh": "graded",
+      "dofs": 150,
+      "initial_projection_error": 1.572942525889189e-05,
+      "wave_error": 0.0029717547081118682,
+      "propagation_error": 0.0029716226552189908,
+      "generated_reverse_error_mass": 1.5630093308239973e-06
+    },
+    {
+      "degree": 6,
+      "mesh": "uniform_coarse",
+      "dofs": 120,
+      "initial_projection_error": 0.0013900874487732407,
+      "wave_error": 0.0036099763573355865,
+      "propagation_error": 0.00385565060966506,
+      "generated_reverse_error_mass": 2.935194691965836e-06
+    },
+    {
+      "degree": 6,
+      "mesh": "uniform_fine",
+      "dofs": 240,
+      "initial_projection_error": 1.103697048533759e-05,
+      "wave_error": 2.0453552069045463e-05,
+      "propagation_error": 2.412050025695085e-05,
+      "generated_reverse_error_mass": 2.2796523575346428e-10
+    },
+    {
+      "degree": 8,
+      "mesh": "graded",
+      "dofs": 200,
+      "initial_projection_error": 4.6964475027747326e-07,
+      "wave_error": 6.609238988718663e-05,
+      "propagation_error": 6.60884648760319e-05,
+      "generated_reverse_error_mass": 1.5139808820696472e-09
+    },
+    {
+      "degree": 8,
+      "mesh": "uniform_coarse",
+      "dofs": 160,
+      "initial_projection_error": 4.9902672933662445e-05,
+      "wave_error": 7.531436902602221e-05,
+      "propagation_error": 9.165887824481713e-05,
+      "generated_reverse_error_mass": 2.9708603425960717e-09
+    },
+    {
+      "degree": 8,
+      "mesh": "uniform_fine",
+      "dofs": 320,
+      "initial_projection_error": 1.0131738618165992e-07,
+      "wave_error": 1.7524144342794624e-07,
+      "propagation_error": 1.9553917708670864e-07,
+      "generated_reverse_error_mass": 1.5830879233106943e-14
+    },
+    {
+      "degree": 10,
+      "mesh": "graded",
+      "dofs": 250,
+      "initial_projection_error": 1.3691155224179573e-08,
+      "wave_error": 1.7406175476888687e-06,
+      "propagation_error": 1.7404322735582885e-06,
+      "generated_reverse_error_mass": 1.1369724947935418e-12
+    },
+    {
+      "degree": 10,
+      "mesh": "uniform_coarse",
+      "dofs": 200,
+      "initial_projection_error": 1.3264447488170878e-06,
+      "wave_error": 1.990325722728432e-06,
+      "propagation_error": 2.1701245300582086e-06,
+      "generated_reverse_error_mass": 1.3768724729895062e-12
+    },
+    {
+      "degree": 10,
+      "mesh": "uniform_fine",
+      "dofs": 400,
+      "initial_projection_error": 6.969398517543095e-10,
+      "wave_error": 1.301234795695031e-09,
+      "propagation_error": 1.5043731516792009e-09,
+      "generated_reverse_error_mass": 9.971359655283082e-19
+    }
+  ],
+  "negative_mode_sampling_relative_difference": 1.533512791881319e-05,
+  "scope": "Uniform coarse/fine have the same element sizes as the corresponding graded regions. DOF counts differ. Generated reverse error subtracts exact FFT propagation of the projected initial state; it is not a unique reflection coefficient."
+}

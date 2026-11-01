@@ -1,0 +1,33 @@
+{
+  "python_files_compiled": [
+    "frozen_interference_gravity.py",
+    "gramfe_frozen_potential.py",
+    "gramfe_phase_control.py",
+    "build_frozen_gravity_report.py",
+    "verify_frozen_gravity.py"
+  ],
+  "local_report_links_checked": [
+    "gamer_diagnosis.html",
+    "frozen_gravity_results/frozen_gravity.json",
+    "frozen_gravity_results/frozen_potential.json",
+    "frozen_gravity_results/runtime_long.json",
+    "frozen_gravity_results/phase_control.json"
+  ],
+  "embedded_images": 3,
+  "max_periodic_fft_mass_defect": 2.1607426958780707e-10,
+  "growing_modes": [
+    {
+      "kind": "stored_matmul",
+      "dominant_wave_number": 44.0,
+      "dominant_ppw": 3.6363636363636362,
+      "spectral_power_below_five_ppw": 0.9997986895892718
+    },
+    {
+      "kind": "fft_fused",
+      "dominant_wave_number": 44.0,
+      "dominant_ppw": 3.6363636363636362,
+      "spectral_power_below_five_ppw": 0.9997995150668391
+    }
+  ],
+  "numerical_checks": "Analytic density, FFT Poisson, exact cubic alias coefficients, direct residuals, harmonic trace, repeated runtime eigenmode growth and smooth-state evolution."
+}

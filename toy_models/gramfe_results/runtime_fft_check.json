@@ -1,0 +1,16 @@
+{
+  "n": 128,
+  "boost": 12,
+  "rows": [
+    {
+      "gravity": "spectral",
+      "runtime_vs_fused_wave": 1.5665507258834822e-09,
+      "runtime_density_error": 1.850152537322394e-06
+    },
+    {
+      "gravity": "fd2",
+      "runtime_vs_fused_wave": 8.80244724548568e-10,
+      "runtime_density_error": 0.0013125585046879168
+    }
+  ]
+}

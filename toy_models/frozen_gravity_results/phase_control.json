@@ -1,0 +1,221 @@
+{
+  "rows": [
+    {
+      "n": 80,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.0,
+      "phase": "fused_taylor",
+      "radius": 1.0000005015053097,
+      "growth_rate": 0.0003192681160606825,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.0,
+      "phase": "runtime_basis_taylor",
+      "radius": 1.0000005837429202,
+      "growth_rate": 0.000371622176528156,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.0,
+      "phase": "runtime_basis_exact_phase",
+      "radius": 1.0000006764206402,
+      "growth_rate": 0.000430622608326599,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.2,
+      "phase": "fused_taylor",
+      "radius": 1.000118980798318,
+      "growth_rate": 0.07574102296694911,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.2,
+      "phase": "runtime_basis_taylor",
+      "radius": 1.000118855408909,
+      "growth_rate": 0.07566120708157963,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.2,
+      "phase": "runtime_basis_exact_phase",
+      "radius": 1.0001188698502868,
+      "growth_rate": 0.07567039965547788,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.0,
+      "phase": "fused_taylor",
+      "radius": 1.0000009404331158,
+      "growth_rate": 0.002394792138425114,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.0,
+      "phase": "runtime_basis_taylor",
+      "radius": 1.000001305816194,
+      "growth_rate": 0.0033252314618050674,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.0,
+      "phase": "runtime_basis_exact_phase",
+      "radius": 1.0000011242029943,
+      "growth_rate": 0.0028627578080213088,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.2,
+      "phase": "fused_taylor",
+      "radius": 1.0001180796364346,
+      "growth_rate": 0.3006695739453573,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.2,
+      "phase": "runtime_basis_taylor",
+      "radius": 1.0001179675796499,
+      "growth_rate": 0.3003842573602761,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 1.0,
+      "potential_ratio": 0.2,
+      "phase": "runtime_basis_exact_phase",
+      "radius": 1.0001180496232207,
+      "growth_rate": 0.30059315494609795,
+      "basis_vs_fused_operator_difference": 2.891078361907621e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.0,
+      "phase": "fused_taylor",
+      "radius": 1.000004008362311,
+      "growth_rate": 0.005103595175416327,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.0,
+      "phase": "runtime_basis_taylor",
+      "radius": 1.000003827019242,
+      "growth_rate": 0.0048727029133591995,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.0,
+      "phase": "runtime_basis_exact_phase",
+      "radius": 1.0000040910900256,
+      "growth_rate": 0.005208926946625927,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.2,
+      "phase": "fused_taylor",
+      "radius": 1.000103335855942,
+      "growth_rate": 0.13156450062622246,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.2,
+      "phase": "runtime_basis_taylor",
+      "radius": 1.0001033769455028,
+      "growth_rate": 0.13161681207326859,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 80,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.2,
+      "phase": "runtime_basis_exact_phase",
+      "radius": 1.0001033496546106,
+      "growth_rate": 0.13158206782137274,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.0,
+      "phase": "fused_taylor",
+      "radius": 1.0000040083623114,
+      "growth_rate": 0.020414380703927027,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.0,
+      "phase": "runtime_basis_taylor",
+      "radius": 1.0000038270192413,
+      "growth_rate": 0.019490811650044217,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.0,
+      "phase": "runtime_basis_exact_phase",
+      "radius": 1.0000040910900234,
+      "growth_rate": 0.020835707775195115,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.2,
+      "phase": "fused_taylor",
+      "radius": 1.0000879570566668,
+      "growth_rate": 0.4479419116092179,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.2,
+      "phase": "runtime_basis_taylor",
+      "radius": 1.000087730474317,
+      "growth_rate": 0.4467880385383007,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    },
+    {
+      "n": 160,
+      "dt_factor": 0.5,
+      "potential_ratio": 0.2,
+      "phase": "runtime_basis_exact_phase",
+      "radius": 1.00008803245828,
+      "growth_rate": 0.4483258950832124,
+      "basis_vs_fused_operator_difference": 3.6511977055279653e-06
+    }
+  ],
+  "scope": "Double-precision basis reconstruction controls the effect of replacing the Taylor phase by an exact exponential while retaining FFT extension and filter. Basis/Taylor versus high-precision fused/Taylor reports numerical reconstruction sensitivity."
+}

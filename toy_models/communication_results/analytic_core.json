@@ -1,0 +1,13 @@
+{
+  "degree": 10,
+  "time": 1.0,
+  "velocity": 1.2566370614359172,
+  "ground_residual": 1.7325830168160827e-13,
+  "wave_error": 3.686927357520793e-09,
+  "density_error": 2.350210565408018e-09,
+  "rhs_calls": 266,
+  "steps": 22,
+  "seconds": 3.0325360000133514,
+  "mass_drift": 2.8193891665750935e-11,
+  "energy_drift": 7.638892106566992e-11
+}

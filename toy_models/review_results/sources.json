@@ -1,0 +1,60 @@
+{
+  "accessed": "2026-11-01",
+  "sources": [
+    {
+      "title": "FINUFFT inverse tutorial",
+      "url": "https://finufft.readthedocs.io/en/latest/tutorial/inv1d2.html",
+      "scope": "Exact sampling matrices can be ill-conditioned despite oversampling; gaps and the approximation space matter."
+    },
+    {
+      "title": "Geo-FNO, JMLR 2023",
+      "url": "https://www.jmlr.org/papers/v24/23-0064.html",
+      "scope": "Learned coordinate deformation to a regular latent domain; arbitrary geometry alone does not certify wave accuracy."
+    },
+    {
+      "title": "GINO, NeurIPS 2023",
+      "url": "https://arxiv.org/html/2309.00583v1",
+      "scope": "Graph integration with geometric weights and Fourier latent layers; check appendix on Riemann weights and the specific CFD benchmark."
+    },
+    {
+      "title": "NUNO, ICML 2023",
+      "url": "https://proceedings.mlr.press/v202/liu23o.html",
+      "scope": "Domain partition and interpolation to local regular grids; it manages representation error rather than removing information loss."
+    },
+    {
+      "title": "Discretization mismatch, ICLR 2025",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/313829757739365201b5adb3a1cbd9bd-Abstract-Conference.html",
+      "scope": "Resolution-independent parameters do not guarantee consistent inference across meshes; aliasing is material."
+    },
+    {
+      "title": "Patel, Subedi and Tewari, 2026 revision",
+      "url": "https://arxiv.org/html/2505.18288v2",
+      "scope": "Structured linear estimator for a fixed prescribed Hamiltonian; weak unitarity, smoothness assumptions and time-generalization limits. Not nonlinear self-gravitating SP."
+    },
+    {
+      "title": "Auzinger et al., 2016",
+      "url": "https://arxiv.org/abs/1605.00437",
+      "scope": "Finite-element Strang splitting for SP has rigorous convergence results under stated regularity and homogeneous Dirichlet assumptions."
+    },
+    {
+      "title": "Kormann, 2016",
+      "url": "https://www.global-sci.com/cicp/article/view/6339",
+      "scope": "High-order Gauss-Lobatto finite elements and Magnus-Lanczos with adaptive error control for Schrodinger evolution."
+    },
+    {
+      "title": "Li, Appelo and Zhang, 2021",
+      "url": "https://arxiv.org/abs/2103.00400",
+      "scope": "Accuracy results for spectral elements applied to wave and linear Schrodinger equations."
+    },
+    {
+      "title": "MFEM performance documentation",
+      "url": "https://mfem.org/performance/",
+      "scope": "Matrix-free tensor-product operator application and multigrid preconditioning provide a credible 3D implementation route, not a measured SP speedup."
+    },
+    {
+      "title": "Halo convergence target",
+      "url": "https://arxiv.org/html/2412.09908v3",
+      "scope": "Whole-halo convergence and matched N-body comparisons matter; a fitted central soliton or NFW shape alone is insufficient."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "python_files_compiled": [
+    "gramfe_probe.py",
+    "gramfe_precision_audit.py",
+    "gramfe_selfgravity.py",
+    "gramfe_boundary_time.py",
+    "gravity_hierarchy_probe.py",
+    "build_gamer_diagnosis.py",
+    "fetch_gramfe_sources.py"
+  ],
+  "embedded_figures": 4,
+  "local_links_checked": 15,
+  "source_hashes_checked": 13,
+  "scope": "Each experiment completed its numerical assertions; this final check compiles code, parses JSON, validates links and verifies cached source hashes. No full GAMER build."
+}

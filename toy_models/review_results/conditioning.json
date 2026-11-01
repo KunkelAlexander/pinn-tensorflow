@@ -1,0 +1,605 @@
+{
+  "normalization": "L2(dx/(2*pi)), Fourier/local bases orthonormal in physical volume",
+  "noise_model": "Independent sigma=1e-6 Gaussian noise per volume-weighted sensor; not equal raw point noise",
+  "grids": [
+    {
+      "grid": "uniform",
+      "sensors": 128,
+      "fourier_dofs": 51,
+      "local_dofs": 50,
+      "fourier_unweighted_condition": 1.0000000000000022,
+      "fourier_weighted_condition": 1.0000000000000018,
+      "local_weighted_condition": null,
+      "max_gap": 0.04908738521234124,
+      "fourier_rank": 51,
+      "local_rank": 34
+    },
+    {
+      "grid": "clustered",
+      "sensors": 128,
+      "fourier_dofs": 51,
+      "local_dofs": 50,
+      "fourier_unweighted_condition": 2.9391690112571546e+17,
+      "fourier_weighted_condition": 2.2687375102910056e+16,
+      "local_weighted_condition": null,
+      "max_gap": 0.9132680888122922,
+      "fourier_rank": 35,
+      "local_rank": 44
+    },
+    {
+      "grid": "halo_base20",
+      "sensors": 128,
+      "fourier_dofs": 51,
+      "local_dofs": 50,
+      "fourier_unweighted_condition": 1.309749438831835e+16,
+      "fourier_weighted_condition": 1.0008025297066492e+16,
+      "local_weighted_condition": 4.259366163568684,
+      "max_gap": 0.3141592653589802,
+      "fourier_rank": 41,
+      "local_rank": 50
+    },
+    {
+      "grid": "halo_base52",
+      "sensors": 128,
+      "fourier_dofs": 51,
+      "local_dofs": 50,
+      "fourier_unweighted_condition": 2.946167648688723,
+      "fourier_weighted_condition": 1.3053070287671225,
+      "local_weighted_condition": 3.8380612284004085,
+      "max_gap": 0.12083048667653173,
+      "fourier_rank": 51,
+      "local_rank": 50
+    }
+  ],
+  "ambiguity": {
+    "grid": "halo_base20",
+    "singular_index": 36,
+    "singular_value": 3.989916177409974e-08,
+    "weighted_observation_norm": 3.989916186744774e-08,
+    "wave_norm": 1.0,
+    "evolved_wave_norm": 1.0,
+    "potential_norm": 0.10626570513294331,
+    "initial_halo_wave_norm": 1.3408902456624016e-07,
+    "evolved_halo_wave_norm": 0.9353741049997555,
+    "equal_initial_mass": 2.0,
+    "evolved_halo_density_difference_rms": 2.270632338148842,
+    "evolved_global_density_difference_rms": 2.6614476720093925,
+    "noise_sigma_per_weighted_sensor": 1e-06
+  },
+  "prior_predictions": [
+    {
+      "grid": "uniform",
+      "training_prior": "bandlimited8",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 4.123105625582618e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "bandlimited8",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 4.1231056255826155e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "bandlimited8",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 0.1259225967677634
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "bandlimited8",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 0.002886795853963863
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "bandlimited8",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 0.8164965809381363
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "bandlimited8",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 0.021897789386519356
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "low_frequency",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 7.025966395181418e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "low_frequency",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 4.124090324656501e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "low_frequency",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 7.072719791197136e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "low_frequency",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 3.058173479158806e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "low_frequency",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 0.0788984575542225
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "low_frequency",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 0.0006152629759699728
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "broadband",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 7.1414284283607405e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "broadband",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 4.124094523018776e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "broadband",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 7.14142842836074e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "broadband",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 3.0581753253949727e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "broadband",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 7.141428428360741e-06
+    },
+    {
+      "grid": "uniform",
+      "training_prior": "broadband",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 7.1414284283607566e-06
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "bandlimited8",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 0.013891912801806272
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "bandlimited8",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 0.011460490968794326
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "bandlimited8",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 183.24081033340636
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "bandlimited8",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 113.12816328407747
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "bandlimited8",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 2115.8691276073005
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "bandlimited8",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 3019.50233291321
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "low_frequency",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 0.5383275243907463
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "low_frequency",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 0.5792839061513457
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "low_frequency",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 0.39233063553247977
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "low_frequency",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 0.2779022886340833
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "low_frequency",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 525.277477903778
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "low_frequency",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 448.06451736675257
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "broadband",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 0.6927085071206726
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "broadband",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 0.616493953020035
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "broadband",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 0.6900306555042
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "broadband",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 0.6000015147172915
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "broadband",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 0.6561353952109162
+    },
+    {
+      "grid": "clustered",
+      "training_prior": "broadband",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 0.6892019937552182
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "bandlimited8",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 4.127307774460549e-06
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "bandlimited8",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 4.125504862523133e-06
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "bandlimited8",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 0.130089299862086
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "bandlimited8",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 0.0070757428898738945
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "bandlimited8",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 1.0449213455739006
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "bandlimited8",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 1.2432230869242098
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "low_frequency",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 0.015973073873657373
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "low_frequency",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 0.0005454751857244381
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "low_frequency",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 0.05777811539259819
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "low_frequency",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 0.0016372975520243772
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "low_frequency",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 122.9897091516827
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "low_frequency",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 8.625438747200763
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "broadband",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 0.6050611472542321
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "broadband",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 0.5160973889844095
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "broadband",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 0.6203716638888619
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "broadband",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 0.5084585066250232
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "broadband",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 0.5776140402399178
+    },
+    {
+      "grid": "halo_base20",
+      "training_prior": "broadband",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 0.640678964854266
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "bandlimited8",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 4.123214566746677e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "bandlimited8",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 4.123172147240929e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "bandlimited8",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 0.12593089177500308
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "bandlimited8",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 0.0030258045926388043
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "bandlimited8",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 0.8166188403270469
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "bandlimited8",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 0.0323555478259065
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "low_frequency",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 7.031912807937819e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "low_frequency",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 4.1253173783800114e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "low_frequency",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 7.080904786749178e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "low_frequency",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 3.0591223607973675e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "low_frequency",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 0.08106019208023686
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "low_frequency",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 0.0036203394479698437
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "broadband",
+      "test_prior": "bandlimited8",
+      "target": "wave",
+      "expected_relative_rms": 7.154617712853721e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "broadband",
+      "test_prior": "bandlimited8",
+      "target": "potential",
+      "expected_relative_rms": 4.125457530466807e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "broadband",
+      "test_prior": "low_frequency",
+      "target": "wave",
+      "expected_relative_rms": 7.154617712853706e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "broadband",
+      "test_prior": "low_frequency",
+      "target": "potential",
+      "expected_relative_rms": 3.059186048045269e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "broadband",
+      "test_prior": "broadband",
+      "target": "wave",
+      "expected_relative_rms": 7.154617712855419e-06
+    },
+    {
+      "grid": "halo_base52",
+      "training_prior": "broadband",
+      "test_prior": "broadband",
+      "target": "potential",
+      "expected_relative_rms": 7.143788660426881e-06
+    }
+  ],
+  "projection": [
+    {
+      "case": "localized_carrier",
+      "basis": "fourier51",
+      "best_projection_error": 0.999881221874801
+    },
+    {
+      "case": "localized_carrier",
+      "basis": "local50",
+      "best_projection_error": 0.06595530800980648
+    },
+    {
+      "case": "global_carrier",
+      "basis": "fourier51",
+      "best_projection_error": 2.9858883511501422e-15
+    },
+    {
+      "case": "global_carrier",
+      "basis": "local50",
+      "best_projection_error": 0.8907337476070186
+    }
+  ],
+  "checks": {
+    "local_basis_exact_mass": 1.3363230891221218e-14,
+    "fourier_exact_mass": 1.6452649199624412e-14,
+    "singular_pair_identity": 9.334800048854412e-17,
+    "free_unitarity": 0.0,
+    "bayes_risk_monte_carlo_relative_difference": 0.001280841140735678
+  },
+  "limitations": "Dense exact sampling and analytic Gaussian priors; no neural network trained; local discontinuous basis is not a PDE solver"
+}

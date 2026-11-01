@@ -1,0 +1,37 @@
+{
+  "rows": [
+    {
+      "fine_h": 1.0,
+      "fine_ppw": 20.0,
+      "parent_dt": 1.0185916357881302,
+      "fine_dt": 0.25464790894703254,
+      "subcycles": 4,
+      "density_error": 0.06942247714712454
+    },
+    {
+      "fine_h": 0.5,
+      "fine_ppw": 40.0,
+      "parent_dt": 1.0185916357881302,
+      "fine_dt": 0.06366197723675814,
+      "subcycles": 16,
+      "density_error": 0.07279314338921464
+    },
+    {
+      "fine_h": 1.0,
+      "fine_ppw": 20.0,
+      "parent_dt": 0.5092958178940651,
+      "fine_dt": 0.12732395447351627,
+      "subcycles": 4,
+      "density_error": 0.017992995555471118
+    },
+    {
+      "fine_h": 1.0,
+      "fine_ppw": 20.0,
+      "parent_dt": 0.25464790894703254,
+      "fine_dt": 0.06366197723675814,
+      "subcycles": 4,
+      "density_error": 0.004562065932820385
+    }
+  ],
+  "scope": "Same physical wave, potential, box and final time; spatial refinement keeps parent endpoint times fixed, temporal controls reduce both level timesteps."
+}

@@ -1,0 +1,43 @@
+{
+  "dft_max_entry_error": 6.835808657661923e-17,
+  "ifft_max_entry_error": 1.0680951027596755e-18,
+  "direct_builder_vs_polynomial_cache": 1.5344781060825621e-16,
+  "rows": [
+    {
+      "ppw": 6,
+      "stored_error": 8.379324983264947e-07,
+      "corrected_dft_error": 8.379325112954355e-07,
+      "factorized_extension_error": 8.359326579795408e-07,
+      "stored_float32_error": 8.466940306615435e-07
+    },
+    {
+      "ppw": 8,
+      "stored_error": 4.173581676016398e-08,
+      "corrected_dft_error": 4.173578698030508e-08,
+      "factorized_extension_error": 3.686983706346141e-08,
+      "stored_float32_error": 1.1774806531221027e-07
+    },
+    {
+      "ppw": 10,
+      "stored_error": 1.0750111506026827e-08,
+      "corrected_dft_error": 1.0750065929009465e-08,
+      "factorized_extension_error": 1.5380014307992807e-09,
+      "stored_float32_error": 9.664676572069786e-08
+    },
+    {
+      "ppw": 16,
+      "stored_error": 1.1396451907214694e-08,
+      "corrected_dft_error": 1.1396451824446723e-08,
+      "factorized_extension_error": 1.914414895764983e-12,
+      "stored_float32_error": 9.09458094493012e-08
+    },
+    {
+      "ppw": 32,
+      "stored_error": 9.128942041874571e-09,
+      "corrected_dft_error": 9.12894207795674e-09,
+      "factorized_extension_error": 3.235113944020334e-16,
+      "stored_float32_error": 1.0388749154672416e-07
+    }
+  ],
+  "scope": "Actual stored constants parsed as decimal at 60 digits. DFT-only control retains extension and MATMUL filter; factorized-extension control builds extension from FFT branch Pl/Pr/Fe/Fo while retaining MATMUL filter. DFT-only correction does not improve the observed smooth-wave floor. Not a compiled binary128 or GPU test. No original source modified."
+}
