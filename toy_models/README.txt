@@ -1,7 +1,32 @@
 Exploratory one dimensional Schrodinger Poisson experiments
 =========================================================
 
-Newest round: frozen_gravity.html tests five versus ten cells per wave with an
+Clarification from the user: doubling resolution has always improved their
+simulations. The unresolved issue is why faithful halos need more than the
+expected five-six cells per wavelength. Earlier interpretations of failure to
+converge under doubling are withdrawn; previous numerical outputs are preserved.
+
+Newest round: fd_wave_crosscheck.html compares the actual GAMER FD wave update
+with Gram-FE, using LAPLACIAN_4TH off/on and FD local mass correction off/on.
+Includes a separately labeled experimental Gram-FE + FD flux correction, free-wave
+convergence, instantaneous flux-order checks, fine grids and profile diagnostics.
+New artifacts: fd_wave_results/. Gram-FE itself does not implement GAMER's local
+continuity correction; earlier suggestions of a missing Gram-FE correction were
+incorrect. See the report for the precise scope and reproduction commands.
+
+Previous round: potential_replay.html compares time-dependent reference-potential
+replay with self-consistent spectral/FD2/FD4 gravity for the same Gram-FE update.
+Includes reference-density replay, evolving bandwidth, a core gravity hierarchy,
+paper-parameter plane-wave calibration, time controls and a mass-drift diagnostic.
+New artifacts are in potential_replay_results/. Reproduction commands are in the
+report. The 1D hierarchy does not reproduce an additional boundary error here.
+
+Previous round: gravity_accuracy.html tests whether FD4 or spectral gravity can
+replace refinement in coupled SP, measures equilibrium-profile bias, and isolates
+source/boundary errors in frozen and evolving 2D gravity hierarchies. New outputs:
+gravity_accuracy_results/. The report lists reproduction commands and limitations.
+
+Previous round: frozen_gravity.html tests five versus ten cells per wave with an
 exact frozen coherent 2D density and six nested Poisson levels. It also provides
 a small long-run kinetic failure with an exact prescribed potential, verified
 by repeated FFT/MATMUL runtime updates. New outputs: frozen_gravity_results/.

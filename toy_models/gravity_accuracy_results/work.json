@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "n": 96,
+      "kinetic": "global_fft",
+      "gravity": "fd2",
+      "gravity_kick_work": 25.557601996949984,
+      "numerical_kinetic_work": -1.3415046851150692e-10,
+      "relative_gravity_work_bias": 0.008045709860841077,
+      "balance_error": 0.0
+    },
+    {
+      "n": 96,
+      "kinetic": "global_fft",
+      "gravity": "fd4",
+      "gravity_kick_work": 25.33999938660827,
+      "numerical_kinetic_work": -1.4517809177050367e-10,
+      "relative_gravity_work_bias": -0.000536995896751491,
+      "balance_error": 0.0
+    },
+    {
+      "n": 96,
+      "kinetic": "global_fft",
+      "gravity": "spectral",
+      "gravity_kick_work": 25.33906330434354,
+      "numerical_kinetic_work": -1.410853656125255e-10,
+      "relative_gravity_work_bias": -0.0005739169549615619,
+      "balance_error": 0.0
+    },
+    {
+      "n": 96,
+      "kinetic": "fft_fused",
+      "gravity": "fd2",
+      "gravity_kick_work": 28.66023893706597,
+      "numerical_kinetic_work": -17.474506573275903,
+      "relative_gravity_work_bias": 0.13042025255514123,
+      "balance_error": 0.0
+    },
+    {
+      "n": 96,
+      "kinetic": "fft_fused",
+      "gravity": "fd4",
+      "gravity_kick_work": 28.42248344034033,
+      "numerical_kinetic_work": -17.415796897014843,
+      "relative_gravity_work_bias": 0.12104267446707517,
+      "balance_error": 0.0
+    },
+    {
+      "n": 96,
+      "kinetic": "fft_fused",
+      "gravity": "spectral",
+      "gravity_kick_work": 28.41362820300435,
+      "numerical_kinetic_work": -17.40063222954086,
+      "relative_gravity_work_bias": 0.1206934052356583,
+      "balance_error": 0.0
+    },
+    {
+      "n": 192,
+      "kinetic": "global_fft",
+      "gravity": "fd2",
+      "gravity_kick_work": 25.41175203584453,
+      "numerical_kinetic_work": 4.6838977141305804e-11,
+      "relative_gravity_work_bias": 0.0022930798764917437,
+      "balance_error": 0.0
+    },
+    {
+      "n": 192,
+      "kinetic": "global_fft",
+      "gravity": "fd4",
+      "gravity_kick_work": 25.355209827812587,
+      "numerical_kinetic_work": 5.95719029661268e-11,
+      "relative_gravity_work_bias": 6.293597490580893e-05,
+      "balance_error": 0.0
+    },
+    {
+      "n": 192,
+      "kinetic": "global_fft",
+      "gravity": "spectral",
+      "gravity_kick_work": 25.353567440101983,
+      "numerical_kinetic_work": 4.445155354915187e-11,
+      "relative_gravity_work_bias": -1.8432593040795808e-06,
+      "balance_error": 0.0
+    },
+    {
+      "n": 192,
+      "kinetic": "fft_fused",
+      "gravity": "fd2",
+      "gravity_kick_work": 25.40880327533796,
+      "numerical_kinetic_work": 0.0145877682181208,
+      "relative_gravity_work_bias": 0.0021767745447782705,
+      "balance_error": 0.0
+    },
+    {
+      "n": 192,
+      "kinetic": "fft_fused",
+      "gravity": "fd4",
+      "gravity_kick_work": 25.352360360508214,
+      "numerical_kinetic_work": 0.014012757326554492,
+      "relative_gravity_work_bias": -4.94530235575219e-05,
+      "balance_error": 0.0
+    },
+    {
+      "n": 192,
+      "kinetic": "fft_fused",
+      "gravity": "spectral",
+      "gravity_kick_work": 25.350745019719966,
+      "numerical_kinetic_work": 0.013837364399478247,
+      "relative_gravity_work_bias": -0.00011316547012241163,
+      "balance_error": 0.0
+    }
+  ],
+  "reference_gravity_work": 25.3536141733872,
+  "scope": "Changes in spectral kinetic energy measured before/after every gravity kick and kinetic step, summed separately. This is a discrete work budget, not time quadrature of j dot force. The older sampled integrated_gravity_work field is under-resolved for rapid fringes and is not used for conclusions."
+}

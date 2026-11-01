@@ -33,12 +33,13 @@ def diagnostics(p,length,green,coupling):
                 power_below_five_cells=float(np.sum(abs(pk[abs(k*h)>2*np.pi/5])**2)/np.sum(abs(pk)**2)))
 
 
-def evolve(p,length,coupling,gravity,kinetic,final,dt,order=2,samples=80,observe=None):
+def evolve(p,length,coupling,gravity,kinetic,final,dt,order=2,samples=80,observe=None,track_kick_work=False):
     n=len(p);h=length/n;k=modes(n,length);steps=int(np.ceil(final/dt));dt=final/steps
     green=inverse_laplacian(n,length,gravity);truegreen=inverse_laplacian(n,length,'spectral')
     a=1/(2-2**(1/3));factors=[1.] if order==2 else [a,1-2*a,a]
     stages=[(dt*f,np.exp(-.5j*k*k*dt*f),None if kinetic=='global_fft' else operator(dt*f/h**2,kinetic)) for f in factors]
-    p=p.copy();history=[]
+    p=p.copy();history=[];kick_work=0.;drift_work=0.
+    def ke(w):return float(.5*h/n*np.sum(k*k*abs(np.fft.fft(w))**2))
     for step in range(steps+1):
         if step%max(1,steps//samples)==0 or step==steps:
             own=diagnostics(p,length,green,coupling);physical=diagnostics(p,length,truegreen,coupling)
@@ -46,28 +47,45 @@ def evolve(p,length,coupling,gravity,kinetic,final,dt,order=2,samples=80,observe
         if step==steps:break
         for stepdt,drift,op in stages:
             phi=np.fft.ifft(green*np.fft.fft(abs(p)**2)).real*coupling
+            if track_kick_work:before=ke(p)
             p*=np.exp(-.5j*stepdt*phi)
+            if track_kick_work:after_kick=ke(p);kick_work+=after_kick-before
             p=np.fft.ifft(np.fft.fft(p)*drift) if op is None else periodic_update(p,op)
+            if track_kick_work:after_drift=ke(p);drift_work+=after_drift-after_kick
             phi=np.fft.ifft(green*np.fft.fft(abs(p)**2)).real*coupling
             p*=np.exp(-.5j*stepdt*phi)
+            if track_kick_work:kick_work+=ke(p)-after_drift
     work=float(np.trapezoid([r['work_rate'] for r in history],[r['time'] for r in history]))
     return p,dict(steps=steps,dt=dt,history=history,integrated_gravity_work=work,
-                  kinetic_change=history[-1]['kinetic']-history[0]['kinetic'])
+                  kinetic_change=history[-1]['kinetic']-history[0]['kinetic'],
+                  discrete_gravity_kick_work=kick_work if track_kick_work else None,
+                  numerical_kinetic_drift_work=drift_work if track_kick_work else None)
+
+
+def sample_periodic(field,n):
+    """Evaluate the reference trigonometric interpolant, without low-pass filtering.
+
+    scipy.signal.resample would discard high density modes when downsampling;
+    folding their coefficients instead evaluates the full reference at our nodes.
+    """
+    m=len(field);frequencies=np.rint(np.fft.fftfreq(m)*m).astype(int)
+    folded=np.zeros(n,complex);np.add.at(folded,frequencies%n,np.fft.fft(field)/m)
+    return np.fft.ifft(folded*n)
 
 
 def compare(p,reference):
     rho=abs(p)**2;ref=abs(reference)**2
     # Evaluate reference density itself, rather than square a truncated wave.
-    target=resample(ref,len(p)).real
-    low=np.fft.fft(rho)/len(p);lowref=np.fft.fft(target)/len(p)
+    target=sample_periodic(ref,len(p)).real
+    low=np.fft.fft(rho)/len(p);lowref_full=np.fft.fft(ref)/len(ref)
     ids=np.r_[np.arange(1,5),np.arange(len(p)-4,len(p))]
     return dict(density_error=float(np.linalg.norm(rho-target)/np.linalg.norm(target)),
-                low_density_absolute_rms=float(np.linalg.norm((low-lowref)[ids])),
+                low_density_absolute_rms=float(np.linalg.norm(low[ids]-np.r_[lowref_full[1:5],lowref_full[-4:]])),
                 peak_density_bias=float(np.max(rho)/np.max(target)-1))
 
 
 def main():
-    start=perf_counter();rows=[];checks=[];references={};final=.5;dt=.0002;coupling=100.
+    start=perf_counter();rows=[];checks=[];references={};final=.5;dt=.0002;coupling=100.;saved={}
     for case in ('standing','enveloped'):
         ref,stats=evolve(initial_wave(768,case),2*np.pi,coupling,'spectral','global_fft',final,dt,order=4,samples=400)
         temporal,_=evolve(initial_wave(768,case),2*np.pi,coupling,'spectral','global_fft',final,dt/2,order=4)
@@ -75,10 +93,12 @@ def main():
         checks.append(dict(case=case,time_reference_error=compare(ref,temporal)['density_error'],
                            space_reference_error=compare(ref,spatial)['density_error']))
         references[case]=stats
+        saved['reference_'+case]=ref
         for n in (80,96,160,192):
             for kinetic in ('global_fft','fft_fused','stored_matmul'):
                 for gravity in ('fd2','fd4','spectral'):
                     p,stats=evolve(initial_wave(n,case),2*np.pi,coupling,gravity,kinetic,final,dt)
+                    saved[f'{case}_{n}_{kinetic}_{gravity}']=p
                     own=stats['history'];energy_scale=abs(own[0]['kinetic'])+abs(own[0]['gravitational'])
                     rows.append(dict(case=case,n=n,carrier_ppw=n/16,shortest_initial_ppw=n/(17 if case=='enveloped' else 16),
                         kinetic=kinetic,gravity=gravity,**compare(p,ref),**stats,
@@ -97,6 +117,7 @@ def main():
                 seconds=perf_counter()-start,clarification='User confirms doubling resolution has always helped. The target is the higher-than-expected cells-per-wavelength requirement, not nonconvergence.',
                 scope='Periodic 1D self-consistent SP; two coherent initial conditions; uniform point samples, no AMR or cosmology. Fixed identical Strang steps for compared runs. Spectral high-resolution fourth-order reference, independent time/space refinement. Gravity work is sampled j dot (-grad Phi) quadrature, not an exact discrete energy identity.')
     (OUT/'evolution.json').write_text(json.dumps(result,indent=2)+'\n')
+    np.savez(OUT/'evolution_fields.npz',**saved)
     fig,axs=plt.subplots(1,2,figsize=(11,4))
     for ax,case in zip(axs,('standing','enveloped')):
         for kinetic in ('global_fft','fft_fused'):

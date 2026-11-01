@@ -1,0 +1,35 @@
+{
+  "python_files_compiled": [
+    "gravity_accuracy_evolution.py",
+    "gravity_accuracy_equilibrium.py",
+    "gravity_accuracy_interface.py",
+    "gravity_accuracy_amr_evolution.py",
+    "gravity_accuracy_bandwidth.py",
+    "gravity_accuracy_work.py",
+    "build_gravity_accuracy_report.py",
+    "verify_gravity_accuracy.py"
+  ],
+  "independent_density_sample_identity": 8.881784197001252e-16,
+  "embedded_plots": 5,
+  "local_links": [
+    "gravity_accuracy_results/evolution.json",
+    "gravity_accuracy_results/equilibrium.json",
+    "gravity_accuracy_results/interface.json",
+    "gravity_accuracy_results/amr_evolution.json",
+    "gravity_accuracy_results/amr_controls.json",
+    "gravity_accuracy_results/bandwidth.json",
+    "gravity_accuracy_results/work.json",
+    "frozen_gravity.html",
+    "gamer_diagnosis.html"
+  ],
+  "json_files": [
+    "amr_controls",
+    "amr_evolution",
+    "bandwidth",
+    "equilibrium",
+    "evolution",
+    "interface",
+    "work"
+  ],
+  "scope": "All experiment assertions passed; report artifacts checked. No GAMER binary compiled or cosmological halo run."
+}

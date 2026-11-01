@@ -1,0 +1,177 @@
+{
+  "rows": [
+    {
+      "label": "uniform0",
+      "shift_cells": 0,
+      "shift": 0.0,
+      "density_error": 2.4394226784705346e-06,
+      "central_density_error": 3.1905187946717716e-06,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.207745263329343e-14,
+      "max_poisson_residual": 0.0,
+      "max_parent_density_mean_error": 0.0
+    },
+    {
+      "label": "uniform2",
+      "shift_cells": 0,
+      "shift": 0.0,
+      "density_error": 0.0012486413449934585,
+      "central_density_error": 0.0017327823517155568,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.163336342344337e-14,
+      "max_poisson_residual": 0.0,
+      "max_parent_density_mean_error": 0.0
+    },
+    {
+      "label": "uniform4",
+      "shift_cells": 0,
+      "shift": 0.0,
+      "density_error": 7.628785521714586e-05,
+      "central_density_error": 0.0001230812026723288,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.285460875053104e-14,
+      "max_poisson_residual": 0.0,
+      "max_parent_density_mean_error": 0.0
+    },
+    {
+      "label": "hierarchy2_2",
+      "shift_cells": 0,
+      "shift": 0.0,
+      "density_error": 0.0014676678672634518,
+      "central_density_error": 0.0017872723671369939,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.218847493575595e-14,
+      "max_poisson_residual": 5.327629252794039e-15,
+      "max_parent_density_mean_error": 8.686184537642916e-06
+    },
+    {
+      "label": "hierarchy4_2",
+      "shift_cells": 0,
+      "shift": 0.0,
+      "density_error": 0.0003114157280285634,
+      "central_density_error": 0.00022475033673008033,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.241051954068098e-14,
+      "max_poisson_residual": 8.738497737715752e-15,
+      "max_parent_density_mean_error": 6.818267602293204e-06
+    },
+    {
+      "label": "hierarchy4_4",
+      "shift_cells": 0,
+      "shift": 0.0,
+      "density_error": 0.00021313849895960706,
+      "central_density_error": 0.0001948705277930425,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.207745263329343e-14,
+      "max_poisson_residual": 8.788188869250288e-15,
+      "max_parent_density_mean_error": 3.804544669971932e-06
+    },
+    {
+      "label": "oracle4",
+      "shift_cells": 0,
+      "shift": 0.0,
+      "density_error": 7.646406052222919e-05,
+      "central_density_error": 0.00012169386162706764,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.241051954068098e-14,
+      "max_poisson_residual": 8.68970258080756e-15,
+      "max_parent_density_mean_error": 0.0
+    },
+    {
+      "label": "uniform0",
+      "shift_cells": 16,
+      "shift": 1.0471975511965976,
+      "density_error": 2.4394226784705346e-06,
+      "central_density_error": 3.1905187946717716e-06,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.207745263329343e-14,
+      "max_poisson_residual": 0.0,
+      "max_parent_density_mean_error": 0.0
+    },
+    {
+      "label": "uniform2",
+      "shift_cells": 16,
+      "shift": 1.0471975511965976,
+      "density_error": 0.0012486413449934585,
+      "central_density_error": 0.0017327823517155568,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.163336342344337e-14,
+      "max_poisson_residual": 0.0,
+      "max_parent_density_mean_error": 0.0
+    },
+    {
+      "label": "uniform4",
+      "shift_cells": 16,
+      "shift": 1.0471975511965976,
+      "density_error": 7.628785521714586e-05,
+      "central_density_error": 0.0001230812026723288,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.285460875053104e-14,
+      "max_poisson_residual": 0.0,
+      "max_parent_density_mean_error": 0.0
+    },
+    {
+      "label": "hierarchy2_2",
+      "shift_cells": 16,
+      "shift": 1.0471975511965976,
+      "density_error": 0.0030137768814753434,
+      "central_density_error": 0.0037471068201524703,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.207745263329343e-14,
+      "max_poisson_residual": 2.8449030125351654e-15,
+      "max_parent_density_mean_error": 2.7488787227802902e-05
+    },
+    {
+      "label": "hierarchy4_2",
+      "shift_cells": 16,
+      "shift": 1.0471975511965976,
+      "density_error": 0.001252866951054678,
+      "central_density_error": 0.0008992518877070941,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.241051954068098e-14,
+      "max_poisson_residual": 4.852538897188689e-15,
+      "max_parent_density_mean_error": 2.278297640323501e-05
+    },
+    {
+      "label": "hierarchy4_4",
+      "shift_cells": 16,
+      "shift": 1.0471975511965976,
+      "density_error": 0.0006353795341469523,
+      "central_density_error": 0.0005160403021467212,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.318767565791859e-14,
+      "max_poisson_residual": 4.8864011459874405e-15,
+      "max_parent_density_mean_error": 1.3473633555527442e-05
+    },
+    {
+      "label": "oracle4",
+      "shift_cells": 16,
+      "shift": 1.0471975511965976,
+      "density_error": 6.94710670690889e-05,
+      "central_density_error": 8.180884152509515e-05,
+      "steps": 200,
+      "dt": 0.0005,
+      "mass_change": -4.285460875053104e-14,
+      "max_poisson_residual": 4.804568555686553e-15,
+      "max_parent_density_mean_error": 0.0
+    }
+  ],
+  "checks": {
+    "space": 4.110869461114422e-14,
+    "time": 6.098007371028097e-07
+  },
+  "scope": "2D evolving SP, L=2*pi, coupling=20, T=0.1, fine wave grid 96^2, parent gravity grid 48^2, child spans half box per axis. Initial shortest wavelength has 9.6 fine cells, 4.8 parent cells. All wave propagation uses the same global FFT. Hierarchy uses exact available fine density, sampled parent density, and FD2/FD4 direct child solves. Uniform branches apply the chosen gravity operator throughout. Oracle4 supplies spectral potential outside the child and on its boundaries; it changes both the exterior and boundary treatment. No wave AMR, subcycling, relaxation error, cell-average restriction, or cosmology."
+}

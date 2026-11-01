@@ -1,0 +1,176 @@
+{
+  "rows": [
+    {
+      "case": "standing",
+      "n": 80,
+      "wave_power_beyond_nyquist": 8.010262165164112e-09,
+      "wave_power_below_five_cells": 8.010262165164128e-09,
+      "density_unresolved_relative_rms": 0.00017884469964618192
+    },
+    {
+      "case": "standing",
+      "n": 96,
+      "wave_power_beyond_nyquist": 8.010262165164112e-09,
+      "wave_power_below_five_cells": 8.010262165164112e-09,
+      "density_unresolved_relative_rms": 0.00017884469964618192
+    },
+    {
+      "case": "standing",
+      "n": 160,
+      "wave_power_beyond_nyquist": 4.0475887351990054e-18,
+      "wave_power_below_five_cells": 8.010262165164112e-09,
+      "density_unresolved_relative_rms": 1.2034176819104572e-08
+    },
+    {
+      "case": "standing",
+      "n": 192,
+      "wave_power_beyond_nyquist": 4.2389932361104155e-27,
+      "wave_power_below_five_cells": 8.010262165164112e-09,
+      "density_unresolved_relative_rms": 1.2034176819101775e-08
+    },
+    {
+      "case": "enveloped",
+      "n": 80,
+      "wave_power_beyond_nyquist": 2.6574283925636083e-06,
+      "wave_power_below_five_cells": 0.341588113299325,
+      "density_unresolved_relative_rms": 0.09636593736800371
+    },
+    {
+      "case": "enveloped",
+      "n": 96,
+      "wave_power_beyond_nyquist": 1.3285791587466995e-08,
+      "wave_power_below_five_cells": 0.25400847079334016,
+      "density_unresolved_relative_rms": 0.026574830865551242
+    },
+    {
+      "case": "enveloped",
+      "n": 160,
+      "wave_power_beyond_nyquist": 1.872273222666226e-14,
+      "wave_power_below_five_cells": 0.0023084841824518635,
+      "density_unresolved_relative_rms": 3.7542146404383473e-06
+    },
+    {
+      "case": "enveloped",
+      "n": 192,
+      "wave_power_beyond_nyquist": 7.400785376290584e-19,
+      "wave_power_below_five_cells": 6.060695297904592e-06,
+      "density_unresolved_relative_rms": 1.6466496979700008e-07
+    }
+  ],
+  "weak_gravity": [
+    {
+      "n": 96,
+      "kinetic": "global_fft",
+      "gravity": "fd2",
+      "density_error": 0.0005763523301261302,
+      "low_density_absolute_rms": 0.00021676100509709199,
+      "peak_density_bias": 0.0002490868175850647,
+      "steps": 2500
+    },
+    {
+      "n": 96,
+      "kinetic": "global_fft",
+      "gravity": "fd4",
+      "density_error": 0.00013597127553326277,
+      "low_density_absolute_rms": 1.861651947710937e-05,
+      "peak_density_bias": 1.704531047130864e-05,
+      "steps": 2500
+    },
+    {
+      "n": 96,
+      "kinetic": "global_fft",
+      "gravity": "spectral",
+      "density_error": 2.523332331285169e-06,
+      "low_density_absolute_rms": 1.2335415393136662e-07,
+      "peak_density_bias": 2.6320364745480163e-06,
+      "steps": 2500
+    },
+    {
+      "n": 96,
+      "kinetic": "fft_fused",
+      "gravity": "fd2",
+      "density_error": 0.0005450133100719913,
+      "low_density_absolute_rms": 0.00019595173347001702,
+      "peak_density_bias": 0.0002230616954217446,
+      "steps": 2500
+    },
+    {
+      "n": 96,
+      "kinetic": "fft_fused",
+      "gravity": "fd4",
+      "density_error": 0.00013700512800041706,
+      "low_density_absolute_rms": 4.524213030239852e-05,
+      "peak_density_bias": -9.377256975362513e-07,
+      "steps": 2500
+    },
+    {
+      "n": 96,
+      "kinetic": "fft_fused",
+      "gravity": "spectral",
+      "density_error": 6.559981034414243e-05,
+      "low_density_absolute_rms": 5.295209252603465e-05,
+      "peak_density_bias": -1.0354563535264205e-05,
+      "steps": 2500
+    },
+    {
+      "n": 192,
+      "kinetic": "global_fft",
+      "gravity": "fd2",
+      "density_error": 0.00013674794442355018,
+      "low_density_absolute_rms": 5.382304380818237e-05,
+      "peak_density_bias": 6.0042217574274304e-05,
+      "steps": 2500
+    },
+    {
+      "n": 192,
+      "kinetic": "global_fft",
+      "gravity": "fd4",
+      "density_error": 9.876736964412308e-06,
+      "low_density_absolute_rms": 1.263698566607772e-06,
+      "peak_density_bias": 8.439170451346456e-07,
+      "steps": 2500
+    },
+    {
+      "n": 192,
+      "kinetic": "global_fft",
+      "gravity": "spectral",
+      "density_error": 2.1314242062982758e-07,
+      "low_density_absolute_rms": 1.2244641935557945e-07,
+      "peak_density_bias": -8.928849470901667e-08,
+      "steps": 2500
+    },
+    {
+      "n": 192,
+      "kinetic": "fft_fused",
+      "gravity": "fd2",
+      "density_error": 0.00013675664580040285,
+      "low_density_absolute_rms": 5.384233234807935e-05,
+      "peak_density_bias": 6.0152234862220766e-05,
+      "steps": 2500
+    },
+    {
+      "n": 192,
+      "kinetic": "fft_fused",
+      "gravity": "fd4",
+      "density_error": 9.874061085148042e-06,
+      "low_density_absolute_rms": 1.2893666787426056e-06,
+      "peak_density_bias": 9.493878048161264e-07,
+      "steps": 2500
+    },
+    {
+      "n": 192,
+      "kinetic": "fft_fused",
+      "gravity": "spectral",
+      "density_error": 2.2803303355555867e-07,
+      "low_density_absolute_rms": 9.696340904748084e-08,
+      "peak_density_bias": 1.555635331662586e-08,
+      "steps": 2500
+    }
+  ],
+  "checks": {
+    "reference_point_sample": 4.042599588416351e-14,
+    "weak_time": 5.3159742473919846e-11,
+    "weak_space": 5.244119797425593e-13
+  },
+  "scope": "Reference wave power and density fluctuation RMS beyond each target grid limit at final time. Five cells refers to wave wavelengths. Weak envelope case changes only coupling from 100 to 10; it is an additional control, not replacement of the difficult case."
+}

@@ -1,0 +1,45 @@
+{
+  "rows": [
+    {
+      "label": "hierarchy4_4",
+      "shift_cells": 0,
+      "density_error": 0.00021354721928641403,
+      "steps": 400,
+      "dt": 0.00025,
+      "mass_change": -9.64783808399261e-14,
+      "max_poisson_residual": 8.895456534577781e-15,
+      "max_parent_density_mean_error": 3.842049005942094e-06
+    },
+    {
+      "label": "hierarchy4_4_projected",
+      "shift_cells": 0,
+      "density_error": 0.00021414672526192503,
+      "steps": 400,
+      "dt": 0.00025,
+      "mass_change": -9.614531393253856e-14,
+      "max_poisson_residual": 8.807455737213143e-15,
+      "max_parent_density_mean_error": 6.661338147750939e-16
+    },
+    {
+      "label": "hierarchy4_4",
+      "shift_cells": 16,
+      "density_error": 0.0006355671003839433,
+      "steps": 400,
+      "dt": 0.00025,
+      "mass_change": -9.636735853746359e-14,
+      "max_poisson_residual": 4.844158800865439e-15,
+      "max_parent_density_mean_error": 1.3604547407397583e-05
+    },
+    {
+      "label": "hierarchy4_4_projected",
+      "shift_cells": 16,
+      "density_error": 0.000634382004730067,
+      "steps": 400,
+      "dt": 0.00025,
+      "mass_change": -9.536815781530095e-14,
+      "max_poisson_residual": 4.857347270292751e-15,
+      "max_parent_density_mean_error": 6.661338147750939e-16
+    }
+  ],
+  "scope": "Half the comparison time step and a reference with half the original reference step. Projected-parent source omits unresolved Fourier modes, preserving root-resolved density coefficients and mean; point-source and projected-source branches otherwise identical. This is a diagnostic oracle, not GAMER restriction."
+}
