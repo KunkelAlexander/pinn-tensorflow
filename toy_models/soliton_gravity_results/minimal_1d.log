@@ -1,0 +1,9 @@
+N=2048 h=0.0156, coarse r32: H=0.500
+ mass   sigma  sig/H   static net self-force/(M^2/2) max over offsets          dynamic T=4: displacement (max offsets) | peak ratio min
+    2   0.788   1.58   spectral: 6.6e-17  coarse r32: 5.7e-09  coarse r16: 1.7e-16   |   spectral: 0.000/1.00  coarse r32: 0.000/1.00  coarse r16: 0.000/1.00
+    4   0.621   1.24   spectral: 9.9e-17  coarse r32: 1.6e-06  coarse r16: 2.7e-16   |   spectral: 0.000/1.00  coarse r32: 0.000/1.01  coarse r16: 0.000/1.00
+    8   0.490   0.98   spectral: 2.0e-16  coarse r32: 9.8e-05  coarse r16: 2.4e-16   |   spectral: 0.000/1.00  coarse r32: 0.004/1.01  coarse r16: 0.000/1.00
+   16   0.387   0.77   spectral: 1.0e-16  coarse r32: 1.8e-03  coarse r16: 4.4e-16   |   spectral: 0.000/0.99  coarse r32: 0.118/1.00  coarse r16: 0.000/1.00
+   32   0.305   0.61   spectral: 4.1e-16  coarse r32: 1.4e-02  coarse r16: 1.3e-15   |   spectral: 0.000/0.99  coarse r32: 0.012/0.99  coarse r16: 0.000/1.00
+   64   0.240   0.48   spectral: 2.6e-16  coarse r32: 5.6e-02  coarse r16: 1.1e-15   |   spectral: 0.000/0.99  coarse r32: 0.228/0.91  coarse r16: 0.000/0.99
+wrote C:\Users\TE\Desktop\Privat\Projects\pinn-tensorflow\toy_models\soliton_gravity_results\minimal_1d.png

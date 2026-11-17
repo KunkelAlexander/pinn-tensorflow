@@ -1,0 +1,7 @@
+wrote C:\Users\TE\Desktop\Privat\Projects\pinn-tensorflow\toy_models\soliton_gravity_results\halo_1d_L128.png
+method                        core |x|<1         mid 1-4      outer 4-10       far 10-40    max|centroid| per seed
+spectral (perturbed)               0.053           0.051           0.029           0.008    0.00 0.00 0.00 0.00 0.00 0.00
+coarse H=0.125                     0.067           0.100           0.048           0.016    0.18 0.07 0.02 0.16 0.07 0.09
+coarse H=0.250                     0.038           0.072           0.079           0.024    2.19 11.56 3.66 3.99 10.61 3.99
+coarse H=0.500                     0.096           0.126           0.174           0.124    58.15 58.31 5.74 39.29 47.54 6.74
+coarse H=1.000                     0.217           0.234           1.177           3.856    57.34 26.96 26.15 58.03 57.80 20.34

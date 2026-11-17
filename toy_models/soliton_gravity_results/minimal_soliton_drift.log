@@ -1,0 +1,25 @@
+ground state residual |Hw-mu w|/|w| = 0.0002767699163754404 mu = -2.074765595953067
+mass 8: per-axis sigma = 0.897  (= 1.79 H4, 0.90 H8)
+  spectral   displacement 0.0000 (max over offsets)  |p| 5.117e-13  peak ratio min 0.999
+  coarse r4  displacement 0.0000 (max over offsets)  |p| 6.754e-08  peak ratio min 1.012
+  coarse r8  displacement 0.0071 (max over offsets)  |p| 2.950e-02  peak ratio min 1.030
+ground state residual |Hw-mu w|/|w| = 0.0013814855195991153 mu = -6.641193070920673
+mass 20: per-axis sigma = 0.565  (= 1.13 H4, 0.57 H8)
+  spectral   displacement 0.0000 (max over offsets)  |p| 1.873e-12  peak ratio min 0.997
+  coarse r4  displacement 0.0012 (max over offsets)  |p| 1.173e-02  peak ratio min 1.027
+  coarse r8  displacement 0.5498 (max over offsets)  |p| 1.026e+00  peak ratio min 0.965
+ground state residual |Hw-mu w|/|w| = 0.005722876865436209 mu = -15.48830214983962
+mass 40: per-axis sigma = 0.399  (= 0.80 H4, 0.40 H8)
+  spectral   displacement 0.0000 (max over offsets)  |p| 5.947e-12  peak ratio min 0.997
+  coarse r4  displacement 0.1846 (max over offsets)  |p| 2.336e+00  peak ratio min 1.026
+  coarse r8  displacement 0.3315 (max over offsets)  |p| 8.424e+00  peak ratio min 0.953
+ground state residual |Hw-mu w|/|w| = 0.026676941156433855 mu = -35.39991914460895
+mass 80: per-axis sigma = 0.281  (= 0.56 H4, 0.28 H8)
+  spectral   displacement 0.0000 (max over offsets)  |p| 1.853e-11  peak ratio min 0.987
+  coarse r4  displacement 0.1680 (max over offsets)  |p| 2.487e+01  peak ratio min 1.010
+  coarse r8  displacement 0.3102 (max over offsets)  |p| 6.010e+01  peak ratio min 0.738
+ground state residual |Hw-mu w|/|w| = 0.12385634213626673 mu = -79.68470848347549
+mass 160: per-axis sigma = 0.198  (= 0.40 H4, 0.20 H8)
+  spectral   displacement 0.0000 (max over offsets)  |p| 5.044e-11  peak ratio min 0.997
+  coarse r4  displacement 0.2613 (max over offsets)  |p| 1.180e+02  peak ratio min 0.898
+  coarse r8  displacement 0.9239 (max over offsets)  |p| 1.583e+02  peak ratio min 0.509

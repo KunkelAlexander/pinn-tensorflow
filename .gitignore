@@ -2,3 +2,13 @@
 __pycache__/neon_style.cpython-314.pyc
 CLAUDE.md
 __pycache__/3_benchmark_resolution.cpython-311.pyc
+
+
+# Heavy outputs (regenerable; keep the small JSON/MD summaries tracked)
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.ckpt
+toy_models/*.log
+runpod/**/*.log

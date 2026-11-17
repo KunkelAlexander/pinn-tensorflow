@@ -1,0 +1,46 @@
+  iter   0 residual 9.59e-02 peak 13.405 states 528
+  iter  10 residual 4.03e-03 peak 15.146 states 528
+  iter  20 residual 1.94e-04 peak 15.231 states 528
+  iter  30 residual 9.63e-06 peak 15.235 states 528
+  iter  40 residual 4.79e-07 peak 15.235 states 528
+  iter  50 residual 2.39e-08 peak 15.235 states 528
+  iter  53 residual 9.72e-09 peak 15.235 states 528
+converged 9.7e-09; 528 states; peak 15.246; rms 1.93; Ec 196.40
+Phi max at |x|=63.97 (need r_c < this), edge density 5.09e-08, mean 0.50
+density at |x| = 0,1,2,4,6,8: ['1.525e+01', '1.222e+01', '6.835e+00', '1.305e+00', '2.154e-01', '3.654e-02']
+seed 1 spectral                 core 16.300  max|centroid| 0.000
+seed 1 spectral (perturbed)     core 16.120  max|centroid| 0.000
+seed 1 coarse H=0.125           core 17.088  max|centroid| 0.182
+seed 1 coarse H=0.250           core 16.388  max|centroid| 2.191
+seed 1 coarse H=0.500           core 16.798  max|centroid| 58.148
+seed 1 coarse H=1.000           core 12.990  max|centroid| 57.343
+seed 2 spectral                 core 13.763  max|centroid| 0.000
+seed 2 spectral (perturbed)     core 13.950  max|centroid| 0.000
+seed 2 coarse H=0.125           core 13.291  max|centroid| 0.069
+seed 2 coarse H=0.250           core 13.733  max|centroid| 11.556
+seed 2 coarse H=0.500           core 12.142  max|centroid| 58.313
+seed 2 coarse H=1.000           core 13.643  max|centroid| 26.962
+seed 3 spectral                 core 15.694  max|centroid| 0.000
+seed 3 spectral (perturbed)     core 14.928  max|centroid| 0.000
+seed 3 coarse H=0.125           core 14.619  max|centroid| 0.025
+seed 3 coarse H=0.250           core 14.721  max|centroid| 3.656
+seed 3 coarse H=0.500           core 14.518  max|centroid| 5.737
+seed 3 coarse H=1.000           core 15.851  max|centroid| 26.146
+seed 4 spectral                 core 15.433  max|centroid| 0.000
+seed 4 spectral (perturbed)     core 16.317  max|centroid| 0.000
+seed 4 coarse H=0.125           core 14.614  max|centroid| 0.163
+seed 4 coarse H=0.250           core 14.933  max|centroid| 3.994
+seed 4 coarse H=0.500           core 15.296  max|centroid| 39.291
+seed 4 coarse H=1.000           core 10.797  max|centroid| 58.033
+seed 5 spectral                 core 15.795  max|centroid| 0.000
+seed 5 spectral (perturbed)     core 16.344  max|centroid| 0.000
+seed 5 coarse H=0.125           core 15.911  max|centroid| 0.067
+seed 5 coarse H=0.250           core 16.804  max|centroid| 10.613
+seed 5 coarse H=0.500           core 16.280  max|centroid| 47.544
+seed 5 coarse H=1.000           core 6.835  max|centroid| 57.796
+seed 6 spectral                 core 14.860  max|centroid| 0.000
+seed 6 spectral (perturbed)     core 15.101  max|centroid| 0.000
+seed 6 coarse H=0.125           core 14.996  max|centroid| 0.086
+seed 6 coarse H=0.250           core 15.229  max|centroid| 3.992
+seed 6 coarse H=0.500           core 15.701  max|centroid| 6.742
+seed 6 coarse H=1.000           core 18.100  max|centroid| 20.344

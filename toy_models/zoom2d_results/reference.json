@@ -1,0 +1,510 @@
+{
+  "n": 256,
+  "dt": 0.002,
+  "time": 0.8,
+  "coupling": 1.0,
+  "checks": {
+    "space": {
+      "wave_error": 3.0838491669196273e-13,
+      "aligned_wave_error": 1.378085592436401e-13,
+      "density_error": 2.100879660274717e-13,
+      "mass_bias": -1.7319479184152442e-13
+    },
+    "time": {
+      "wave_error": 2.069769427360143e-11,
+      "aligned_wave_error": 1.643268120659593e-11,
+      "density_error": 2.6277540592906908e-11,
+      "mass_bias": -1.5765166949677223e-13
+    }
+  },
+  "bandwidth": [
+    {
+      "time": 0.0,
+      "power_below_6cells_N64": 0.8781874298303821,
+      "power_below_6cells_N128": 0.1078475019293038,
+      "power_below_6cells_N256": 1.7879823373978014e-09
+    },
+    {
+      "time": 0.01,
+      "power_below_6cells_N64": 0.878256055142036,
+      "power_below_6cells_N128": 0.10786161978310486,
+      "power_below_6cells_N256": 3.4737515253479647e-09
+    },
+    {
+      "time": 0.02,
+      "power_below_6cells_N64": 0.8783372627810607,
+      "power_below_6cells_N128": 0.10786373782866254,
+      "power_below_6cells_N256": 8.51795879448306e-09
+    },
+    {
+      "time": 0.03,
+      "power_below_6cells_N64": 0.8784310184911919,
+      "power_below_6cells_N128": 0.10785387506705134,
+      "power_below_6cells_N256": 1.6825554362690295e-08
+    },
+    {
+      "time": 0.04,
+      "power_below_6cells_N64": 0.8785372762584486,
+      "power_below_6cells_N128": 0.10783205608683448,
+      "power_below_6cells_N256": 2.8228162004957937e-08
+    },
+    {
+      "time": 0.05,
+      "power_below_6cells_N64": 0.878655979743799,
+      "power_below_6cells_N128": 0.10779831107404474,
+      "power_below_6cells_N256": 4.248547143275157e-08
+    },
+    {
+      "time": 0.06,
+      "power_below_6cells_N64": 0.87878706389774,
+      "power_below_6cells_N128": 0.107752675821914,
+      "power_below_6cells_N256": 5.928803297628755e-08
+    },
+    {
+      "time": 0.07,
+      "power_below_6cells_N64": 0.8789304567231736,
+      "power_below_6cells_N128": 0.10769519173873028,
+      "power_below_6cells_N256": 7.826166993126223e-08
+    },
+    {
+      "time": 0.08,
+      "power_below_6cells_N64": 0.8790860811483218,
+      "power_below_6cells_N128": 0.10762590585156387,
+      "power_below_6cells_N256": 9.897376528668146e-08
+    },
+    {
+      "time": 0.09,
+      "power_below_6cells_N64": 0.879253856967013,
+      "power_below_6cells_N128": 0.10754487080276308,
+      "power_below_6cells_N256": 1.209416881155244e-07
+    },
+    {
+      "time": 0.1,
+      "power_below_6cells_N64": 0.8794337027995014,
+      "power_below_6cells_N128": 0.1074521448350887,
+      "power_below_6cells_N256": 1.4364358512117218e-07
+    },
+    {
+      "time": 0.11,
+      "power_below_6cells_N64": 0.8796255380232143,
+      "power_below_6cells_N128": 0.10734779176018665,
+      "power_below_6cells_N256": 1.6653166190181744e-07
+    },
+    {
+      "time": 0.12,
+      "power_below_6cells_N64": 0.8798292846196262,
+      "power_below_6cells_N128": 0.1072318809038792,
+      "power_below_6cells_N256": 1.890479095807145e-07
+    },
+    {
+      "time": 0.13,
+      "power_below_6cells_N64": 0.8800448688810301,
+      "power_below_6cells_N128": 0.10710448702059741,
+      "power_below_6cells_N256": 2.106419978758527e-07
+    },
+    {
+      "time": 0.14,
+      "power_below_6cells_N64": 0.8802722229195972,
+      "power_below_6cells_N128": 0.10696569016832061,
+      "power_below_6cells_N256": 2.3079076950927223e-07
+    },
+    {
+      "time": 0.15,
+      "power_below_6cells_N64": 0.8805112859209723,
+      "power_below_6cells_N128": 0.10681557553475061,
+      "power_below_6cells_N256": 2.4901846007677693e-07
+    },
+    {
+      "time": 0.16,
+      "power_below_6cells_N64": 0.8807620050860565,
+      "power_below_6cells_N128": 0.10665423320526907,
+      "power_below_6cells_N256": 2.649164711340563e-07
+    },
+    {
+      "time": 0.17,
+      "power_below_6cells_N64": 0.8810243362077957,
+      "power_below_6cells_N128": 0.10648175786359085,
+      "power_below_6cells_N256": 2.781612899024848e-07
+    },
+    {
+      "time": 0.18,
+      "power_below_6cells_N64": 0.8812982438349019,
+      "power_below_6cells_N128": 0.10629824841702576,
+      "power_below_6cells_N256": 2.885290268066563e-07
+    },
+    {
+      "time": 0.19,
+      "power_below_6cells_N64": 0.8815837009816716,
+      "power_below_6cells_N128": 0.10610380753992514,
+      "power_below_6cells_N256": 2.95905076651996e-07
+    },
+    {
+      "time": 0.2,
+      "power_below_6cells_N64": 0.8818806883525038,
+      "power_below_6cells_N128": 0.10589854113124773,
+      "power_below_6cells_N256": 3.002876307758309e-07
+    },
+    {
+      "time": 0.21,
+      "power_below_6cells_N64": 0.8821891930613307,
+      "power_below_6cells_N128": 0.10568255768519809,
+      "power_below_6cells_N256": 3.0178418332723384e-07
+    },
+    {
+      "time": 0.22,
+      "power_below_6cells_N64": 0.8825092068399056,
+      "power_below_6cells_N128": 0.10545596757752024,
+      "power_below_6cells_N256": 3.006007637536031e-07
+    },
+    {
+      "time": 0.23,
+      "power_below_6cells_N64": 0.8828407237444545,
+      "power_below_6cells_N128": 0.10521888227418488,
+      "power_below_6cells_N256": 2.970243381269342e-07
+    },
+    {
+      "time": 0.24,
+      "power_below_6cells_N64": 0.8831837373872564,
+      "power_below_6cells_N128": 0.1049714134737411,
+      "power_below_6cells_N256": 2.9139957576732606e-07
+    },
+    {
+      "time": 0.25,
+      "power_below_6cells_N64": 0.8835382377377943,
+      "power_below_6cells_N128": 0.10471367219936042,
+      "power_below_6cells_N256": 2.841018781337503e-07
+    },
+    {
+      "time": 0.26,
+      "power_below_6cells_N64": 0.8839042075565073,
+      "power_below_6cells_N128": 0.10444576786135534,
+      "power_below_6cells_N256": 2.7550911230484527e-07
+    },
+    {
+      "time": 0.27,
+      "power_below_6cells_N64": 0.8842816185421702,
+      "power_below_6cells_N128": 0.10416780731546219,
+      "power_below_6cells_N256": 2.659747899981151e-07
+    },
+    {
+      "time": 0.28,
+      "power_below_6cells_N64": 0.8846704272906404,
+      "power_below_6cells_N128": 0.1038798939461702,
+      "power_below_6cells_N256": 2.5580541917438997e-07
+    },
+    {
+      "time": 0.29,
+      "power_below_6cells_N64": 0.8850705711772365,
+      "power_below_6cells_N128": 0.10358212680756199,
+      "power_below_6cells_N256": 2.4524440166332793e-07
+    },
+    {
+      "time": 0.3,
+      "power_below_6cells_N64": 0.8854819642864356,
+      "power_below_6cells_N128": 0.10327459985623715,
+      "power_below_6cells_N256": 2.3446417607460084e-07
+    },
+    {
+      "time": 0.31,
+      "power_below_6cells_N64": 0.8859044935200355,
+      "power_below_6cells_N128": 0.10295740131165546,
+      "power_below_6cells_N256": 2.235673769522621e-07
+    },
+    {
+      "time": 0.32,
+      "power_below_6cells_N64": 0.8863380150177509,
+      "power_below_6cells_N128": 0.10263061317847023,
+      "power_below_6cells_N256": 2.1259670601020836e-07
+    },
+    {
+      "time": 0.33,
+      "power_below_6cells_N64": 0.886782351021766,
+      "power_below_6cells_N128": 0.10229431096297167,
+      "power_below_6cells_N256": 2.015521244379321e-07
+    },
+    {
+      "time": 0.34,
+      "power_below_6cells_N64": 0.8872372873088971,
+      "power_below_6cells_N128": 0.10194856361158511,
+      "power_below_6cells_N256": 1.9041302147408092e-07
+    },
+    {
+      "time": 0.35000000000000003,
+      "power_below_6cells_N64": 0.8877025713006305,
+      "power_below_6cells_N128": 0.10159343369350188,
+      "power_below_6cells_N256": 1.79162327750704e-07
+    },
+    {
+      "time": 0.36,
+      "power_below_6cells_N64": 0.8881779109427345,
+      "power_below_6cells_N128": 0.10122897784211246,
+      "power_below_6cells_N256": 1.67809225891395e-07
+    },
+    {
+      "time": 0.37,
+      "power_below_6cells_N64": 0.888662974423043,
+      "power_below_6cells_N128": 0.10085524746120231,
+      "power_below_6cells_N256": 1.56407222576962e-07
+    },
+    {
+      "time": 0.38,
+      "power_below_6cells_N64": 0.8891573907692383,
+      "power_below_6cells_N128": 0.1004722896922097,
+      "power_below_6cells_N256": 1.450648865446654e-07
+    },
+    {
+      "time": 0.39,
+      "power_below_6cells_N64": 0.8896607513391737,
+      "power_below_6cells_N128": 0.10008014862864444,
+      "power_below_6cells_N256": 1.3394746821098167e-07
+    },
+    {
+      "time": 0.4,
+      "power_below_6cells_N64": 0.8901726121857825,
+      "power_below_6cells_N128": 0.09967886675351148,
+      "power_below_6cells_N256": 1.2326878920275832e-07
+    },
+    {
+      "time": 0.41000000000000003,
+      "power_below_6cells_N64": 0.8906924972483211,
+      "power_below_6cells_N128": 0.09926848656578256,
+      "power_below_6cells_N256": 1.1327407616902623e-07
+    },
+    {
+      "time": 0.42,
+      "power_below_6cells_N64": 0.8912199022929919,
+      "power_below_6cells_N128": 0.09884905235312184,
+      "power_below_6cells_N256": 1.0421564609374194e-07
+    },
+    {
+      "time": 0.43,
+      "power_below_6cells_N64": 0.891754299500248,
+      "power_below_6cells_N128": 0.09842061206068299,
+      "power_below_6cells_N256": 9.63243667253819e-08
+    },
+    {
+      "time": 0.44,
+      "power_below_6cells_N64": 0.8922951425744367,
+      "power_below_6cells_N128": 0.0979832192002689,
+      "power_below_6cells_N256": 8.9780478165956e-08
+    },
+    {
+      "time": 0.45,
+      "power_below_6cells_N64": 0.8928418722348823,
+      "power_below_6cells_N128": 0.09753693474080632,
+      "power_below_6cells_N256": 8.468757717939316e-08
+    },
+    {
+      "time": 0.46,
+      "power_below_6cells_N64": 0.8933939219367145,
+      "power_below_6cells_N128": 0.09708182892015856,
+      "power_below_6cells_N256": 8.105329890597576e-08
+    },
+    {
+      "time": 0.47000000000000003,
+      "power_below_6cells_N64": 0.8939507236650439,
+      "power_below_6cells_N128": 0.09661798291985065,
+      "power_below_6cells_N256": 7.877950854320475e-08
+    },
+    {
+      "time": 0.48,
+      "power_below_6cells_N64": 0.8945117136476131,
+      "power_below_6cells_N128": 0.09614549034828256,
+      "power_below_6cells_N256": 7.766372457937458e-08
+    },
+    {
+      "time": 0.49,
+      "power_below_6cells_N64": 0.8950763378384303,
+      "power_below_6cells_N128": 0.0956644584842545,
+      "power_below_6cells_N256": 7.741216972624274e-08
+    },
+    {
+      "time": 0.5,
+      "power_below_6cells_N64": 0.8956440570377102,
+      "power_below_6cells_N128": 0.09517500924084692,
+      "power_below_6cells_N256": 7.766345048648202e-08
+    },
+    {
+      "time": 0.51,
+      "power_below_6cells_N64": 0.8962143515307952,
+      "power_below_6cells_N128": 0.09467727981946623,
+      "power_below_6cells_N256": 7.802057475695275e-08
+    },
+    {
+      "time": 0.52,
+      "power_below_6cells_N64": 0.8967867251497602,
+      "power_below_6cells_N128": 0.0941714230347233,
+      "power_below_6cells_N256": 7.808798874210056e-08
+    },
+    {
+      "time": 0.53,
+      "power_below_6cells_N64": 0.8973607086849328,
+      "power_below_6cells_N128": 0.0936576073022346,
+      "power_below_6cells_N256": 7.75096753929433e-08
+    },
+    {
+      "time": 0.54,
+      "power_below_6cells_N64": 0.8979358625985109,
+      "power_below_6cells_N128": 0.09313601629289113,
+      "power_below_6cells_N256": 7.600418265052192e-08
+    },
+    {
+      "time": 0.55,
+      "power_below_6cells_N64": 0.8985117790176659,
+      "power_below_6cells_N128": 0.09260684826812125,
+      "power_below_6cells_N256": 7.339275862476717e-08
+    },
+    {
+      "time": 0.56,
+      "power_below_6cells_N64": 0.8990880830089093,
+      "power_below_6cells_N128": 0.09207031512071338,
+      "power_below_6cells_N256": 6.961752073296419e-08
+    },
+    {
+      "time": 0.5700000000000001,
+      "power_below_6cells_N64": 0.8996644331581386,
+      "power_below_6cells_N128": 0.0915266411544674,
+      "power_below_6cells_N256": 6.474768221347065e-08
+    },
+    {
+      "time": 0.58,
+      "power_below_6cells_N64": 0.9002405215008502,
+      "power_below_6cells_N128": 0.09097606164300669,
+      "power_below_6cells_N256": 5.897316812575001e-08
+    },
+    {
+      "time": 0.59,
+      "power_below_6cells_N64": 0.9008160728638984,
+      "power_below_6cells_N128": 0.09041882121329531,
+      "power_below_6cells_N256": 5.2586317813964414e-08
+    },
+    {
+      "time": 0.6,
+      "power_below_6cells_N64": 0.9013908436934572,
+      "power_below_6cells_N128": 0.08985517210266442,
+      "power_below_6cells_N256": 4.595363359521398e-08
+    },
+    {
+      "time": 0.61,
+      "power_below_6cells_N64": 0.9019646204533001,
+      "power_below_6cells_N128": 0.0892853723394529,
+      "power_below_6cells_N256": 3.94805550280541e-08
+    },
+    {
+      "time": 0.62,
+      "power_below_6cells_N64": 0.9025372176830901,
+      "power_below_6cells_N128": 0.08870968389679701,
+      "power_below_6cells_N256": 3.3572906865087404e-08
+    },
+    {
+      "time": 0.63,
+      "power_below_6cells_N64": 0.9031084758082194,
+      "power_below_6cells_N128": 0.0881283708668294,
+      "power_below_6cells_N256": 2.8598923886965193e-08
+    },
+    {
+      "time": 0.64,
+      "power_below_6cells_N64": 0.9036782587911387,
+      "power_below_6cells_N128": 0.0875416976987958,
+      "power_below_6cells_N256": 2.4855584649763663e-08
+    },
+    {
+      "time": 0.65,
+      "power_below_6cells_N64": 0.9042464517094444,
+      "power_below_6cells_N128": 0.08694992753964453,
+      "power_below_6cells_N256": 2.2542425304837967e-08
+    },
+    {
+      "time": 0.66,
+      "power_below_6cells_N64": 0.9048129583387956,
+      "power_below_6cells_N128": 0.0863533207097875,
+      "power_below_6cells_N256": 2.1745132884116456e-08
+    },
+    {
+      "time": 0.67,
+      "power_below_6cells_N64": 0.9053776988094682,
+      "power_below_6cells_N128": 0.08575213334027806,
+      "power_below_6cells_N256": 2.243014431632582e-08
+    },
+    {
+      "time": 0.68,
+      "power_below_6cells_N64": 0.9059406073946922,
+      "power_below_6cells_N128": 0.08514661619090706,
+      "power_below_6cells_N256": 2.4450328753119052e-08
+    },
+    {
+      "time": 0.6900000000000001,
+      "power_below_6cells_N64": 0.9065016304773122,
+      "power_below_6cells_N128": 0.08453701366195547,
+      "power_below_6cells_N256": 2.756073321343709e-08
+    },
+    {
+      "time": 0.7000000000000001,
+      "power_below_6cells_N64": 0.9070607247294062,
+      "power_below_6cells_N128": 0.08392356300581465,
+      "power_below_6cells_N256": 3.144243822921027e-08
+    },
+    {
+      "time": 0.71,
+      "power_below_6cells_N64": 0.9076178555276849,
+      "power_below_6cells_N128": 0.08330649373859801,
+      "power_below_6cells_N256": 3.573188889860756e-08
+    },
+    {
+      "time": 0.72,
+      "power_below_6cells_N64": 0.9081729956162675,
+      "power_below_6cells_N128": 0.08268602724638917,
+      "power_below_6cells_N256": 4.0052692040788656e-08
+    },
+    {
+      "time": 0.73,
+      "power_below_6cells_N64": 0.9087261240180926,
+      "power_below_6cells_N128": 0.08206237657601888,
+      "power_below_6cells_N256": 4.404681971572114e-08
+    },
+    {
+      "time": 0.74,
+      "power_below_6cells_N64": 0.9092772251870921,
+      "power_below_6cells_N128": 0.08143574639631922,
+      "power_below_6cells_N256": 4.7402415103535815e-08
+    },
+    {
+      "time": 0.75,
+      "power_below_6cells_N64": 0.9098262883854769,
+      "power_below_6cells_N128": 0.08080633311269712,
+      "power_below_6cells_N256": 4.987590959234267e-08
+    },
+    {
+      "time": 0.76,
+      "power_below_6cells_N64": 0.9103733072642054,
+      "power_below_6cells_N128": 0.08017432511560887,
+      "power_below_6cells_N256": 5.130685789853816e-08
+    },
+    {
+      "time": 0.77,
+      "power_below_6cells_N64": 0.9109182796199925,
+      "power_below_6cells_N128": 0.07953990314206914,
+      "power_below_6cells_N256": 5.1624695942332326e-08
+    },
+    {
+      "time": 0.78,
+      "power_below_6cells_N64": 0.9114612072989681,
+      "power_below_6cells_N128": 0.0789032407286359,
+      "power_below_6cells_N256": 5.0847435946202885e-08
+    },
+    {
+      "time": 0.79,
+      "power_below_6cells_N64": 0.9120020962153632,
+      "power_below_6cells_N128": 0.07826450473430903,
+      "power_below_6cells_N256": 4.907305347250216e-08
+    },
+    {
+      "time": 0.8,
+      "power_below_6cells_N64": 0.9125409564531531,
+      "power_below_6cells_N128": 0.07762385591237422,
+      "power_below_6cells_N256": 4.646492519290063e-08
+    }
+  ],
+  "seconds": 27.77532610000344,
+  "scope": "Periodic 2D SP, L=32. Moving Gaussian core mass10, weak counter-moving packet and uniform amplitude .003; not a stationary soliton or 3D halo. Fourier Yoshida4 reference, space/time refinements. Potential stored every .01; wave every .1."
+}

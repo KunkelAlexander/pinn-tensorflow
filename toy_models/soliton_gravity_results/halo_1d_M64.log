@@ -1,0 +1,27 @@
+converged 9.0e-09; 78 states; peak 13.298; rms 2.19; Ec 44.55
+Phi max at |x|=15.98 (need r_c < this), edge density 3.00e-25, mean 2.00
+density at |x| = 0,1,2,4,6,8: ['1.330e+01', '1.119e+01', '7.053e+00', '1.836e+00', '4.020e-01', '6.708e-02']
+seed 1 spectral                 core 12.178  max|centroid| 0.000
+seed 1 spectral (perturbed)     core 12.678  max|centroid| 0.000
+seed 1 coarse H=0.125           core 13.116  max|centroid| 0.020
+seed 1 coarse H=0.250           core 11.283  max|centroid| 4.706
+seed 1 coarse H=0.500           core 13.265  max|centroid| 6.524
+seed 1 coarse H=1.000           core 11.460  max|centroid| 11.687
+seed 2 spectral                 core 14.256  max|centroid| 0.000
+seed 2 spectral (perturbed)     core 15.150  max|centroid| 0.000
+seed 2 coarse H=0.125           core 15.560  max|centroid| 0.028
+seed 2 coarse H=0.250           core 17.157  max|centroid| 4.160
+seed 2 coarse H=0.500           core 14.375  max|centroid| 11.651
+seed 2 coarse H=1.000           core 8.231  max|centroid| 11.653
+seed 3 spectral                 core 13.905  max|centroid| 0.000
+seed 3 spectral (perturbed)     core 14.003  max|centroid| 0.000
+seed 3 coarse H=0.125           core 12.680  max|centroid| 0.022
+seed 3 coarse H=0.250           core 12.302  max|centroid| 0.184
+seed 3 coarse H=0.500           core 8.261  max|centroid| 11.610
+seed 3 coarse H=1.000           core 9.926  max|centroid| 11.300
+seed 4 spectral                 core 11.345  max|centroid| 0.000
+seed 4 spectral (perturbed)     core 11.621  max|centroid| 0.000
+seed 4 coarse H=0.125           core 13.576  max|centroid| 0.020
+seed 4 coarse H=0.250           core 13.008  max|centroid| 1.465
+seed 4 coarse H=0.500           core 4.394  max|centroid| 11.296
+seed 4 coarse H=1.000           core 11.952  max|centroid| 11.111

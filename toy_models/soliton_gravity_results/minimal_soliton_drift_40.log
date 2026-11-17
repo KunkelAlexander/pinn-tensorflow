@@ -1,0 +1,5 @@
+ground state residual |Hw-mu w|/|w| = 0.005722876865436209 mu = -15.48830214983962
+mass 40: per-axis sigma = 0.399  (= 0.80 H4, 0.40 H8)
+  spectral   displacement 0.0000 (max over offsets)  |p| 5.947e-12  peak ratio min 0.997
+  coarse r4  displacement 0.1846 (max over offsets)  |p| 2.336e+00  peak ratio min 1.026
+  coarse r8  displacement 0.3315 (max over offsets)  |p| 8.424e+00  peak ratio min 0.953

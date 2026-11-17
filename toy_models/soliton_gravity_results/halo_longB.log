@@ -1,0 +1,10 @@
+spectral                222s  rms 3.367->3.725  core 3.09->3.91  contrast 0.977  centroid 0.006  |p| 1.55e-07  E drift -5.18e-07
+fd2                     222s  rms 3.367->3.770  core 3.09->4.10  contrast 0.973  centroid 0.004  |p| 1.55e-07  E drift +3.46e-05
+coarse_r4_fd2           196s  rms 3.367->3.699  core 3.08->3.77  contrast 0.976  centroid 0.258  |p| 1.35e+00  E drift +2.78e-03
+coarse_r8_fd2           149s  rms 3.367->3.784  core 3.32->4.12  contrast 1.012  centroid 1.046  |p| 7.01e+00  E drift -2.33e-02
+coarse_r4_tsc_fd2       225s  rms 3.367->3.508  core 3.00->3.69  contrast 0.977  centroid 0.026  |p| 1.29e-01  E drift +4.55e-03
+coarse_r8_tsc_fd2       167s  rms 3.367->3.716  core 2.76->2.56  contrast 0.955  centroid 0.156  |p| 8.21e-01  E drift -3.67e-03
+patch_r8_half32         161s  rms 3.367->3.750  core 3.09->3.91  contrast 0.977  centroid 0.109  |p| 1.60e+00  E drift +5.22e-04
+patch_r8_half48         169s  rms 3.367->3.765  core 3.09->4.07  contrast 0.973  centroid 0.090  |p| 4.36e-01  E drift +8.26e-05
+galerkin_r8_tsc_half32    289s  rms 3.367->3.769  core 3.09->3.95  contrast 0.973  centroid 0.011  |p| 2.65e-02  E drift +1.21e-04
+galerkin_r8_tsc_half48    521s  rms 3.367->3.770  core 3.09->4.10  contrast 0.973  centroid 0.002  |p| 1.61e-02  E drift +3.59e-05

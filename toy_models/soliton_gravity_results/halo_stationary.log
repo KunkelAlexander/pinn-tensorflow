@@ -1,0 +1,27 @@
+halo: mass 80.00000007525753 peak 11.80214435772692
+reference done; final rms radius 2.8746468644889247 peak 13.345262241471652
+reference rms radius over time [2.639, 2.839, 2.805, 2.795, 2.887, 2.742, 2.832, 2.86, 2.84, 2.813, 2.875]
+floor_half_dt                      rho err max 1.41e-04 mean 6.18e-05  mean-profile err 4.77e-06  core err 1.15e-05 bias +6.02e-06
+floor_perturbed_1e-8               rho err max 4.21e-08 mean 1.90e-08  mean-profile err 1.11e-09  core err 3.98e-09 bias -1.01e-09
+fd2                                rho err max 5.20e-02 mean 2.17e-02  mean-profile err 1.93e-03  core err 3.96e-03 bias +1.67e-03
+fd4                                rho err max 9.41e-04 mean 3.68e-04  mean-profile err 5.78e-05  core err 8.21e-05 bias +5.63e-05
+coarse_r2_fd2                      rho err max 1.04e-01 mean 4.33e-02  mean-profile err 2.50e-03  core err 7.96e-03 bias +2.56e-03
+coarse_r4_fd2                      rho err max 5.11e-01 mean 2.08e-01  mean-profile err 2.09e-02  core err 4.67e-02 bias +2.41e-03
+coarse_r8_fd2                      rho err max 1.26e+00 mean 6.71e-01  mean-profile err 2.13e-01  core err 2.02e-01 bias -1.83e-01
+coarse_r8_spectral                 rho err max 1.14e+00 mean 6.51e-01  mean-profile err 1.12e-01  core err 1.92e-01 bias -1.10e-01
+patch_r4_half16                    rho err max 1.32e-01 mean 4.73e-02  mean-profile err 2.12e-03  core err 1.12e-02 bias -1.68e-03
+mlc_r4_half16                      rho err max 1.37e-01 mean 5.24e-02  mean-profile err 8.91e-03  core err 1.14e-02 bias +6.22e-03
+patch_r8_half16                    rho err max 8.92e-01 mean 3.78e-01  mean-profile err 2.05e-02  core err 7.89e-02 bias +2.62e-03
+mlc_r8_half16                      rho err max 6.46e-01 mean 3.60e-01  mean-profile err 1.02e-01  core err 8.75e-02 bias -5.11e-02
+patch_r4_half32                    rho err max 5.55e-02 mean 2.29e-02  mean-profile err 1.12e-03  core err 4.22e-03 bias +1.04e-03
+mlc_r4_half32                      rho err max 5.79e-02 mean 2.26e-02  mean-profile err 2.36e-03  core err 4.68e-03 bias +2.29e-03
+patch_r8_half32                    rho err max 4.28e-01 mean 1.58e-01  mean-profile err 5.99e-03  core err 2.15e-02 bias -2.91e-03
+mlc_r8_half32                      rho err max 1.76e-01 mean 6.50e-02  mean-profile err 1.06e-02  core err 1.10e-02 bias +6.49e-03
+patch_r4_half48                    rho err max 5.05e-02 mean 2.15e-02  mean-profile err 1.79e-03  core err 3.90e-03 bias +1.52e-03
+mlc_r4_half48                      rho err max 5.24e-02 mean 2.18e-02  mean-profile err 1.94e-03  core err 4.05e-03 bias +1.66e-03
+patch_r8_half48                    rho err max 1.78e-01 mean 6.94e-02  mean-profile err 4.96e-03  core err 9.35e-03 bias +1.31e-03
+mlc_r8_half48                      rho err max 6.61e-02 mean 2.66e-02  mean-profile err 2.39e-03  core err 5.04e-03 bias +2.08e-03
+patch_r4_half64                    rho err max 5.15e-02 mean 2.16e-02  mean-profile err 1.87e-03  core err 3.96e-03 bias +1.62e-03
+mlc_r4_half64                      rho err max 5.23e-02 mean 2.18e-02  mean-profile err 1.93e-03  core err 4.00e-03 bias +1.67e-03
+patch_r8_half64                    rho err max 9.65e-02 mean 3.90e-02  mean-profile err 3.61e-03  core err 5.34e-03 bias +1.87e-03
+mlc_r8_half64                      rho err max 6.25e-02 mean 2.44e-02  mean-profile err 1.55e-03  core err 4.86e-03 bias +1.55e-03
